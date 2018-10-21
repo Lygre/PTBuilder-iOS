@@ -15,6 +15,11 @@
 		9F61A481217BEE16002A78A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F61A47F217BEE16002A78A8 /* LaunchScreen.storyboard */; };
 		9F61A48C217BEE16002A78A8 /* PTBuilder_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A48B217BEE16002A78A8 /* PTBuilder_iOSTests.swift */; };
 		9F61A497217BEE16002A78A8 /* PTBuilder_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A496217BEE16002A78A8 /* PTBuilder_iOSUITests.swift */; };
+		9F61A4A5217BEEAF002A78A8 /* Pokedex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4A4217BEEAF002A78A8 /* Pokedex.swift */; };
+		9F61A4A7217BEF20002A78A8 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4A6217BEF20002A78A8 /* Pokemon.swift */; };
+		9F61A4A9217BEF3E002A78A8 /* Support Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4A8217BEF3E002A78A8 /* Support Functions.swift */; };
+		9F61A4AB217BEF56002A78A8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4AA217BEF56002A78A8 /* Team.swift */; };
+		9F61A4AD217BEF7B002A78A8 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4AC217BEF7B002A78A8 /* Calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		9F61A492217BEE16002A78A8 /* PTBuilder iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PTBuilder iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F61A496217BEE16002A78A8 /* PTBuilder_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTBuilder_iOSUITests.swift; sourceTree = "<group>"; };
 		9F61A498217BEE16002A78A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F61A4A4217BEEAF002A78A8 /* Pokedex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokedex.swift; sourceTree = "<group>"; };
+		9F61A4A6217BEF20002A78A8 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		9F61A4A8217BEF3E002A78A8 /* Support Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Support Functions.swift"; sourceTree = "<group>"; };
+		9F61A4AA217BEF56002A78A8 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		9F61A4AC217BEF7B002A78A8 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,11 @@
 		9F61A468217BEE13002A78A8 = {
 			isa = PBXGroup;
 			children = (
+				9F61A4A4217BEEAF002A78A8 /* Pokedex.swift */,
+				9F61A4A6217BEF20002A78A8 /* Pokemon.swift */,
+				9F61A4A8217BEF3E002A78A8 /* Support Functions.swift */,
+				9F61A4AA217BEF56002A78A8 /* Team.swift */,
+				9F61A4AC217BEF7B002A78A8 /* Calculator.swift */,
 				9F61A473217BEE13002A78A8 /* PTBuilder iOS */,
 				9F61A48A217BEE16002A78A8 /* PTBuilder iOSTests */,
 				9F61A495217BEE16002A78A8 /* PTBuilder iOSUITests */,
@@ -259,7 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F61A4A9217BEF3E002A78A8 /* Support Functions.swift in Sources */,
+				9F61A4A7217BEF20002A78A8 /* Pokemon.swift in Sources */,
+				9F61A4AB217BEF56002A78A8 /* Team.swift in Sources */,
+				9F61A4A5217BEEAF002A78A8 /* Pokedex.swift in Sources */,
 				9F61A479217BEE13002A78A8 /* SecondViewController.swift in Sources */,
+				9F61A4AD217BEF7B002A78A8 /* Calculator.swift in Sources */,
 				9F61A475217BEE13002A78A8 /* AppDelegate.swift in Sources */,
 				9F61A477217BEE13002A78A8 /* FirstViewController.swift in Sources */,
 			);
