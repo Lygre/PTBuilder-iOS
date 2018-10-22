@@ -136,6 +136,50 @@ func dexNumToSprite(_ mon: Pokemon) -> String? {
 	return spriteName!
 }
 
+func dexNumToSpriteUsingSpecies(_ monName: String) -> String? {
+	let mon = Dex.searchDex(searchParam: monName)[0]
+	let dexNum: Int? = mon.num
+	var spriteName: String?
+	
+	spriteName = "\(dexNum ?? 0)"
+	
+	if mon.species.contains("-Alola") {
+		spriteName = spriteName! + "-alola"
+	} else if mon.species.contains("-Mega") {
+		spriteName = spriteName! + "-mega"
+	} else if mon.species.contains("-") && !mon.species.contains("ommo-") {
+		let lowerSpecies = mon.species.lowercased()
+		var index = lowerSpecies.firstIndex(of: "-")
+		//		if lowerSpecies.contains("kommo") { index = }
+		spriteName = spriteName! + lowerSpecies[index!...]
+	}
+	
+	spriteName = spriteName! + ".png"
+	
+	return spriteName ?? "0.png"
+}
+
+func dexNumToSpriteUsingNum(_ num: Int) -> String? {
+	let dexNum: Int? = num
+	var spriteName: String?
+	
+	spriteName = "\(dexNum ?? 0)"
+//
+//	if mon.species.contains("-Alola") {
+//		spriteName = spriteName! + "-alola"
+//	} else if mon.species.contains("-Mega") {
+//		spriteName = spriteName! + "-mega"
+//	} else if mon.species.contains("-") && !mon.species.contains("ommo-") {
+//		let lowerSpecies = mon.species.lowercased()
+//		var index = lowerSpecies.firstIndex(of: "-")
+//		//		if lowerSpecies.contains("kommo") { index = }
+//		spriteName = spriteName! + lowerSpecies[index!...]
+//	}
+	
+	spriteName = spriteName! + ".png"
+	
+	return spriteName ?? "0.png"
+}
 
 //func determineMonInteractionIconTable(pokemon: Pokemon) -> [String: NSImage] {
 //	var monWeaknessDict: [String: Int]

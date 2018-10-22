@@ -22,6 +22,8 @@
 		9F61A4A9217BEF3E002A78A8 /* Support Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4A8217BEF3E002A78A8 /* Support Functions.swift */; };
 		9F61A4AB217BEF56002A78A8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4AA217BEF56002A78A8 /* Team.swift */; };
 		9F61A4AD217BEF7B002A78A8 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4AC217BEF7B002A78A8 /* Calculator.swift */; };
+		9F9E53C9217E4FB5009D4C56 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E53C8217E4FB5009D4C56 /* DetailViewController.swift */; };
+		9F9E53CB217E7A8E009D4C56 /* PokemonSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E53CA217E7A8E009D4C56 /* PokemonSelectionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		9F61A4A8217BEF3E002A78A8 /* Support Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Support Functions.swift"; sourceTree = "<group>"; };
 		9F61A4AA217BEF56002A78A8 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		9F61A4AC217BEF7B002A78A8 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		9F9E53C8217E4FB5009D4C56 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9F9E53CA217E7A8E009D4C56 /* PokemonSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSelectionDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 				9F61A47A217BEE13002A78A8 /* Main.storyboard */,
 				9F36B786217CCCF60013DAAF /* PokemonTableViewCell.swift */,
 				9F36B788217CCF9F0013DAAF /* PokemonTableViewController.swift */,
+				9F9E53CA217E7A8E009D4C56 /* PokemonSelectionDelegate.swift */,
+				9F9E53C8217E4FB5009D4C56 /* DetailViewController.swift */,
 				9F61A47D217BEE16002A78A8 /* Assets.xcassets */,
 				9F61A47F217BEE16002A78A8 /* LaunchScreen.storyboard */,
 				9F61A482217BEE16002A78A8 /* Info.plist */,
@@ -211,6 +217,9 @@
 		9F61A469217BEE13002A78A8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					splitView,
+				);
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Hugh Broome";
@@ -280,8 +289,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F9E53C9217E4FB5009D4C56 /* DetailViewController.swift in Sources */,
 				9F36B787217CCCF60013DAAF /* PokemonTableViewCell.swift in Sources */,
 				9F61A4A9217BEF3E002A78A8 /* Support Functions.swift in Sources */,
+				9F9E53CB217E7A8E009D4C56 /* PokemonSelectionDelegate.swift in Sources */,
 				9F36B789217CCF9F0013DAAF /* PokemonTableViewController.swift in Sources */,
 				9F61A4A7217BEF20002A78A8 /* Pokemon.swift in Sources */,
 				9F61A4AB217BEF56002A78A8 /* Team.swift in Sources */,

@@ -9,66 +9,46 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Team Overview-->
-        <scene sceneID="6aR-Cq-vmw">
-            <objects>
-                <tableViewController id="LjK-Ia-owH" customClass="PokemonTableViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6Md-xn-6Hc">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PokemonTableViewCell" rowHeight="90" id="Trh-uH-ggz" customClass="PokemonTableViewCell" customModule="PTBuilder_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="1024" height="90"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Trh-uH-ggz" id="hwH-4o-bvJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="89.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="XnB-Ie-PYF">
-                                            <rect key="frame" x="10" y="15" width="60" height="60"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfC-Kf-AM4">
-                                            <rect key="frame" x="78" y="15" width="266" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="pokemonImageView" destination="XnB-Ie-PYF" id="Fdb-iF-bIn"/>
-                                    <outlet property="pokemonNameLabel" destination="SfC-Kf-AM4" id="mE4-Sl-6Ym"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="LjK-Ia-owH" id="6WM-77-uaP"/>
-                            <outlet property="delegate" destination="LjK-Ia-owH" id="WJY-aM-e6V"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Team Overview" id="4WB-61-vrG"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xGn-Ri-7aI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="750" y="359"/>
-        </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="1sd-a9-CLm">
             <objects>
-                <viewController id="NKZ-h8-eda" sceneMemberID="viewController">
+                <viewController id="NKZ-h8-eda" customClass="DetailViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qmj-ih-0jF">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mKi-js-cFP">
+                                <rect key="frame" x="885" y="33" width="95" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="Gj8-IG-dqT"/>
+                                    <constraint firstAttribute="height" constant="95" id="tc1-ni-xGh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgI-9C-Mty">
+                                <rect key="frame" x="658.5" y="33" width="218.5" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mKi-js-cFP" firstAttribute="leading" secondItem="LgI-9C-Mty" secondAttribute="trailing" constant="8" id="Jdk-LO-7Yz"/>
+                            <constraint firstItem="mKi-js-cFP" firstAttribute="top" secondItem="tBc-T2-f1A" secondAttribute="top" constant="13" id="awv-ab-ctc"/>
+                            <constraint firstItem="LgI-9C-Mty" firstAttribute="top" secondItem="tBc-T2-f1A" secondAttribute="top" constant="13" id="h6g-Vt-9Wj"/>
+                            <constraint firstItem="tBc-T2-f1A" firstAttribute="trailing" secondItem="mKi-js-cFP" secondAttribute="trailing" constant="44" id="vcf-mA-GCL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tBc-T2-f1A"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RuP-qZ-xPf"/>
+                    <connections>
+                        <outlet property="pokemonNameLabel" destination="LgI-9C-Mty" id="Azj-EK-JXn"/>
+                        <outlet property="spriteImageView" destination="mKi-js-cFP" id="mKK-Jv-1jo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sB0-9a-VrF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1479" y="1402"/>
+            <point key="canvasLocation" x="1479" y="970"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="jf7-qh-AY8">
@@ -91,7 +71,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9E-6b-H2c">
-                                            <rect key="frame" x="87" y="7" width="72" height="21"/>
+                                            <rect key="frame" x="87" y="7" width="177" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -102,6 +82,7 @@
                                 <connections>
                                     <outlet property="pokemonImageView" destination="YCt-GE-c3G" id="ZFl-4Q-m2h"/>
                                     <outlet property="pokemonNameLabel" destination="K9E-6b-H2c" id="15h-iG-EJZ"/>
+                                    <segue destination="NKZ-h8-eda" kind="showDetail" id="vTu-ry-fWT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -111,10 +92,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="x3a-qN-iQO"/>
+                    <connections>
+                        <outlet property="teamTableView" destination="qSN-QL-lBP" id="y5o-Ad-Y4M"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rrv-dU-AfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2206.640625" y="770.8638360175695"/>
+            <point key="canvasLocation" x="2209" y="285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SAF-Kg-gRG">
@@ -130,21 +114,21 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lkk-fA-Zwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1479" y="771"/>
+            <point key="canvasLocation" x="1479" y="285"/>
         </scene>
-        <!--Team Members-->
+        <!--teamMembersView-->
         <scene sceneID="SKG-AT-wtW">
             <objects>
-                <splitViewController id="gu1-qd-EFT" sceneMemberID="viewController">
+                <splitViewController storyboardIdentifier="teamMembersView" title="teamMembersView" id="gu1-qd-EFT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Team Members" id="njo-Wo-rGJ"/>
                     <connections>
                         <segue destination="Oum-vw-Khk" kind="relationship" relationship="masterViewController" id="Pc4-CK-S98"/>
-                        <segue destination="NKZ-h8-eda" kind="relationship" relationship="detailViewController" id="Kym-Hk-svy"/>
+                        <segue destination="NKZ-h8-eda" kind="relationship" relationship="detailViewController" id="2Uw-e2-fDd"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtc-mG-S1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="1087"/>
+            <point key="canvasLocation" x="698" y="599"/>
         </scene>
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
@@ -220,7 +204,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="LjK-Ia-owH" kind="relationship" relationship="viewControllers" id="JOi-Wt-HLv"/>
                         <segue destination="gu1-qd-EFT" kind="relationship" relationship="viewControllers" id="1DD-H1-5Py"/>
                     </connections>
                 </tabBarController>
@@ -233,4 +216,7 @@
         <image name="defaultPhoto" width="16" height="16"/>
         <image name="first" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="2Uw-e2-fDd"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -5,7 +5,7 @@
 //  Created by Hugh Broome on 9/11/18.
 //  Copyright © 2018 Hugh Broome. All rights reserved.
 //
-
+import UIKit
 import Foundation
 
 class Pokemon: NSObject {
@@ -30,6 +30,7 @@ class Pokemon: NSObject {
 	
 	@objc dynamic var statBoosts: [String: Double]
 	
+	@objc dynamic var monSprite: UIImage
 	//override init
 	override init() {
 		num = 0
@@ -52,6 +53,8 @@ class Pokemon: NSObject {
 		item = Item()
 		
 		statBoosts = ["atk": 1.0, "def": 1.0, "spa": 1.0, "spd": 1.0, "spe": 1.0]
+		
+		monSprite = UIImage(named: "0.png")!
 		
 		super.init()
 	}
@@ -79,6 +82,8 @@ class Pokemon: NSObject {
 		
 		self.statBoosts = ["atk": 1.0, "def": 1.0, "spa": 1.0, "spd": 1.0, "spe": 1.0]
 		
+		self.monSprite = UIImage(named: dexNumToSpriteUsingNum(num)!)!
+		
 		super.init()
 	}
 	// initialization from ?? creating a specific mon for team << ex.
@@ -104,6 +109,8 @@ class Pokemon: NSObject {
 		self.item = item
 		
 		self.statBoosts = ["atk": 1.0, "def": 1.0, "spa": 1.0, "spd": 1.0, "spe": 1.0]
+		
+		self.monSprite = UIImage(named: dexNumToSpriteUsingSpecies(species)!)!
 		
 		super.init()
 	}

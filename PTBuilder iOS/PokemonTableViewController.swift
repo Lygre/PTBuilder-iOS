@@ -8,12 +8,18 @@
 
 import UIKit
 
+
+
 class PokemonTableViewController: UITableViewController {
 
-	var team = [Pokemon]()
+	var team: Team = teamMaster
+	var detailViewController: DetailViewController?
+	
+	var delegate: PokemonSelectionDelegate?
 	
 	
 	
+	@IBOutlet var teamTableView: UITableView!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +63,13 @@ class PokemonTableViewController: UITableViewController {
         return cell
     }
 	
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let selectedPokemon = team.members[indexPath.row]
+//		if let detailViewController = delegate as? DetailViewController, let detail
+		let presenter = self.splitViewController?.viewControllers.last as? DetailViewController
+		presenter?.pokemonSelected(selectedPokemon)
 
+	}
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -93,29 +105,22 @@ class PokemonTableViewController: UITableViewController {
     }
     */
 
-    /*
+	
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//		if segue.destination
+//    }
+
 	func addToTeam(pokemon: Pokemon) {
 		teamMaster.members.append(pokemon)
+		team.members.append(pokemon)
 	}
-	private func loadSamplePokemon() {
-		let pImage1 = UIImage(named: "807")
-		
-		guard let pokemon1: Pokemon = Dex.searchDex(searchParam: "Zeraora")[0] else {
-			fatalError("Unable to init Zeraora")
-		}
-		
-		team.append(pokemon1)
-	}
+
 	
-	
+
 	
 	
 }
