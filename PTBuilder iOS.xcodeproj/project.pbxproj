@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F36B787217CCCF60013DAAF /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36B786217CCCF60013DAAF /* PokemonTableViewCell.swift */; };
+		9F36B789217CCF9F0013DAAF /* PokemonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36B788217CCF9F0013DAAF /* PokemonTableViewController.swift */; };
 		9F61A475217BEE13002A78A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A474217BEE13002A78A8 /* AppDelegate.swift */; };
 		9F61A477217BEE13002A78A8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A476217BEE13002A78A8 /* FirstViewController.swift */; };
 		9F61A479217BEE13002A78A8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A478217BEE13002A78A8 /* SecondViewController.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F36B786217CCCF60013DAAF /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
+		9F36B788217CCF9F0013DAAF /* PokemonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewController.swift; sourceTree = "<group>"; };
 		9F61A471217BEE13002A78A8 /* PTBuilder iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PTBuilder iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F61A474217BEE13002A78A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F61A476217BEE13002A78A8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				9F61A476217BEE13002A78A8 /* FirstViewController.swift */,
 				9F61A478217BEE13002A78A8 /* SecondViewController.swift */,
 				9F61A47A217BEE13002A78A8 /* Main.storyboard */,
+				9F36B786217CCCF60013DAAF /* PokemonTableViewCell.swift */,
+				9F36B788217CCF9F0013DAAF /* PokemonTableViewController.swift */,
 				9F61A47D217BEE16002A78A8 /* Assets.xcassets */,
 				9F61A47F217BEE16002A78A8 /* LaunchScreen.storyboard */,
 				9F61A482217BEE16002A78A8 /* Info.plist */,
@@ -274,7 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F36B787217CCCF60013DAAF /* PokemonTableViewCell.swift in Sources */,
 				9F61A4A9217BEF3E002A78A8 /* Support Functions.swift in Sources */,
+				9F36B789217CCF9F0013DAAF /* PokemonTableViewController.swift in Sources */,
 				9F61A4A7217BEF20002A78A8 /* Pokemon.swift in Sources */,
 				9F61A4AB217BEF56002A78A8 /* Team.swift in Sources */,
 				9F61A4A5217BEEAF002A78A8 /* Pokedex.swift in Sources */,

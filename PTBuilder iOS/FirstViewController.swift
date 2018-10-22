@@ -8,6 +8,8 @@
 
 import UIKit
 
+var teamMaster: Team = Team()
+
 class FirstViewController: UIViewController {
 
 	@IBOutlet weak var monSearchField: UITextField!
@@ -18,7 +20,7 @@ class FirstViewController: UIViewController {
 	
 	@IBOutlet weak var memberName: UILabel!
 	
-	
+	var teamViewController: PokemonTableViewController?
 	
 	@objc dynamic var team = [Pokemon]()
 	
@@ -46,7 +48,6 @@ class FirstViewController: UIViewController {
 	
 	@objc dynamic var levelArray = [Int]()
 	
-//	@objc dynamic var selectedMonImage = NSImage()
 	
 	@objc dynamic var evHPBind = Int()
 	@objc dynamic var evATKBind = Int()
@@ -97,6 +98,7 @@ class FirstViewController: UIViewController {
 		monToAdd.actualStats = Pokemon.calcStats(pokemon: monToAdd)
 		monToAdd.virtualStats = Pokemon.calcVirtualStats(pokemon: monToAdd)
 		//add pokemon object to objc team variable (bound to array controller)
+		//-----This can probably go fuck itself
 		self.team.append(monToAdd)
 		if team2test.members.isEmpty {
 			team2test = Team(members: team)
@@ -104,7 +106,14 @@ class FirstViewController: UIViewController {
 			team2test.addMember(monToAdd)
 		}
 		
-		monAddedName.text = monToAdd.species
+		//-----This is the important part now
+		monAddedName.text = ""
+		for mon in team {
+			monAddedName.text = monAddedName.text! + mon.species
+		}
+		let vc = self.teamViewController
+		vc?.addToTeam(pokemon: monToAdd)
+		teamMaster.members.append(monToAdd)
 	}
 	
 }
