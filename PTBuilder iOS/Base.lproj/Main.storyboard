@@ -30,6 +30,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYD-38-1zf">
+                                <rect key="frame" x="446" y="70" width="123" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ability" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOR-nZ-5Qx">
+                                <rect key="frame" x="446" y="107" width="123" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PO0-le-xr1">
+                                <rect key="frame" x="338" y="184" width="339" height="248"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZVf-En-zOQ">
+                                <rect key="frame" x="338" y="148" width="304" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Item"/>
+                                    <segment title="Ability"/>
+                                    <segment title="Nature"/>
+                                </segments>
+                                <connections>
+                                    <action selector="pokemonPropertySegmentedSelectorAction:" destination="NKZ-h8-eda" eventType="valueChanged" id="p1y-eT-N2D"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwF-sR-sIo">
+                                <rect key="frame" x="302" y="107" width="123" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -42,20 +79,25 @@
                     </view>
                     <navigationItem key="navigationItem" id="RuP-qZ-xPf"/>
                     <connections>
+                        <outlet property="abilityLabel" destination="jOR-nZ-5Qx" id="uu4-Hu-IOd"/>
+                        <outlet property="itemLabel" destination="VYD-38-1zf" id="bsj-7I-KSK"/>
+                        <outlet property="natureLabel" destination="nwF-sR-sIo" id="zMn-Rx-V22"/>
                         <outlet property="pokemonNameLabel" destination="LgI-9C-Mty" id="Azj-EK-JXn"/>
+                        <outlet property="pokemonPropertyPicker" destination="PO0-le-xr1" id="NnZ-UZ-uOw"/>
+                        <outlet property="pokemonPropertySegmentedSelector" destination="ZVf-En-zOQ" id="p3Q-cH-8tm"/>
                         <outlet property="spriteImageView" destination="mKi-js-cFP" id="mKK-Jv-1jo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sB0-9a-VrF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1479" y="970"/>
+            <point key="canvasLocation" x="1478.90625" y="969.83894582723269"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="jf7-qh-AY8">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="hzE-p3-wVt" customClass="PokemonTableViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qSN-QL-lBP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1346"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>

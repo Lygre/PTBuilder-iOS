@@ -24,6 +24,7 @@
 		9F61A4AD217BEF7B002A78A8 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4AC217BEF7B002A78A8 /* Calculator.swift */; };
 		9F9E53C9217E4FB5009D4C56 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E53C8217E4FB5009D4C56 /* DetailViewController.swift */; };
 		9F9E53CB217E7A8E009D4C56 /* PokemonSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E53CA217E7A8E009D4C56 /* PokemonSelectionDelegate.swift */; };
+		9F9E53CD217E8AB5009D4C56 /* PokemonPropertyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E53CC217E8AB5009D4C56 /* PokemonPropertyPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		9F61A4AC217BEF7B002A78A8 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		9F9E53C8217E4FB5009D4C56 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9F9E53CA217E7A8E009D4C56 /* PokemonSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSelectionDelegate.swift; sourceTree = "<group>"; };
+		9F9E53CC217E8AB5009D4C56 /* PokemonPropertyPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonPropertyPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				9F36B788217CCF9F0013DAAF /* PokemonTableViewController.swift */,
 				9F9E53CA217E7A8E009D4C56 /* PokemonSelectionDelegate.swift */,
 				9F9E53C8217E4FB5009D4C56 /* DetailViewController.swift */,
+				9F9E53CC217E8AB5009D4C56 /* PokemonPropertyPickerView.swift */,
 				9F61A47D217BEE16002A78A8 /* Assets.xcassets */,
 				9F61A47F217BEE16002A78A8 /* LaunchScreen.storyboard */,
 				9F61A482217BEE16002A78A8 /* Info.plist */,
@@ -296,6 +299,7 @@
 				9F36B789217CCF9F0013DAAF /* PokemonTableViewController.swift in Sources */,
 				9F61A4A7217BEF20002A78A8 /* Pokemon.swift in Sources */,
 				9F61A4AB217BEF56002A78A8 /* Team.swift in Sources */,
+				9F9E53CD217E8AB5009D4C56 /* PokemonPropertyPickerView.swift in Sources */,
 				9F61A4A5217BEEAF002A78A8 /* Pokedex.swift in Sources */,
 				9F61A479217BEE13002A78A8 /* SecondViewController.swift in Sources */,
 				9F61A4AD217BEF7B002A78A8 /* Calculator.swift in Sources */,
