@@ -18,12 +18,20 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 	@IBOutlet weak var itemLabel: UILabel!
 	@IBOutlet weak var abilityLabel: UILabel!
 	@IBOutlet weak var natureLabel: UILabel!
+	@IBOutlet weak var levelLabel: UILabel!
+	@IBOutlet weak var move1Label: UILabel!
+	@IBOutlet weak var move2Label: UILabel!
+	@IBOutlet weak var move3Label: UILabel!
+	@IBOutlet weak var move4Label: UILabel!
+	
+	
+	
 	
 	@IBOutlet weak var pokemonPropertyPicker: UIPickerView!
 	
 	
 	
-	
+	var learnsetMoves = [Move]()
 	
 	var natureList: [String] = [String]()
 	var propertyPickerData: [String] = [String]()
@@ -36,7 +44,9 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-		
+		Dex.initializeDex()
+		Dex.defineTypeMatchups()
+		MoveDex.initializeMoveDex()
 		ItemDex.initializeItemDex()
         // Do any additional setup after loading the view.
 //		let initMember = teamMaster.members
@@ -78,6 +88,16 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 			}
 			sortedNatureList.sort()
 			pokemon?.nature = sortedNatureList[row]
+		case 3:
+			pokemon?.level = Int(propertyPickerData[row]) ?? 100
+		case 4:
+			pokemon?.move1 = MoveDex.searchMovedex(searchParam: propertyPickerData[row])
+		case 5:
+			pokemon?.move2 = MoveDex.searchMovedex(searchParam: propertyPickerData[row])
+		case 6:
+			pokemon?.move3 = MoveDex.searchMovedex(searchParam: propertyPickerData[row])
+		case 7:
+			pokemon?.move4 = MoveDex.searchMovedex(searchParam: propertyPickerData[row])
 		default:
 			print("Something went wrong with picker selection switch")
 		}
@@ -110,6 +130,11 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 		natureLabel.text = pokemon?.nature
 		abilityLabel.text = pokemon?.ability
 		itemLabel.text = pokemon?.item.name
+		levelLabel.text = pokemon?.level.description
+		move1Label.text = pokemon?.move1.name
+		move2Label.text = pokemon?.move2.name
+		move3Label.text = pokemon?.move3.name
+		move4Label.text = pokemon?.move4.name
 		
 		let propertySelectorIndex = pokemonPropertySegmentedSelector.selectedSegmentIndex
 		print(propertySelectorIndex)
@@ -149,6 +174,31 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 			}
 			natureList.sort()
 			propertyPickerData = natureList
+			self.pokemonPropertyPicker.reloadAllComponents()
+		case 3:
+			var levelArray: [String] = [String]()
+			var levelToAdd = 1
+			repeat {
+				levelArray.append("\(levelToAdd)")
+				levelToAdd += 1
+			} while levelToAdd < 101
+			propertyPickerData = levelArray
+			self.pokemonPropertyPicker.reloadAllComponents()
+		case 4:
+			let learnset = pokemon?.getPokemonLearnset(pokemon: pokemon!).sorted()
+			propertyPickerData = learnset!
+			self.pokemonPropertyPicker.reloadAllComponents()
+		case 5:
+			let learnset = pokemon?.getPokemonLearnset(pokemon: pokemon!).sorted()
+			propertyPickerData = learnset!
+			self.pokemonPropertyPicker.reloadAllComponents()
+		case 6:
+			let learnset = pokemon?.getPokemonLearnset(pokemon: pokemon!).sorted()
+			propertyPickerData = learnset!
+			self.pokemonPropertyPicker.reloadAllComponents()
+		case 7:
+			let learnset = pokemon?.getPokemonLearnset(pokemon: pokemon!).sorted()
+			propertyPickerData = learnset!
 			self.pokemonPropertyPicker.reloadAllComponents()
 		default:
 			print("oops. Something went wrong in the switch")

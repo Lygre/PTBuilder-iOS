@@ -84,6 +84,7 @@ class Team: NSObject {
 			//			print(type, scalar)
 		}
 		//		print(teamWeaknessDict)
+		self.teamWeaknesses = teamWeaknessDict
 		return teamWeaknessDict
 	}
 	
@@ -290,6 +291,7 @@ class Team: NSObject {
 				}
 			}
 		}
+		self.teamCoverage = coverageDict
 		return coverageDict
 	}
 	
@@ -323,12 +325,12 @@ class Team: NSObject {
 			}
 			
 		}
-		
+		self.additionalAttributes = attrDict
 		return attrDict
 	}
 	
 	func addMember(_ pokemon: Pokemon) {
-		members.append(pokemon)
+		self.members.append(pokemon)
 	}
 	
 	//	func removeMember(_ pokemon: Pokemon) {
