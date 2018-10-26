@@ -36,12 +36,21 @@ class TeamWeaknessTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return team.members.count
+		switch (section) {
+		case 1:
+			return team.members.count
+		case 2:
+			return 1
+		default:
+			print("Something went wrong with static cell switch")
+			return 1
+		}
+		
     }
 
     /*
@@ -61,54 +70,87 @@ class TeamWeaknessTableViewController: UITableViewController {
 			else {
 				fatalError("Not an instance of TeamOverviewTableViewCell")
 		}
-		
+		switch (indexPath.section) {
 		// Configure the cell...
-		let monImage = UIImage(named: "\(team.members[indexPath.row].num).png")
-		cell.monImageView.image = monImage ?? UIImage(named: "defaultPhoto")
-		
-		let mon = team.members[indexPath.row]
-		let monWeaknesses = mon.getPokemonWeaknesses(pokemonName: mon)
-		var weaknessToImageDict: [String: UIImage] = [:]
-	
-		for (type, vector) in monWeaknesses {
-			switch vector {
-			case 0:
-				weaknessToImageDict[type] = UIImage(named: "immune.png")
-			case 1:
-				weaknessToImageDict[type] = UIImage(named: "neutral.png")
-			case 2:
-				weaknessToImageDict[type] = UIImage(named: "weak2.png")
-			case 4:
-				weaknessToImageDict[type] = UIImage(named: "weak4.png")
-			case -2:
-				weaknessToImageDict[type] = UIImage(named: "resist2.png")
-			case -4:
-				weaknessToImageDict[type] = UIImage(named: "resist4.png")
-			default:
-				print("Problem with vector to image switch")
-			}
+		case 1:
+			let monImage = UIImage(named: "\(team.members[indexPath.row].num).png")
+			cell.monImageView.image = monImage ?? UIImage(named: "defaultPhoto")
 			
-		}
-		cell.bugEfficacyImage.image = weaknessToImageDict["Bug"]
-		cell.darkEfficacyImage.image = weaknessToImageDict["Dark"]
-		cell.dragonEfficacyImage.image = weaknessToImageDict["Dragon"]
-		cell.electricEfficacyImage.image = weaknessToImageDict["Electric"]
-		cell.fairyEfficacyImage.image = weaknessToImageDict["Fairy"]
-		cell.fightingEfficacyImage.image = weaknessToImageDict["Fighting"]
-		cell.fireEfficacyImage.image = weaknessToImageDict["Fire"]
-		cell.flyingEfficacyImage.image = weaknessToImageDict["Flying"]
-		cell.ghostEfficacyImage.image = weaknessToImageDict["Ghost"]
-		cell.grassEfficacyImage.image = weaknessToImageDict["Grass"]
-		cell.groundEfficacyImage.image = weaknessToImageDict["Ground"]
-		cell.iceEfficacyImage.image = weaknessToImageDict["Ice"]
-		cell.normalEfficacyImage.image = weaknessToImageDict["Normal"]
-		cell.poisonEfficacyImage.image = weaknessToImageDict["Poison"]
-		cell.psychicEfficacyImage.image = weaknessToImageDict["Psychic"]
-		cell.rockEfficacyImage.image = weaknessToImageDict["Rock"]
-		cell.steelEfficacyImage.image = weaknessToImageDict["Steel"]
-		cell.waterEfficacyImage.image = weaknessToImageDict["Water"]
+			let mon = team.members[indexPath.row]
+			let monWeaknesses = mon.getPokemonWeaknesses(pokemonName: mon)
+			var weaknessToImageDict: [String: UIImage] = [:]
 		
-		return cell
+			for (type, vector) in monWeaknesses {
+				switch vector {
+				case 0:
+					weaknessToImageDict[type] = UIImage(named: "immune.png")
+				case 1:
+					weaknessToImageDict[type] = UIImage(named: "neutral.png")
+				case 2:
+					weaknessToImageDict[type] = UIImage(named: "weak2.png")
+				case 4:
+					weaknessToImageDict[type] = UIImage(named: "weak4.png")
+				case -2:
+					weaknessToImageDict[type] = UIImage(named: "resist2.png")
+				case -4:
+					weaknessToImageDict[type] = UIImage(named: "resist4.png")
+				default:
+					print("Problem with vector to image switch")
+				}
+			
+			}
+			cell.bugEfficacyImage.image = weaknessToImageDict["Bug"]
+			cell.darkEfficacyImage.image = weaknessToImageDict["Dark"]
+			cell.dragonEfficacyImage.image = weaknessToImageDict["Dragon"]
+			cell.electricEfficacyImage.image = weaknessToImageDict["Electric"]
+			cell.fairyEfficacyImage.image = weaknessToImageDict["Fairy"]
+			cell.fightingEfficacyImage.image = weaknessToImageDict["Fighting"]
+			cell.fireEfficacyImage.image = weaknessToImageDict["Fire"]
+			cell.flyingEfficacyImage.image = weaknessToImageDict["Flying"]
+			cell.ghostEfficacyImage.image = weaknessToImageDict["Ghost"]
+			cell.grassEfficacyImage.image = weaknessToImageDict["Grass"]
+			cell.groundEfficacyImage.image = weaknessToImageDict["Ground"]
+			cell.iceEfficacyImage.image = weaknessToImageDict["Ice"]
+			cell.normalEfficacyImage.image = weaknessToImageDict["Normal"]
+			cell.poisonEfficacyImage.image = weaknessToImageDict["Poison"]
+			cell.psychicEfficacyImage.image = weaknessToImageDict["Psychic"]
+			cell.rockEfficacyImage.image = weaknessToImageDict["Rock"]
+			cell.steelEfficacyImage.image = weaknessToImageDict["Steel"]
+			cell.waterEfficacyImage.image = weaknessToImageDict["Water"]
+			
+			return cell
+			
+		case 0:
+//			let teamWeaknessCumulativeDict = team.determineCumulativeTeamWeaknessesUsingDoubles()
+			var weaknessToImageDict = team.determineCumulativeInteractionIconTable()
+			
+			cell.monImageView.image = UIImage(named: "PokeballIcon.png")
+			
+			cell.bugEfficacyImage.image = weaknessToImageDict["Bug"]
+			cell.darkEfficacyImage.image = weaknessToImageDict["Dark"]
+			cell.dragonEfficacyImage.image = weaknessToImageDict["Dragon"]
+			cell.electricEfficacyImage.image = weaknessToImageDict["Electric"]
+			cell.fairyEfficacyImage.image = weaknessToImageDict["Fairy"]
+			cell.fightingEfficacyImage.image = weaknessToImageDict["Fighting"]
+			cell.fireEfficacyImage.image = weaknessToImageDict["Fire"]
+			cell.flyingEfficacyImage.image = weaknessToImageDict["Flying"]
+			cell.ghostEfficacyImage.image = weaknessToImageDict["Ghost"]
+			cell.grassEfficacyImage.image = weaknessToImageDict["Grass"]
+			cell.groundEfficacyImage.image = weaknessToImageDict["Ground"]
+			cell.iceEfficacyImage.image = weaknessToImageDict["Ice"]
+			cell.normalEfficacyImage.image = weaknessToImageDict["Normal"]
+			cell.poisonEfficacyImage.image = weaknessToImageDict["Poison"]
+			cell.psychicEfficacyImage.image = weaknessToImageDict["Psychic"]
+			cell.rockEfficacyImage.image = weaknessToImageDict["Rock"]
+			cell.steelEfficacyImage.image = weaknessToImageDict["Steel"]
+			cell.waterEfficacyImage.image = weaknessToImageDict["Water"]
+			
+			return cell
+			
+			
+		default:
+			return cell
+		}
 	}
     /*
     // Override to support conditional editing of the table view.

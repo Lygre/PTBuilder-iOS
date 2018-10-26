@@ -5,7 +5,7 @@
 //  Created by Hugh Broome on 7/11/18.
 //  Copyright © 2018 Hugh Broome. All rights reserved.
 //
-
+import UIKit
 import Foundation
 
 class Team: NSObject {
@@ -123,21 +123,6 @@ class Team: NSObject {
 				}
 			}
 		}
-		
-		//		for mon in members {
-		//			let monWeaknessDict = mon.getPokemonWeaknesses(pokemonName: mon)
-		//			for (type, scalar) in monWeaknessDict {
-		//				if scalar == 0 {
-		//					immunities.append(type)
-		//				} else if scalar == 1 {
-		//					teamWeaknessDict[type] = teamWeaknessDict[type]! + Double(scalar)
-		//				} else if scalar == -2 {
-		//					teamWeaknessDict[type] = teamWeaknessDict[type]! - 0.5
-		//				} else if scalar == -4 {
-		//					teamWeaknessDict[type] = teamWeaknessDict[type]! - 2
-		//				}
-		//			}
-		//		}
 		for (type, scalar) in teamWeaknessDict {
 			if immunities.contains(type) {
 				teamWeaknessDict[type] = 0.00
@@ -155,62 +140,43 @@ class Team: NSObject {
 		//				print(teamWeaknessDict)
 		return teamWeaknessDict
 	}
-//	
-//	func determineCumulativeInteractionIconTable() -> [String: NSImage] {
-//		var teamWeaknessDict: [String: Double]
-//		
-//		var teamWeaknessDictTransformed: [String: NSImage] = [:]
-//		
-//		teamWeaknessDict = self.determineCumulativeTeamWeaknessesUsingDoubles()
-//		
-//		
-//		for (type, scalar) in teamWeaknessDict {
-//			var typeModImg: NSImage = NSImage(imageLiteralResourceName: "neutral.png")
-//			//			if scalar == 0.0 {
-//			//				typeModImg = NSImage(imageLiteralResourceName: "immune.png")
-//			//			} else if scalar == 1.0 {
-//			//				typeModImg = NSImage(imageLiteralResourceName: "neutral.png")
-//			//			} else if scalar == -0.5 {
-//			//				typeModImg = NSImage(imageLiteralResourceName: "resist2.png")
-//			//			} else if scalar == -1.0 {
-//			//				typeModImg = NSImage(imageLiteralResourceName: "resist2.png")
-//			//			} else if scalar == -2.0 {
-//			//				typeModImg = NSImage(imageLiteralResourceName: "resist2.png")
-//			//			} else if scalar == -4.0 {
-//			//				typeModImg = NSImage(imageLiteralResourceName: "resist4.png")
-//			//			} else if scalar == 1.5 {
-//			//				typeModImg = NSImage(imageLiteralResourceName: "weak2.png")
-//			//			} else if scalar == 2.0 {
-//			//				typeModImg = NSImage(imageLiteralResourceName: "weak2.png")
-//			//			} else if scalar == 4.0 {
-//			//				typeModImg = NSImage(imageLiteralResourceName: "weak4.png")
-//			//			}
-//			//trying different logic
-//			if scalar == 0.0 {
-//				typeModImg = NSImage(imageLiteralResourceName: "immune.png")
-//			} else if scalar == 1.0 {
-//				typeModImg = NSImage(imageLiteralResourceName: "neutral.png")
-//			} else if scalar > 1.0 && scalar <= 1.5 {
-//				typeModImg = NSImage(imageLiteralResourceName: "weak2.png")
-//			} else if scalar < 0.0 && scalar >= -1.0 {
-//				typeModImg = NSImage(imageLiteralResourceName: "resist2.png")
-//			} else if scalar > 0.0 && scalar < 0.5 {
-//				typeModImg = NSImage(imageLiteralResourceName: "resist2.png")
-//			} else if scalar == 0.5 {
-//				typeModImg = NSImage(imageLiteralResourceName: "neutral.png")
-//			} else if scalar > 1.5 {
-//				typeModImg = NSImage(imageLiteralResourceName: "weak4.png")
-//			} else if scalar < -1.0 {
-//				typeModImg = NSImage(imageLiteralResourceName: "resist4.png")
-//			}
-//			
-//			teamWeaknessDictTransformed[type] = typeModImg
-//		}
-//		
-//		return teamWeaknessDictTransformed
-//		
-//	}
-//	
+	
+	func determineCumulativeInteractionIconTable() -> [String: UIImage] {
+		var teamWeaknessDict: [String: Double]
+		
+		var teamWeaknessDictTransformed: [String: UIImage] = [:]
+		
+		teamWeaknessDict = self.determineCumulativeTeamWeaknessesUsingDoubles()
+		
+		
+		for (type, scalar) in teamWeaknessDict {
+			var typeModImg: UIImage = UIImage(named: "neutral.png")!
+	
+			if scalar == 0.0 {
+				typeModImg = UIImage(named: "immune.png")!
+			} else if scalar == 1.0 {
+				typeModImg = UIImage(named: "neutral.png")!
+			} else if scalar > 1.0 && scalar <= 1.5 {
+				typeModImg = UIImage(named: "weak2.png")!
+			} else if scalar < 0.0 && scalar >= -1.0 {
+				typeModImg = UIImage(named: "resist2.png")!
+			} else if scalar > 0.0 && scalar < 0.5 {
+				typeModImg = UIImage(named: "resist2.png")!
+			} else if scalar == 0.5 {
+				typeModImg = UIImage(named: "neutral.png")!
+			} else if scalar > 1.5 {
+				typeModImg = UIImage(named: "weak4.png")!
+			} else if scalar < -1.0 {
+				typeModImg = UIImage(named: "resist4.png")!
+			}
+			
+			teamWeaknessDictTransformed[type] = typeModImg
+		}
+		
+		return teamWeaknessDictTransformed
+		
+	}
+	
 	// Method for calculating team type coverage
 	func determineTeamCoverage() -> [String: [String: Bool]] {
 		var coverageDict = [String: [String: Bool]]()

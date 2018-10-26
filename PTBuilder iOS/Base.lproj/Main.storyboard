@@ -681,8 +681,8 @@
         <scene sceneID="jf7-qh-AY8">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="hzE-p3-wVt" customClass="PokemonTableViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qSN-QL-lBP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1346"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qSN-QL-lBP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -709,7 +709,7 @@
                                 <connections>
                                     <outlet property="pokemonImageView" destination="YCt-GE-c3G" id="ZFl-4Q-m2h"/>
                                     <outlet property="pokemonNameLabel" destination="K9E-6b-H2c" id="15h-iG-EJZ"/>
-                                    <segue destination="NKZ-h8-eda" kind="showDetail" id="vTu-ry-fWT"/>
+                                    <segue destination="NKZ-h8-eda" kind="showDetail" identifier="showDetail" id="vTu-ry-fWT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -732,7 +732,7 @@
             <objects>
                 <navigationController id="Oum-vw-Khk" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I0N-OH-mhp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
