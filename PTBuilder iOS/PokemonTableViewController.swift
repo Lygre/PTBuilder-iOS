@@ -17,7 +17,9 @@ class PokemonTableViewController: UITableViewController {
 	
 	var delegate: PokemonSelectionDelegate?
 	
+	var delegateForTeam: TeamSectionSelectionDelegate?
 	
+	var pokemon: Pokemon?
 	
 	@IBOutlet var teamTableView: UITableView!
 	
@@ -44,7 +46,7 @@ class PokemonTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return teamMaster.members.count
+        return team.members.count
     }
 
 	
@@ -55,10 +57,10 @@ class PokemonTableViewController: UITableViewController {
 			fatalError("Not an instance of PokemonTableViewCell")
 		}
 		
-		let pokemon = teamMaster.members[indexPath.row]
+		pokemon = team.members[indexPath.row]
 		
-		cell.pokemonNameLabel.text = pokemon.species
-		cell.pokemonImageView.image = UIImage(named: dexNumToSprite(pokemon)!)
+		cell.pokemonNameLabel.text = pokemon!.species
+		cell.pokemonImageView.image = UIImage(named: dexNumToSprite(pokemon!)!)
 		
         return cell
     }
@@ -77,18 +79,31 @@ class PokemonTableViewController: UITableViewController {
         return true
     }
     */
-
-    /*
+	override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+		print("oh it was this one")
+		team.members.remove(at: indexPath.row)
+//		teamMaster.members.remove(at: indexPath.row)
+		delegateForTeam?.updateTeam(team)
+		tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.left)
+	}
+	
+	/*
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+			print("oh hi")
+			team.members.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+	*/
+	override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//		print("stfu")
+		self.teamTableView.endUpdates()
+	}
 
     /*
     // Override to support rearranging the table view.
@@ -115,12 +130,21 @@ class PokemonTableViewController: UITableViewController {
 //    }
 
 	func addToTeam(pokemon: Pokemon) {
-		teamMaster.members.append(pokemon)
+//		teamMaster.members.append(pokemon)
 		team.members.append(pokemon)
 	}
 
 	
-
+	
+	@IBAction func removeMember(_ sender: Any) {
+		let editModeEnabled: Bool = teamTableView.isEditing
+		if editModeEnabled == false {
+			teamTableView.setEditing(true, animated: true)
+		} else {
+			teamTableView.setEditing(false, animated: true)
+		}
+	}
+	
 	
 	
 }

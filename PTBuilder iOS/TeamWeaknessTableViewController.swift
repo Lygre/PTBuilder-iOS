@@ -10,7 +10,7 @@ import UIKit
 
 class TeamWeaknessTableViewController: UITableViewController {
 
-	var team = teamMaster
+	var team: Team = teamMaster
 	
 	
 	@IBOutlet var teamWeaknessTableView: UITableView!
@@ -30,6 +30,7 @@ class TeamWeaknessTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+		refreshUI()
     }
 
     // MARK: - Table view data source
@@ -206,5 +207,8 @@ class TeamWeaknessTableViewController: UITableViewController {
 extension TeamWeaknessTableViewController: TeamSectionSelectionDelegate {
 	func sectionSelected(_ newSection: String) {
 		teamSectionToDisplay = newSection
+	}
+	func updateTeam(_ updatedTeam: Team) {
+		team = updatedTeam
 	}
 }

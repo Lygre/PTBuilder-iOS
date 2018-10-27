@@ -81,6 +81,9 @@ class FirstViewController: UIViewController {
 			levelArray.append(levelArray.count + 1)
 		} while levelArray.count < 100
 	
+		//dismiss keyboard
+		self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+		
 	}
 
 	@IBAction func searchMonForAdd(_ sender: Any) {

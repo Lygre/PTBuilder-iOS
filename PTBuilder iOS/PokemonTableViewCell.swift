@@ -15,9 +15,13 @@ class PokemonTableViewCell: UITableViewCell {
 	@IBOutlet weak var pokemonImageView: UIImageView!
 	
 	
+	
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+//		self.editingAccessoryType.rawValue(2)
+		self.editingAccessoryType = AccessoryType.detailDisclosureButton
+//		self.editingStyle = EditingStyle.delete
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

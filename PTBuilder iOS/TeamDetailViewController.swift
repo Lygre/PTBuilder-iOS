@@ -171,6 +171,10 @@ class TeamDetailViewController: UIViewController {
 }
 
 extension TeamDetailViewController: TeamSectionSelectionDelegate {
+	func updateTeam(_ updatedTeam: Team) {
+		team = updatedTeam
+	}
+	
 	func sectionSelected(_ newSection: String) {
 		teamSectionToDisplay = newSection
 	}

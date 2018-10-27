@@ -10,4 +10,5 @@ import Foundation
 
 protocol TeamSectionSelectionDelegate {
 	func sectionSelected(_ newSection: String)
+	func updateTeam(_ updatedTeam: Team)
 }

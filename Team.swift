@@ -299,8 +299,12 @@ class Team: NSObject {
 		self.members.append(pokemon)
 	}
 	
-	//	func removeMember(_ pokemon: Pokemon) {
-	//		let index: Int = members.firstIndex(of: pokemon)!
-	//		members.remove(at: index)
-	//	}
+//	func removeMember(_ index: Int) {
+//
+//		self.members.remove(at: index)
+//	}
+		func removeMember(_ pokemonIndex: Int) {
+//			let index: Int = members.firstIndex(of: pokemon)!
+			self.members.remove(at: pokemonIndex)
+		}
 }
