@@ -10,14 +10,24 @@ import UIKit
 
 class TeamWeaknessTableViewController: UITableViewController {
 
-	var team: Team = teamMaster
+//	internal let refreshControl = UIRefreshControl()
+	private let refreshTableControl = UIRefreshControl()
 	
+	var team: Team = teamMaster {
+		didSet {
+//			refreshUI()
+			updateView()
+		}
+	}
+	
+	@IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
 	
 	@IBOutlet var teamWeaknessTableView: UITableView!
 	
 	var teamSectionToDisplay: String? {
 		didSet {
-			refreshUI()
+//			refreshUI()
+			updateView()
 		}
 	}
 	
@@ -30,11 +40,14 @@ class TeamWeaknessTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-		refreshUI()
+//		refreshUI()
+		setupView()
+		fetchTeamData()
+		refreshTableControl.addTarget(self, action: #selector(refreshTeamData(_:)), for: .valueChanged)
     }
 
     // MARK: - Table view data source
-
+	
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 2
@@ -199,10 +212,50 @@ class TeamWeaknessTableViewController: UITableViewController {
     */
 
 	func refreshUI() {
+//		self.teamWeaknessTableView.reloadData()
+//		teamWeaknessTableView.reloadData()
+//		DispatchQueue.main.async {
+//			self.teamWeaknessTableView.reloadData()
+//		}
+	}
+	
+	private func setupView() {
+		setupTableView()
+		setupActivityIndicatorView()
+	}
+	
+	private func setupTableView() {
+		teamWeaknessTableView.refreshControl = refreshTableControl
+	}
+	
+	private func setupActivityIndicatorView() {
+		self.activityIndicatorView.hidesWhenStopped = true
+		activityIndicatorView.startAnimating()
+	}
+	
+	private func updateView() {
+		teamWeaknessTableView.reloadData()
+	}
+	
+	func fetchTeamData() {
+		print("Fetching team Data")
+		
+		self.team = teamMaster
+		
+		self.updateView()
+		self.refreshTableControl.endRefreshing()
+		self.activityIndicatorView.stopAnimating()
 		
 	}
 	
+	@objc private func refreshTeamData(_ sender: Any) {
+		fetchTeamData()
+	}
+	
 }
+
+
+
 
 extension TeamWeaknessTableViewController: TeamSectionSelectionDelegate {
 	func sectionSelected(_ newSection: String) {
@@ -210,5 +263,8 @@ extension TeamWeaknessTableViewController: TeamSectionSelectionDelegate {
 	}
 	func updateTeam(_ updatedTeam: Team) {
 		team = updatedTeam
+//		self.teamWeaknessTableView.reloadData()
+		
+		print("team updated")
 	}
 }

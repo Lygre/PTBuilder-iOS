@@ -82,9 +82,11 @@ class PokemonTableViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
 		print("oh it was this one")
 		team.members.remove(at: indexPath.row)
-//		teamMaster.members.remove(at: indexPath.row)
-		delegateForTeam?.updateTeam(team)
 		tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.left)
+		teamMaster = team
+		let vc = storyboard?.instantiateViewController(withIdentifier: "teamWeaknessTableController") as? TeamWeaknessTableViewController
+//		vc?.updateTeam(team)
+//		vc?.fetchTeamData()
 	}
 	
 	/*
@@ -143,6 +145,8 @@ class PokemonTableViewController: UITableViewController {
 		} else {
 			teamTableView.setEditing(false, animated: true)
 		}
+		
+//		vc?.teamWeaknessTableView.reloadData()
 	}
 	
 	
