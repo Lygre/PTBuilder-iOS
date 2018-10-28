@@ -109,11 +109,6 @@
 		9F61A468217BEE13002A78A8 = {
 			isa = PBXGroup;
 			children = (
-				9F61A4A4217BEEAF002A78A8 /* Pokedex.swift */,
-				9F61A4A6217BEF20002A78A8 /* Pokemon.swift */,
-				9F61A4A8217BEF3E002A78A8 /* Support Functions.swift */,
-				9F61A4AA217BEF56002A78A8 /* Team.swift */,
-				9F61A4AC217BEF7B002A78A8 /* Calculator.swift */,
 				9F61A473217BEE13002A78A8 /* PTBuilder iOS */,
 				9F61A48A217BEE16002A78A8 /* PTBuilder iOSTests */,
 				9F61A495217BEE16002A78A8 /* PTBuilder iOSUITests */,
@@ -134,22 +129,15 @@
 		9F61A473217BEE13002A78A8 /* PTBuilder iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9F61A474217BEE13002A78A8 /* AppDelegate.swift */,
-				9F61A476217BEE13002A78A8 /* FirstViewController.swift */,
-				9F61A47A217BEE13002A78A8 /* Main.storyboard */,
-				9FB3F2DE21828395009AB5AB /* TeamWeaknessTableViewController.swift */,
-				9FB3F2E021828446009AB5AB /* TeamWeaknessTableViewCell.swift */,
-				9FF00AF72180E39500DB9BE8 /* TeamOverviewTableViewCell.swift */,
-				9FF00AF32180E1D000DB9BE8 /* TeamTableViewController.swift */,
-				9FF00AF52180E1F500DB9BE8 /* TeamDetailViewController.swift */,
-				9FB3F2DC21822550009AB5AB /* TeamSectionSelectionDelegate.swift */,
-				9F36B786217CCCF60013DAAF /* PokemonTableViewCell.swift */,
-				9F36B788217CCF9F0013DAAF /* PokemonTableViewController.swift */,
-				9F9E53C8217E4FB5009D4C56 /* DetailViewController.swift */,
-				9F9E53CA217E7A8E009D4C56 /* PokemonSelectionDelegate.swift */,
-				9F9E53CC217E8AB5009D4C56 /* PokemonPropertyPickerView.swift */,
 				9F61A47D217BEE16002A78A8 /* Assets.xcassets */,
+				9F61A474217BEE13002A78A8 /* AppDelegate.swift */,
+				9FE7BF7E218620F3001EEDA8 /* Global Classes and Methods */,
+				9FE7BF7D21861ED5001EEDA8 /* Table View Cells */,
+				9FE7BF7B21861E92001EEDA8 /* View Controllers */,
+				9FE7BF7C21861EBC001EEDA8 /* Delegates */,
+				9F61A47A217BEE13002A78A8 /* Main.storyboard */,
 				9F61A47F217BEE16002A78A8 /* LaunchScreen.storyboard */,
+				9F9E53CC217E8AB5009D4C56 /* PokemonPropertyPickerView.swift */,
 				9F61A482217BEE16002A78A8 /* Info.plist */,
 			);
 			path = "PTBuilder iOS";
@@ -171,6 +159,50 @@
 				9F61A498217BEE16002A78A8 /* Info.plist */,
 			);
 			path = "PTBuilder iOSUITests";
+			sourceTree = "<group>";
+		};
+		9FE7BF7B21861E92001EEDA8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F61A476217BEE13002A78A8 /* FirstViewController.swift */,
+				9FB3F2DE21828395009AB5AB /* TeamWeaknessTableViewController.swift */,
+				9FF00AF32180E1D000DB9BE8 /* TeamTableViewController.swift */,
+				9FF00AF52180E1F500DB9BE8 /* TeamDetailViewController.swift */,
+				9F36B788217CCF9F0013DAAF /* PokemonTableViewController.swift */,
+				9F9E53C8217E4FB5009D4C56 /* DetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9FE7BF7C21861EBC001EEDA8 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				9FB3F2DC21822550009AB5AB /* TeamSectionSelectionDelegate.swift */,
+				9F9E53CA217E7A8E009D4C56 /* PokemonSelectionDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		9FE7BF7D21861ED5001EEDA8 /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9FB3F2E021828446009AB5AB /* TeamWeaknessTableViewCell.swift */,
+				9FF00AF72180E39500DB9BE8 /* TeamOverviewTableViewCell.swift */,
+				9F36B786217CCCF60013DAAF /* PokemonTableViewCell.swift */,
+			);
+			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		9FE7BF7E218620F3001EEDA8 /* Global Classes and Methods */ = {
+			isa = PBXGroup;
+			children = (
+				9F61A4A4217BEEAF002A78A8 /* Pokedex.swift */,
+				9F61A4A6217BEF20002A78A8 /* Pokemon.swift */,
+				9F61A4A8217BEF3E002A78A8 /* Support Functions.swift */,
+				9F61A4AA217BEF56002A78A8 /* Team.swift */,
+				9F61A4AC217BEF7B002A78A8 /* Calculator.swift */,
+			);
+			path = "Global Classes and Methods";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
