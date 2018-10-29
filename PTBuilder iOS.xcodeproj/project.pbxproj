@@ -27,6 +27,7 @@
 		9FB3F2DD21822550009AB5AB /* TeamSectionSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB3F2DC21822550009AB5AB /* TeamSectionSelectionDelegate.swift */; };
 		9FB3F2DF21828395009AB5AB /* TeamWeaknessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB3F2DE21828395009AB5AB /* TeamWeaknessTableViewController.swift */; };
 		9FB3F2E121828446009AB5AB /* TeamWeaknessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB3F2E021828446009AB5AB /* TeamWeaknessTableViewCell.swift */; };
+		9FE7BF8021862628001EEDA8 /* TeamCoverageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE7BF7F21862628001EEDA8 /* TeamCoverageTableViewCell.swift */; };
 		9FF00AF42180E1D000DB9BE8 /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF00AF32180E1D000DB9BE8 /* TeamTableViewController.swift */; };
 		9FF00AF62180E1F500DB9BE8 /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF00AF52180E1F500DB9BE8 /* TeamDetailViewController.swift */; };
 		9FF00AF82180E39500DB9BE8 /* TeamOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF00AF72180E39500DB9BE8 /* TeamOverviewTableViewCell.swift */; };
@@ -76,6 +77,7 @@
 		9FB3F2DC21822550009AB5AB /* TeamSectionSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSectionSelectionDelegate.swift; sourceTree = "<group>"; };
 		9FB3F2DE21828395009AB5AB /* TeamWeaknessTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamWeaknessTableViewController.swift; sourceTree = "<group>"; };
 		9FB3F2E021828446009AB5AB /* TeamWeaknessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamWeaknessTableViewCell.swift; sourceTree = "<group>"; };
+		9FE7BF7F21862628001EEDA8 /* TeamCoverageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeamCoverageTableViewCell.swift; path = "PTBuilder iOS/Table View Cells/TeamCoverageTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		9FF00AF32180E1D000DB9BE8 /* TeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
 		9FF00AF52180E1F500DB9BE8 /* TeamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
 		9FF00AF72180E39500DB9BE8 /* TeamOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamOverviewTableViewCell.swift; sourceTree = "<group>"; };
@@ -131,11 +133,11 @@
 			children = (
 				9F61A47D217BEE16002A78A8 /* Assets.xcassets */,
 				9F61A474217BEE13002A78A8 /* AppDelegate.swift */,
+				9F61A47A217BEE13002A78A8 /* Main.storyboard */,
 				9FE7BF7E218620F3001EEDA8 /* Global Classes and Methods */,
 				9FE7BF7D21861ED5001EEDA8 /* Table View Cells */,
 				9FE7BF7B21861E92001EEDA8 /* View Controllers */,
 				9FE7BF7C21861EBC001EEDA8 /* Delegates */,
-				9F61A47A217BEE13002A78A8 /* Main.storyboard */,
 				9F61A47F217BEE16002A78A8 /* LaunchScreen.storyboard */,
 				9F9E53CC217E8AB5009D4C56 /* PokemonPropertyPickerView.swift */,
 				9F61A482217BEE16002A78A8 /* Info.plist */,
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				9FB3F2E021828446009AB5AB /* TeamWeaknessTableViewCell.swift */,
+				9FE7BF7F21862628001EEDA8 /* TeamCoverageTableViewCell.swift */,
 				9FF00AF72180E39500DB9BE8 /* TeamOverviewTableViewCell.swift */,
 				9F36B786217CCCF60013DAAF /* PokemonTableViewCell.swift */,
 			);
@@ -340,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F9E53C9217E4FB5009D4C56 /* DetailViewController.swift in Sources */,
+				9FE7BF8021862628001EEDA8 /* TeamCoverageTableViewCell.swift in Sources */,
 				9F36B787217CCCF60013DAAF /* PokemonTableViewCell.swift in Sources */,
 				9F61A4A9217BEF3E002A78A8 /* Support Functions.swift in Sources */,
 				9F9E53CB217E7A8E009D4C56 /* PokemonSelectionDelegate.swift in Sources */,
