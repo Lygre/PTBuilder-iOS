@@ -232,6 +232,34 @@ class Pokemon: NSObject {
 		}
 		return actualStats
 	}
+	
+	func calcStatsMutating() {
+		let pokemon: Pokemon = self
+		let nature: String = pokemon.nature.lowercased()
+		let baseStats: [String: Int] = pokemon.baseStats
+		var ivs = pokemon.iVs
+		var evs = pokemon.eVs
+		let level = pokemon.level
+		var actualStats: [String: Int] = ["hp": 0, "atk": 0, "def": 0, "spa": 0, "spd": 0, "spe": 0]
+		
+		for (stat, value) in baseStats {
+			var statMod: Double = 1.0
+			let eScalar = Double(evs[stat]! / 4)
+			let baseStatCalc: Double = (2.0 * Double(value) + Double(ivs[stat]!) + eScalar)
+			//var levelScalar: Double = (Double(level) / 100.0 + 5.0)
+			if (Dex.natureList[nature]![stat] != nil) {
+				statMod = Dex.natureList[nature]![stat]!
+			}
+			if stat == "hp" {
+				actualStats[stat] = Int.init(Double((baseStatCalc * Double(level) / 100.0 + Double(level) + 10.0)))
+			} else {
+				actualStats[stat] = Int.init(Double((baseStatCalc * Double(level) / 100.0 + 5.0) * statMod))
+			}
+		}
+		self.actualStats = actualStats
+		
+	}
+	
 	//calc Max virtual stat values for Level indicators
 	static func calcMaxStats() -> [String: Int] {
 		let natureMod: Double = 1.1
@@ -280,6 +308,36 @@ class Pokemon: NSObject {
 		return virtualStats
 		//make something return an array of altered virtual stats for text color!!!-----Reminder!!!!!
 	}
+	
+	func calcVirtualStatsMutating() {
+		let pokemon: Pokemon = self
+		var virtuallyAlteredStats = [String]()
+		let actualStats: [String: Int] = pokemon.actualStats
+		var virtualStats: [String: Int] = actualStats
+		//check for virtual stats
+		if pokemon.item.statMods != ["": 1.0] {
+			//			pokemon.virtualStats = pokemon.actualStats
+			for (stat, value) in pokemon.item.statMods {
+				virtualStats[stat] = Int.init(Double(virtualStats[stat]!) * value)
+				virtuallyAlteredStats.append(stat) //this does nothing right now
+			}
+		}
+		// begin the exception line here
+		if pokemon.ability == "Huge Power" || pokemon.ability == "Pure Power" {
+			pokemon.statBoosts["atk"] = pokemon.statBoosts["atk"]! * 2.0
+		}
+		let boostSum: Double = pokemon.statBoosts["atk"]! + pokemon.statBoosts["def"]! + pokemon.statBoosts["spa"]! + pokemon.statBoosts["spd"]! + pokemon.statBoosts["spe"]!
+		if boostSum != 5.0 {
+			for (stat, boostMult) in pokemon.statBoosts {
+				virtualStats[stat] = Int.init(Double(virtualStats[stat]!) * boostMult)
+			}
+		}
+		
+		self.virtualStats = virtualStats
+		//make something return an array of altered virtual stats for text color!!!-----Reminder!!!!!
+	}
+	
+	
 	// method to calc BST
 	static func calcBST(pokemon: Pokemon) -> Int {
 		var bst = 0

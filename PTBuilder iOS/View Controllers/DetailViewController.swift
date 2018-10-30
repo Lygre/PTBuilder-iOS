@@ -19,12 +19,56 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 	@IBOutlet weak var abilityLabel: UILabel!
 	@IBOutlet weak var natureLabel: UILabel!
 	@IBOutlet weak var levelLabel: UILabel!
+	//move labels
 	@IBOutlet weak var move1Label: UILabel!
 	@IBOutlet weak var move2Label: UILabel!
 	@IBOutlet weak var move3Label: UILabel!
 	@IBOutlet weak var move4Label: UILabel!
+	//base stat labels
+	@IBOutlet weak var baseHPLabel: UILabel!
+	@IBOutlet weak var baseATKLabel: UILabel!
+	@IBOutlet weak var baseDEFLabel: UILabel!
+	@IBOutlet weak var baseSPALabel: UILabel!
+	@IBOutlet weak var baseSPDLabel: UILabel!
+	@IBOutlet weak var baseSPELabel: UILabel!
+	//EV sliders
+	@IBOutlet weak var hpEVSlider: UISlider!
+	@IBOutlet weak var atkEVSlider: UISlider!
+	@IBOutlet weak var defEVSlider: UISlider!
+	@IBOutlet weak var spaEVSlider: UISlider!
+	@IBOutlet weak var spdEVSlider: UISlider!
+	@IBOutlet weak var speEVSlider: UISlider!
+	//EV value labels
+	@IBOutlet weak var hpEVLabel: UILabel!
+	@IBOutlet weak var atkEVLabel: UILabel!
+	@IBOutlet weak var defEVLabel: UILabel!
+	@IBOutlet weak var spaEVLabel: UILabel!
+	@IBOutlet weak var spdEVLabel: UILabel!
+	@IBOutlet weak var speEVLabel: UILabel!
+	
+	//iv text fields
+	@IBOutlet weak var hpIVTextField: UITextField!
+	@IBOutlet weak var atkIVTextField: UITextField!
+	@IBOutlet weak var defIVTextField: UITextField!
+	@IBOutlet weak var spaIVTextField: UITextField!
+	@IBOutlet weak var spdIVTextField: UITextField!
+	@IBOutlet weak var speIVTextField: UITextField!
 	
 	
+	//actual stats labels
+	@IBOutlet weak var actualHPLabel: UILabel!
+	@IBOutlet weak var actualATKLabel: UILabel!
+	@IBOutlet weak var actualDEFLabel: UILabel!
+	@IBOutlet weak var actualSPALabel: UILabel!
+	@IBOutlet weak var actualSPDLabel: UILabel!
+	@IBOutlet weak var actualSPELabel: UILabel!
+	
+	@IBOutlet weak var hpVirtualLabel: UILabel!
+	@IBOutlet weak var atkVirtualLabel: UILabel!
+	@IBOutlet weak var defVirtualLabel: UILabel!
+	@IBOutlet weak var spaVirtualLabel: UILabel!
+	@IBOutlet weak var spdVirtualLabel: UILabel!
+	@IBOutlet weak var speVirtualLabel: UILabel!
 	
 	
 	@IBOutlet weak var pokemonPropertyPicker: UIPickerView!
@@ -123,8 +167,41 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 		refreshUI()
 	}
 	
+	
+	@IBAction func sliderChanged(_ sender: Any) {
+		//set current pokemon's EVs based on updated slider values
+		pokemon?.eVs["hp"] = Int.init(hpEVSlider.value)
+		pokemon?.eVs["atk"] = Int.init(atkEVSlider.value)
+		pokemon?.eVs["def"] = Int.init(defEVSlider.value)
+		pokemon?.eVs["spa"] = Int.init(spaEVSlider.value)
+		pokemon?.eVs["spd"] = Int.init(spdEVSlider.value)
+		pokemon?.eVs["spe"] = Int.init(speEVSlider.value)
+		pokemon?.calcStatsMutating()
+		pokemon?.calcVirtualStatsMutating()
+		refreshUI()
+		
+		print(pokemon?.eVs["hp"], pokemon?.eVs["atk"])
+		print(pokemon?.virtualStats)
+	}
+	
+	@IBAction func ivValueChanged(_ sender: Any) {
+		pokemon?.iVs["hp"] = Int.init(hpIVTextField.text ?? "0")
+		pokemon?.iVs["atk"] = Int.init(atkIVTextField.text ?? "0")
+		pokemon?.iVs["def"] = Int.init(defIVTextField.text ?? "0")
+		pokemon?.iVs["spa"] = Int.init(spaIVTextField.text ?? "0")
+		pokemon?.iVs["spd"] = Int.init(spdIVTextField.text ?? "0")
+		pokemon?.iVs["spe"] = Int.init(speIVTextField.text ?? "0")
+		pokemon?.calcStatsMutating()
+		pokemon?.calcVirtualStatsMutating()
+		refreshUI()
+	}
+	
+	
+	
 	func refreshUI() {
 		loadViewIfNeeded()
+
+		
 		pokemonNameLabel.text = pokemon?.species
 		spriteImageView.image = pokemon?.monSprite
 		natureLabel.text = pokemon?.nature
@@ -135,6 +212,47 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 		move2Label.text = pokemon?.move2.name
 		move3Label.text = pokemon?.move3.name
 		move4Label.text = pokemon?.move4.name
+		baseHPLabel.text = "\(pokemon!.baseStats["hp"]!)"
+		baseATKLabel.text = "\(pokemon!.baseStats["atk"]!)"
+		baseDEFLabel.text = "\(pokemon!.baseStats["def"]!)"
+		baseSPALabel.text = "\(pokemon!.baseStats["spa"]!)"
+		baseSPDLabel.text = "\(pokemon!.baseStats["spd"]!)"
+		baseSPELabel.text = "\(pokemon!.baseStats["spe"]!)"
+		
+		hpEVSlider.value = Float(pokemon!.eVs["hp"]!)
+		atkEVSlider.value = Float(pokemon!.eVs["atk"]!)
+		defEVSlider.value = Float(pokemon!.eVs["def"]!)
+		spaEVSlider.value = Float(pokemon!.eVs["spa"]!)
+		spdEVSlider.value = Float(pokemon!.eVs["spd"]!)
+		speEVSlider.value = Float(pokemon!.eVs["spe"]!)
+		
+		hpEVLabel.text = "\(pokemon!.eVs["hp"]!)"
+		atkEVLabel.text = "\(pokemon!.eVs["atk"]!)"
+		defEVLabel.text = "\(pokemon!.eVs["def"]!)"
+		spaEVLabel.text = "\(pokemon!.eVs["spa"]!)"
+		spdEVLabel.text = "\(pokemon!.eVs["spd"]!)"
+		speEVLabel.text = "\(pokemon!.eVs["spe"]!)"
+		
+		hpIVTextField.text = "\(pokemon!.iVs["hp"]!)"
+		atkIVTextField.text = "\(pokemon!.iVs["atk"]!)"
+		defIVTextField.text = "\(pokemon!.iVs["def"]!)"
+		spaIVTextField.text = "\(pokemon!.iVs["spa"]!)"
+		spdIVTextField.text = "\(pokemon!.iVs["spd"]!)"
+		speIVTextField.text = "\(pokemon!.iVs["spe"]!)"
+		
+		actualHPLabel.text = "\(pokemon!.actualStats["hp"]!)"
+		actualATKLabel.text = "\(pokemon!.actualStats["atk"]!)"
+		actualDEFLabel.text = "\(pokemon!.actualStats["def"]!)"
+		actualSPALabel.text = "\(pokemon!.actualStats["spa"]!)"
+		actualSPDLabel.text = "\(pokemon!.actualStats["spd"]!)"
+		actualSPELabel.text = "\(pokemon!.actualStats["spe"]!)"
+		
+		hpVirtualLabel.text = "\(pokemon!.virtualStats["hp"]!)"
+		atkVirtualLabel.text = "\(pokemon!.virtualStats["atk"]!)"
+		defVirtualLabel.text = "\(pokemon!.virtualStats["def"]!)"
+		spaVirtualLabel.text = "\(pokemon!.virtualStats["spa"]!)"
+		spdVirtualLabel.text = "\(pokemon!.virtualStats["spd"]!)"
+		speVirtualLabel.text = "\(pokemon!.virtualStats["spe"]!)"
 		
 		let propertySelectorIndex = pokemonPropertySegmentedSelector.selectedSegmentIndex
 		print(propertySelectorIndex)
