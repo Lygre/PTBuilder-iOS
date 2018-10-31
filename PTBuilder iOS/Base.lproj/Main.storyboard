@@ -1038,7 +1038,7 @@
         <scene sceneID="LYH-hY-gMM">
             <objects>
                 <tableViewController storyboardIdentifier="teamWeaknessTableController" title="teamWeaknessTableController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uYR-uo-KGB" customClass="TeamWeaknessTableViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="300" estimatedRowHeight="-1" sectionHeaderHeight="43" sectionFooterHeight="28" id="Gec-Vd-lgT">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="43" sectionFooterHeight="28" id="Gec-Vd-lgT">
                         <rect key="frame" x="0.0" y="0.0" width="990.5" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1911,7 +1911,7 @@
             <objects>
                 <navigationController id="Oum-vw-Khk" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I0N-OH-mhp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

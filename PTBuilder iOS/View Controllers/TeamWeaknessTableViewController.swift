@@ -84,7 +84,15 @@ class TeamWeaknessTableViewController: UITableViewController {
         return cell
     }
     */
-
+	//set modular row height varying by section to display
+	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		if teamSectionToDisplay == "Team Weaknesses" {
+			return 90.0
+		} else if teamSectionToDisplay == "Team Coverage" {
+			return 300.0
+		} else { return 90.0 }
+	}
+	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		var cellIdentifier = ""
 		
