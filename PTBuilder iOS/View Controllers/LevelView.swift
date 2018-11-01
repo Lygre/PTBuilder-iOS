@@ -33,7 +33,7 @@ class LevelView: UIView {
 		
 		let rectMultiplier = pokemon?.determineMultipliersForStatRectangles()
 		//specify fill color and apply it to the path
-		UIColor.orange.setFill()
+		UIColor.gray.setFill()
 		path.fill()
 		
 		//specify a border color
