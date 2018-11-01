@@ -40,7 +40,24 @@ class LevelView: UIView {
 		UIColor.purple.setStroke()
 		path.stroke()
 		
-		self.createLevelInRect(levelMult: rectMultiplier?["hp"] ?? 0.5)
+		switch (self.accessibilityIdentifier) {
+		case "hpLevel":
+			self.createLevelInRect(levelMult: rectMultiplier?["hp"] ?? 0.5)
+		case "atkLevel":
+			self.createLevelInRect(levelMult: rectMultiplier?["atk"] ?? 0.5)
+		case "defLevel":
+			self.createLevelInRect(levelMult: rectMultiplier?["def"] ?? 0.5)
+		case "spaLevel":
+			self.createLevelInRect(levelMult: rectMultiplier?["spa"] ?? 0.5)
+		case "spdLevel":
+			self.createLevelInRect(levelMult: rectMultiplier?["spd"] ?? 0.5)
+		case "speLevel":
+			self.createLevelInRect(levelMult: rectMultiplier?["spe"] ?? 0.5)
+		default:
+			print("something wrong with draw switch for Levels based on access. identifier")
+		}
+		
+//		self.createLevelInRect(levelMult: rectMultiplier?["hp"] ?? 0.5)
 		UIColor.green.setFill()
 		levelPath.fill()
 		UIColor.blue.setStroke()

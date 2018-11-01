@@ -114,9 +114,26 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 		let width: CGFloat = 200.0
 		let height: CGFloat = 21.0
 		
-		let levelView = LevelView(frame: CGRect(x: 760.0, y: 480.0, width: width, height: height))
+		let hpLevelView = LevelView(frame: CGRect(x: 760.0, y: 480.0, width: width, height: height))
+		let atkLevelView = LevelView(frame: CGRect(x: 760.0, y: 534.0, width: width, height: height))
+		let defLevelView = LevelView(frame: CGRect(x: 760.0, y: 588.0, width: width, height: height))
+		let spaLevelView = LevelView(frame: CGRect(x: 760.0, y: 642.0, width: width, height: height))
+		let spdLevelView = LevelView(frame: CGRect(x: 760.0, y: 696.0, width: width, height: height))
+		let speLevelView = LevelView(frame: CGRect(x: 760.0, y: 750.0, width: width, height: height))
 		
-		self.view.addSubview(levelView)
+		hpLevelView.accessibilityIdentifier = "hpLevel"
+		atkLevelView.accessibilityIdentifier = "atkLevel"
+		defLevelView.accessibilityIdentifier = "defLevel"
+		spaLevelView.accessibilityIdentifier = "spaLevel"
+		spdLevelView.accessibilityIdentifier = "spdLevel"
+		speLevelView.accessibilityIdentifier = "speLevel"
+		
+		self.view.addSubview(hpLevelView)
+		self.view.addSubview(atkLevelView)
+		self.view.addSubview(defLevelView)
+		self.view.addSubview(spaLevelView)
+		self.view.addSubview(spdLevelView)
+		self.view.addSubview(speLevelView)
 	}
 	
 	override func didReceiveMemoryWarning() {
