@@ -336,8 +336,31 @@ class Pokemon: NSObject {
 		self.virtualStats = virtualStats
 		//make something return an array of altered virtual stats for text color!!!-----Reminder!!!!!
 	}
-	
-	
+	//determine multipliers for drawing stat rectangles
+	func determineMultipliersForStatRectangles() -> [String: CGFloat] {
+		let baseStats = self.baseStats
+		var multiplierDict: [String: CGFloat] = [:]
+		
+		for (stat, value) in baseStats {
+			switch (stat) {
+			case "hp":
+				multiplierDict[stat] = CGFloat.init(Double.init(value) / Double.init(255))
+			case "atk":
+				multiplierDict[stat] = CGFloat.init(Double.init(value) / Double.init(190))
+			case "def":
+				multiplierDict[stat] = CGFloat.init(Double.init(value) / Double.init(230))
+			case "spa":
+				multiplierDict[stat] = CGFloat.init(Double.init(value) / Double.init(194))
+			case "spd":
+				multiplierDict[stat] = CGFloat.init(Double.init(value) / Double.init(230))
+			case "spe":
+				multiplierDict[stat] = CGFloat.init(Double.init(value) / Double.init(180))
+			default:
+				print("something went wrong with multiplier switch")
+			}
+		}
+		return multiplierDict
+	}
 	// method to calc BST
 	static func calcBST(pokemon: Pokemon) -> Int {
 		var bst = 0

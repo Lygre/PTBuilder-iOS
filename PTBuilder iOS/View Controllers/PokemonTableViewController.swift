@@ -67,6 +67,7 @@ class PokemonTableViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let selectedPokemon = team.members[indexPath.row]
+		selectedDetailMember = selectedPokemon
 //		if let detailViewController = delegate as? DetailViewController, let detail
 		let presenter = self.splitViewController?.viewControllers.last as? DetailViewController
 		presenter?.pokemonSelected(selectedPokemon)

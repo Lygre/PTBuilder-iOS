@@ -10,6 +10,8 @@ import UIKit
 
 var teamMaster: Team = Team()
 
+var selectedDetailMember: Pokemon? = Pokemon()
+
 class FirstViewController: UIViewController {
 
 	@IBOutlet weak var monSearchField: UITextField!

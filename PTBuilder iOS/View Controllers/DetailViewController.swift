@@ -69,11 +69,17 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 	@IBOutlet weak var spaVirtualLabel: UILabel!
 	@IBOutlet weak var spdVirtualLabel: UILabel!
 	@IBOutlet weak var speVirtualLabel: UILabel!
+	//progress levels for stats
+	@IBOutlet weak var hpProgressBar: UIProgressView!
+	@IBOutlet weak var atkProgressBar: UIProgressView!
+	@IBOutlet weak var defProgressBar: UIProgressView!
+	@IBOutlet weak var spaProgressBar: UIProgressView!
+	@IBOutlet weak var spdProgressBar: UIProgressView!
+	@IBOutlet weak var speProgressBar: UIProgressView!
 	
 	
 	@IBOutlet weak var pokemonPropertyPicker: UIPickerView!
-	
-	
+
 	
 	var learnsetMoves = [Move]()
 	
@@ -101,6 +107,17 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 		
 		
     }
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		let width: CGFloat = 200.0
+		let height: CGFloat = 21.0
+		
+		let levelView = LevelView(frame: CGRect(x: 760.0, y: 480.0, width: width, height: height))
+		
+		self.view.addSubview(levelView)
+	}
 	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
@@ -253,6 +270,11 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 		spaVirtualLabel.text = "\(pokemon!.virtualStats["spa"]!)"
 		spdVirtualLabel.text = "\(pokemon!.virtualStats["spd"]!)"
 		speVirtualLabel.text = "\(pokemon!.virtualStats["spe"]!)"
+		
+		//don't know how I would configure this yet
+		//hpProgressBar.setProgress(<#T##progress: Float##Float#>, animated: <#T##Bool#>)
+	
+		
 		
 		let propertySelectorIndex = pokemonPropertySegmentedSelector.selectedSegmentIndex
 		print(propertySelectorIndex)

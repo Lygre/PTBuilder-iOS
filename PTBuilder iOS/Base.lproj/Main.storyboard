@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mKi-js-cFP">
-                                <rect key="frame" x="852" y="33" width="136" height="108"/>
+                                <rect key="frame" x="852" y="33" width="135.5" height="107.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mKi-js-cFP" secondAttribute="height" multiplier="17:9" constant="-68" id="mLt-F4-L45"/>
                                 </constraints>
@@ -723,6 +723,7 @@
                         <outlet property="atkEVLabel" destination="YaS-T8-Dyj" id="VXf-n8-PiC"/>
                         <outlet property="atkEVSlider" destination="pPk-a5-5FE" id="TJ4-1t-E6R"/>
                         <outlet property="atkIVTextField" destination="tJp-Pv-FKI" id="Zb5-jd-l3W"/>
+                        <outlet property="atkProgressBar" destination="ISJ-xJ-g00" id="ui5-L5-DIN"/>
                         <outlet property="atkVirtualLabel" destination="TO1-T8-hvx" id="gXj-Gm-Ysd"/>
                         <outlet property="baseATKLabel" destination="XKm-gP-ihZ" id="nHI-kn-g2h"/>
                         <outlet property="baseDEFLabel" destination="dA8-V4-ntj" id="pVJ-66-Amd"/>
@@ -733,10 +734,12 @@
                         <outlet property="defEVLabel" destination="rVL-a9-5th" id="Vch-pN-Oph"/>
                         <outlet property="defEVSlider" destination="Tba-Bd-1P8" id="FxB-sU-ISF"/>
                         <outlet property="defIVTextField" destination="7rN-uA-O7F" id="OfQ-MK-YVC"/>
+                        <outlet property="defProgressBar" destination="fnv-em-0RK" id="jER-zT-HWt"/>
                         <outlet property="defVirtualLabel" destination="kpI-fa-MQM" id="DEI-Tg-zfN"/>
                         <outlet property="hpEVLabel" destination="qKm-dz-Qoh" id="tdp-Dv-ZU9"/>
                         <outlet property="hpEVSlider" destination="52Z-Ac-2iQ" id="Znv-JM-EjS"/>
                         <outlet property="hpIVTextField" destination="3BZ-aw-9k0" id="iRL-4D-035"/>
+                        <outlet property="hpProgressBar" destination="Pnp-MU-Wfs" id="au8-Rq-n2b"/>
                         <outlet property="hpVirtualLabel" destination="A5t-c1-2cu" id="EP7-Hv-SWV"/>
                         <outlet property="itemLabel" destination="VYD-38-1zf" id="bsj-7I-KSK"/>
                         <outlet property="levelLabel" destination="Dfb-g4-1Rg" id="siH-io-to2"/>
@@ -751,14 +754,17 @@
                         <outlet property="spaEVLabel" destination="ObT-Xm-e0R" id="0Yd-xD-Zjm"/>
                         <outlet property="spaEVSlider" destination="ObU-ok-q21" id="K75-tw-AyG"/>
                         <outlet property="spaIVTextField" destination="71V-DG-M9f" id="KpW-fe-jtk"/>
+                        <outlet property="spaProgressBar" destination="je8-Dx-JU7" id="Ux7-4w-ZrD"/>
                         <outlet property="spaVirtualLabel" destination="Flh-na-Fvp" id="V0f-Rw-4lo"/>
                         <outlet property="spdEVLabel" destination="OM8-yr-bHw" id="Kto-bf-acM"/>
                         <outlet property="spdEVSlider" destination="0ba-UC-VrB" id="34h-iw-m1h"/>
                         <outlet property="spdIVTextField" destination="JBc-hg-bJf" id="wx2-0f-XEs"/>
+                        <outlet property="spdProgressBar" destination="Hlz-Eg-z83" id="8jZ-ox-vug"/>
                         <outlet property="spdVirtualLabel" destination="YIF-Um-lnR" id="cqe-Zp-MmS"/>
                         <outlet property="speEVLabel" destination="icC-cu-Rjb" id="rt6-gq-iHJ"/>
                         <outlet property="speEVSlider" destination="Drq-AC-eJU" id="Zqh-YT-Udg"/>
                         <outlet property="speIVTextField" destination="TeG-iw-3ip" id="TEq-5e-bUp"/>
+                        <outlet property="speProgressBar" destination="EHT-Uv-kAh" id="Ib3-q0-r3V"/>
                         <outlet property="speVirtualLabel" destination="MBh-6h-hoY" id="l9Z-gk-gPF"/>
                         <outlet property="spriteImageView" destination="mKi-js-cFP" id="mKK-Jv-1jo"/>
                     </connections>
@@ -776,7 +782,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section to Display" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8u-Rc-ayv">
-                                <rect key="frame" x="614" y="40" width="138" height="21"/>
+                                <rect key="frame" x="614" y="40" width="138" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -979,6 +985,76 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="equalSpacing" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="RfS-rp-1Yo">
+                                <rect key="frame" x="782" y="241" width="150" height="281.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="redraw" verticalHuggingPriority="750" ambiguous="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pnp-MU-Wfs">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="2.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1.5" id="XAg-sP-lAR"/>
+                                        </constraints>
+                                        <color key="progressTintColor" red="0.20126202393602155" green="0.66666668653488159" blue="0.20525293124310232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </progressView>
+                                    <progressView opaque="NO" contentMode="redraw" verticalHuggingPriority="750" ambiguous="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ISJ-xJ-g00">
+                                        <rect key="frame" x="0.0" y="56" width="150" height="2.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1.5" id="ZL9-kj-o86"/>
+                                        </constraints>
+                                        <color key="progressTintColor" red="0.2012620239" green="0.66666668650000005" blue="0.20525293119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="trackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </progressView>
+                                    <progressView opaque="NO" contentMode="redraw" verticalHuggingPriority="750" ambiguous="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fnv-em-0RK">
+                                        <rect key="frame" x="0.0" y="112" width="150" height="2.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1.5" id="Wt6-9t-QNW"/>
+                                        </constraints>
+                                        <color key="progressTintColor" red="0.2012620239" green="0.66666668650000005" blue="0.20525293119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="trackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </progressView>
+                                    <progressView opaque="NO" contentMode="redraw" verticalHuggingPriority="750" ambiguous="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="je8-Dx-JU7">
+                                        <rect key="frame" x="0.0" y="168" width="150" height="2.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1.5" id="jyk-m7-H65"/>
+                                        </constraints>
+                                        <color key="progressTintColor" red="0.2012620239" green="0.66666668650000005" blue="0.20525293119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="trackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </progressView>
+                                    <progressView opaque="NO" contentMode="redraw" verticalHuggingPriority="750" ambiguous="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hlz-Eg-z83">
+                                        <rect key="frame" x="0.0" y="224" width="150" height="2.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1.5" id="wja-Zl-2lY"/>
+                                        </constraints>
+                                        <color key="progressTintColor" red="0.2012620239" green="0.66666668650000005" blue="0.20525293119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="trackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </progressView>
+                                    <progressView opaque="NO" contentMode="redraw" verticalHuggingPriority="750" ambiguous="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EHT-Uv-kAh">
+                                        <rect key="frame" x="0.0" y="280" width="150" height="2.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="progressTintColor" red="0.2012620239" green="0.66666668650000005" blue="0.20525293119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="trackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </progressView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ISJ-xJ-g00" firstAttribute="centerX" secondItem="Pnp-MU-Wfs" secondAttribute="centerX" id="6rI-wy-1bJ"/>
+                                    <constraint firstItem="ISJ-xJ-g00" firstAttribute="top" secondItem="Pnp-MU-Wfs" secondAttribute="bottom" constant="54.5" id="72k-ZF-XCr"/>
+                                    <constraint firstItem="EHT-Uv-kAh" firstAttribute="centerX" secondItem="Pnp-MU-Wfs" secondAttribute="centerX" id="72k-dt-wDD"/>
+                                    <constraint firstItem="Hlz-Eg-z83" firstAttribute="centerX" secondItem="Pnp-MU-Wfs" secondAttribute="centerX" id="IPG-HY-0Wh"/>
+                                    <constraint firstItem="je8-Dx-JU7" firstAttribute="centerX" secondItem="Pnp-MU-Wfs" secondAttribute="centerX" id="gPY-KH-8eY"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1837,7 +1913,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="1i8-Qi-hRy">
-                            <rect key="frame" x="0.0" y="118" width="0.0" height="44"/>
+                            <rect key="frame" x="0.0" y="118" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <viewLayoutGuide key="safeArea" id="8e3-e5-qav"/>
                             <items>
