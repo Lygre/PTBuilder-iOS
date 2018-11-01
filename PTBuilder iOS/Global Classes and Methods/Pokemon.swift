@@ -344,17 +344,17 @@ class Pokemon: NSObject {
 		for (stat, value) in baseStats {
 			switch (stat) {
 			case "hp":
-				multiplierDict[stat] = CGFloat.init(Double.init(value) / Double.init(255))
+				multiplierDict[stat] = CGFloat.init(Double.init(value) / Double.init(258))
 			case "atk":
-				multiplierDict[stat] = CGFloat.init(Double.init(value) / Double.init(190))
+				multiplierDict[stat] = CGFloat.init(Double.init(value) / Double.init(192))
 			case "def":
-				multiplierDict[stat] = CGFloat.init(Double.init(value) / Double.init(230))
+				multiplierDict[stat] = CGFloat.init(Double.init(value) / Double.init(232))
 			case "spa":
-				multiplierDict[stat] = CGFloat.init(Double.init(value) / Double.init(194))
+				multiplierDict[stat] = CGFloat.init(Double.init(value) / Double.init(196))
 			case "spd":
-				multiplierDict[stat] = CGFloat.init(Double.init(value) / Double.init(230))
+				multiplierDict[stat] = CGFloat.init(Double.init(value) / Double.init(232))
 			case "spe":
-				multiplierDict[stat] = CGFloat.init(Double.init(value) / Double.init(180))
+				multiplierDict[stat] = CGFloat.init(Double.init(value) / Double.init(182))
 			default:
 				print("something went wrong with multiplier switch")
 			}

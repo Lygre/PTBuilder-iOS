@@ -42,26 +42,110 @@ class LevelView: UIView {
 		
 		switch (self.accessibilityIdentifier) {
 		case "hpLevel":
-			self.createLevelInRect(levelMult: rectMultiplier?["hp"] ?? 0.5)
+			let levelMultiplier = rectMultiplier?["hp"] ?? 0.5
+			self.createLevelInRect(levelMult: levelMultiplier)
+			if levelMultiplier > 0.5 {
+				UIColor.green.setFill()
+				levelPath.fill()
+			} else if levelMultiplier < 0.5 {
+				UIColor.orange.setFill()
+				levelPath.fill()
+			} else if levelMultiplier < 0.25 {
+				UIColor.red.setFill()
+				levelPath.fill()
+			} else {
+				UIColor.green.setFill()
+				levelPath.fill()
+			}
 		case "atkLevel":
-			self.createLevelInRect(levelMult: rectMultiplier?["atk"] ?? 0.5)
+			let levelMultiplier = rectMultiplier?["atk"] ?? 0.5
+			self.createLevelInRect(levelMult: levelMultiplier)
+			if levelMultiplier > 0.5 {
+				UIColor.green.setFill()
+				levelPath.fill()
+			} else if levelMultiplier < 0.5 {
+				UIColor.orange.setFill()
+				levelPath.fill()
+			} else if levelMultiplier < 0.25 {
+				UIColor.red.setFill()
+				levelPath.fill()
+			} else {
+				UIColor.green.setFill()
+				levelPath.fill()
+			}
 		case "defLevel":
-			self.createLevelInRect(levelMult: rectMultiplier?["def"] ?? 0.5)
+			let levelMultiplier = rectMultiplier?["def"] ?? 0.5
+			self.createLevelInRect(levelMult: levelMultiplier)
+			if levelMultiplier > 0.5 {
+				UIColor.green.setFill()
+				levelPath.fill()
+			} else if levelMultiplier < 0.5 {
+				UIColor.orange.setFill()
+				levelPath.fill()
+			} else if levelMultiplier < 0.25 {
+				UIColor.red.setFill()
+				levelPath.fill()
+			} else {
+				UIColor.green.setFill()
+				levelPath.fill()
+			}
 		case "spaLevel":
-			self.createLevelInRect(levelMult: rectMultiplier?["spa"] ?? 0.5)
+			let levelMultiplier = rectMultiplier?["spa"] ?? 0.5
+			self.createLevelInRect(levelMult: levelMultiplier)
+			if levelMultiplier > 0.5 {
+				UIColor.green.setFill()
+				levelPath.fill()
+			} else if levelMultiplier < 0.5 {
+				UIColor.orange.setFill()
+				levelPath.fill()
+			} else if levelMultiplier < 0.25 {
+				UIColor.red.setFill()
+				levelPath.fill()
+			} else {
+				UIColor.green.setFill()
+				levelPath.fill()
+			}
 		case "spdLevel":
-			self.createLevelInRect(levelMult: rectMultiplier?["spd"] ?? 0.5)
+			let levelMultiplier = rectMultiplier?["spd"] ?? 0.5
+			self.createLevelInRect(levelMult: levelMultiplier)
+			if levelMultiplier > 0.5 {
+				UIColor.green.setFill()
+				levelPath.fill()
+			} else if levelMultiplier < 0.5 {
+				UIColor.orange.setFill()
+				levelPath.fill()
+			} else if levelMultiplier < 0.25 {
+				UIColor.red.setFill()
+				levelPath.fill()
+			} else {
+				UIColor.green.setFill()
+				levelPath.fill()
+			}
 		case "speLevel":
-			self.createLevelInRect(levelMult: rectMultiplier?["spe"] ?? 0.5)
+			let levelMultiplier = rectMultiplier?["spe"] ?? 0.5
+			self.createLevelInRect(levelMult: levelMultiplier)
+			if levelMultiplier > 0.5 {
+				UIColor.green.setFill()
+				levelPath.fill()
+			} else if levelMultiplier < 0.5 {
+				UIColor.orange.setFill()
+				levelPath.fill()
+			} else if levelMultiplier < 0.25 {
+				UIColor.red.setFill()
+				levelPath.fill()
+			} else {
+				UIColor.green.setFill()
+				levelPath.fill()
+			}
 		default:
 			print("something wrong with draw switch for Levels based on access. identifier")
 		}
 		
 //		self.createLevelInRect(levelMult: rectMultiplier?["hp"] ?? 0.5)
-		UIColor.green.setFill()
-		levelPath.fill()
-		UIColor.blue.setStroke()
-		levelPath.stroke()
+//		UIColor.green.setFill()
+//		levelPath.fill()
+//		UIColor.blue.setStroke()
+//		levelPath.stroke()
 		
 	}
 	
