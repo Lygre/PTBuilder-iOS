@@ -56,13 +56,9 @@ class PokedexViewController: UITableViewController {
 		let presenter = self.splitViewController?.viewControllers.last as? PokedexDetailViewController
 		presenter?.pokemonSelected(selectedPokemon!)
 		pokemon = selectedPokemon
-		selectedDetailMember = pokemon
-		presenter?.hpLevelView.pokemonSelected(pokemon!)
-		presenter?.atkLevelView.pokemonSelected(pokemon!)
-		presenter?.defLevelView.pokemonSelected(pokemon!)
-		presenter?.spaLevelView.pokemonSelected(pokemon!)
-		presenter?.spdLevelView.pokemonSelected(pokemon!)
-		presenter?.speLevelView.pokemonSelected(pokemon!)
+		selectedDetailMember2 = selectedPokemon
+		presenter?.pokemonSelected(pokemon!)
+		
 	}
 
 //	func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

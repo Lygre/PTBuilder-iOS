@@ -39,33 +39,36 @@ class PokedexDetailViewController: UIViewController {
 	
 	var pokemon: Pokemon? {
 		didSet {
-			self.pokemon?.level = 100
 			refreshUI()
 		}
 	}
 	
-	var hpLevelView = LevelView()
-	var atkLevelView = LevelView()
-	var defLevelView = LevelView()
-	var spaLevelView = LevelView()
-	var spdLevelView = LevelView()
-	var speLevelView = LevelView()
+
 	
 	
 	var abilitiesArray: [String] = []
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		Dex.initializeDex()
+		Dex.defineTypeMatchups()
+		MoveDex.initializeMoveDex()
+		ItemDex.initializeItemDex()
+		
+    }
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
 		
 		let width: CGFloat = 200.0
 		let height: CGFloat = 21.0
 		
-		hpLevelView = LevelView(frame: CGRect(x: 760.0, y: 480.0, width: width, height: height))
-		atkLevelView = LevelView(frame: CGRect(x: 760.0, y: 534.0, width: width, height: height))
-		defLevelView = LevelView(frame: CGRect(x: 760.0, y: 588.0, width: width, height: height))
-		spaLevelView = LevelView(frame: CGRect(x: 760.0, y: 642.0, width: width, height: height))
-		spdLevelView = LevelView(frame: CGRect(x: 760.0, y: 696.0, width: width, height: height))
-		speLevelView = LevelView(frame: CGRect(x: 760.0, y: 750.0, width: width, height: height))
+		let hpLevelView = LevelViewPokedex(frame: CGRect(x: 760.0, y: 480.0, width: width, height: height))
+		let atkLevelView = LevelViewPokedex(frame: CGRect(x: 760.0, y: 534.0, width: width, height: height))
+		let defLevelView = LevelViewPokedex(frame: CGRect(x: 760.0, y: 588.0, width: width, height: height))
+		let spaLevelView = LevelViewPokedex(frame: CGRect(x: 760.0, y: 642.0, width: width, height: height))
+		let spdLevelView = LevelViewPokedex(frame: CGRect(x: 760.0, y: 696.0, width: width, height: height))
+		let speLevelView = LevelViewPokedex(frame: CGRect(x: 760.0, y: 750.0, width: width, height: height))
 		
 		hpLevelView.accessibilityIdentifier = "hpLevel2"
 		atkLevelView.accessibilityIdentifier = "atkLevel2"
@@ -74,12 +77,12 @@ class PokedexDetailViewController: UIViewController {
 		spdLevelView.accessibilityIdentifier = "spdLevel2"
 		speLevelView.accessibilityIdentifier = "speLevel2"
 		
-//		hpLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
-//		atkLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
-//		defLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
-//		spaLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
-//		spdLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
-//		speLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
+		//		hpLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
+		//		atkLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
+		//		defLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
+		//		spaLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
+		//		spdLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
+		//		speLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
 		
 		self.view.addSubview(hpLevelView)
 		self.view.addSubview(atkLevelView)
@@ -87,15 +90,11 @@ class PokedexDetailViewController: UIViewController {
 		self.view.addSubview(spaLevelView)
 		self.view.addSubview(spdLevelView)
 		self.view.addSubview(speLevelView)
-        // Do any additional setup after loading the view.
-    }
-	
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
-		
-		
+		// Do any additional setup after loading the view.
 	}
-
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+	}
     /*
     // MARK: - Navigation
 
@@ -110,7 +109,7 @@ class PokedexDetailViewController: UIViewController {
 	func refreshUI() {
 		loadViewIfNeeded()
 		
-		selectedDetailMember = pokemon
+		selectedDetailMember2 = pokemon
 		pokemon?.level = 100
 		pokemon?.nature = "hardy"
 		pokemon?.calcStatsMutating()
@@ -145,6 +144,8 @@ class PokedexDetailViewController: UIViewController {
 		actualSPALabel.text = "\(pokemon!.actualStats["spa"]!)"
 		actualSPDLabel.text = "\(pokemon!.actualStats["spd"]!)"
 		actualSPELabel.text = "\(pokemon!.actualStats["spe"]!)"
+		
+//		hpLevelView.
 		
 //		hpLevelView?.pokemonSelected(pokemon!)
 //		atkLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])

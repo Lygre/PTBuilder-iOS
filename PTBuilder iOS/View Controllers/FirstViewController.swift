@@ -12,6 +12,8 @@ var teamMaster: Team = Team()
 
 var selectedDetailMember: Pokemon? = Pokemon()
 
+var selectedDetailMember2: Pokemon? = Pokemon()
+
 class FirstViewController: UIViewController {
 
 	@IBOutlet weak var monSearchField: UITextField!

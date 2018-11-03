@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F11283B218E0CD10025F468 /* LevelViewPokedex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F11283A218E0CD10025F468 /* LevelViewPokedex.swift */; };
 		9F36B787217CCCF60013DAAF /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36B786217CCCF60013DAAF /* PokemonTableViewCell.swift */; };
 		9F36B789217CCF9F0013DAAF /* PokemonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36B788217CCF9F0013DAAF /* PokemonTableViewController.swift */; };
 		9F61A475217BEE13002A78A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A474217BEE13002A78A8 /* AppDelegate.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F11283A218E0CD10025F468 /* LevelViewPokedex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewPokedex.swift; sourceTree = "<group>"; };
 		9F36B786217CCCF60013DAAF /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
 		9F36B788217CCF9F0013DAAF /* PokemonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewController.swift; sourceTree = "<group>"; };
 		9F61A471217BEE13002A78A8 /* PTBuilder iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PTBuilder iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +190,7 @@
 				9F36B788217CCF9F0013DAAF /* PokemonTableViewController.swift */,
 				9F9E53C8217E4FB5009D4C56 /* DetailViewController.swift */,
 				9F983A2B218B4FFE003F4584 /* LevelView.swift */,
+				9F11283A218E0CD10025F468 /* LevelViewPokedex.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				9F983A33218C0331003F4584 /* PokedexSearch.swift in Sources */,
 				9F36B787217CCCF60013DAAF /* PokemonTableViewCell.swift in Sources */,
 				9F61A4A9217BEF3E002A78A8 /* Support Functions.swift in Sources */,
+				9F11283B218E0CD10025F468 /* LevelViewPokedex.swift in Sources */,
 				9F9E53CB217E7A8E009D4C56 /* PokemonSelectionDelegate.swift in Sources */,
 				9FF00AF42180E1D000DB9BE8 /* TeamTableViewController.swift in Sources */,
 				9F983A2F218BD75F003F4584 /* PokedexViewController.swift in Sources */,
