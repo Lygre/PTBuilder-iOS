@@ -44,98 +44,231 @@ class LevelView: UIView {
 		case "hpLevel":
 			let levelMultiplier = rectMultiplier?["hp"] ?? 0.5
 			self.createLevelInRect(levelMult: levelMultiplier)
-			if levelMultiplier > 0.5 {
+			if levelMultiplier > 0.24 && levelMultiplier < 0.35 {
+				UIColor.yellow.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier >= 0.35 {
 				UIColor.green.setFill()
-				levelPath.fill()
-			} else if levelMultiplier < 0.5 {
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.24 && levelMultiplier > 0.17 {
 				UIColor.orange.setFill()
-				levelPath.fill()
-			} else if levelMultiplier < 0.25 {
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.13 {
 				UIColor.red.setFill()
-				levelPath.fill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
 			} else {
 				UIColor.green.setFill()
-				levelPath.fill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
 			}
 		case "atkLevel":
 			let levelMultiplier = rectMultiplier?["atk"] ?? 0.5
 			self.createLevelInRect(levelMult: levelMultiplier)
-			if levelMultiplier > 0.5 {
+			if levelMultiplier > 0.25 && levelMultiplier < 0.70 {
+				UIColor.yellow.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier >= 0.70 {
 				UIColor.green.setFill()
-				levelPath.fill()
-			} else if levelMultiplier < 0.5 {
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.25 && levelMultiplier > 0.1 {
 				UIColor.orange.setFill()
-				levelPath.fill()
-			} else if levelMultiplier < 0.25 {
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.1 {
 				UIColor.red.setFill()
-				levelPath.fill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
 			} else {
 				UIColor.green.setFill()
-				levelPath.fill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
 			}
 		case "defLevel":
 			let levelMultiplier = rectMultiplier?["def"] ?? 0.5
 			self.createLevelInRect(levelMult: levelMultiplier)
-			if levelMultiplier > 0.5 {
+			if levelMultiplier > 0.32 && levelMultiplier < 0.59 {
+				UIColor.yellow.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier >= 0.59 {
 				UIColor.green.setFill()
-				levelPath.fill()
-			} else if levelMultiplier < 0.5 {
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.32 && levelMultiplier > 0.19 {
 				UIColor.orange.setFill()
-				levelPath.fill()
-			} else if levelMultiplier < 0.25 {
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.19 {
 				UIColor.red.setFill()
-				levelPath.fill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
 			} else {
 				UIColor.green.setFill()
-				levelPath.fill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
 			}
 		case "spaLevel":
 			let levelMultiplier = rectMultiplier?["spa"] ?? 0.5
 			self.createLevelInRect(levelMult: levelMultiplier)
-			if levelMultiplier > 0.5 {
+			if levelMultiplier > 0.38 && levelMultiplier < 0.55 {
+				UIColor.yellow.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier >= 0.55 {
 				UIColor.green.setFill()
-				levelPath.fill()
-			} else if levelMultiplier < 0.5 {
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.38 && levelMultiplier > 0.21 {
 				UIColor.orange.setFill()
-				levelPath.fill()
-			} else if levelMultiplier < 0.25 {
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.21 {
 				UIColor.red.setFill()
-				levelPath.fill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
 			} else {
 				UIColor.green.setFill()
-				levelPath.fill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
 			}
 		case "spdLevel":
 			let levelMultiplier = rectMultiplier?["spd"] ?? 0.5
 			self.createLevelInRect(levelMult: levelMultiplier)
-			if levelMultiplier > 0.5 {
+			if levelMultiplier > 0.32 && levelMultiplier < 0.44 {
+				UIColor.yellow.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier >= 0.44 {
 				UIColor.green.setFill()
-				levelPath.fill()
-			} else if levelMultiplier < 0.5 {
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.32 && levelMultiplier > 0.20 {
 				UIColor.orange.setFill()
-				levelPath.fill()
-			} else if levelMultiplier < 0.25 {
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.20 {
 				UIColor.red.setFill()
-				levelPath.fill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
 			} else {
 				UIColor.green.setFill()
-				levelPath.fill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
 			}
 		case "speLevel":
 			let levelMultiplier = rectMultiplier?["spe"] ?? 0.5
 			self.createLevelInRect(levelMult: levelMultiplier)
-			if levelMultiplier > 0.5 {
+			if levelMultiplier > 0.39 && levelMultiplier < 0.55 {
+				UIColor.yellow.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier >= 0.55 {
 				UIColor.green.setFill()
-				levelPath.fill()
-			} else if levelMultiplier < 0.5 {
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.39 && levelMultiplier > 0.22 {
 				UIColor.orange.setFill()
-				levelPath.fill()
-			} else if levelMultiplier < 0.25 {
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.22 {
 				UIColor.red.setFill()
-				levelPath.fill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
 			} else {
 				UIColor.green.setFill()
-				levelPath.fill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			}
+			//--- For other set of LevelViews
+		case "hpLevel2":
+			let levelMultiplier = rectMultiplier?["hp"] ?? 0.5
+			self.createLevelInRect(levelMult: levelMultiplier)
+			if levelMultiplier > 0.24 && levelMultiplier < 0.35 {
+				UIColor.yellow.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier >= 0.35 {
+				UIColor.green.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.24 && levelMultiplier > 0.17 {
+				UIColor.orange.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.13 {
+				UIColor.red.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else {
+				UIColor.green.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			}
+		case "atkLevel2":
+			let levelMultiplier = rectMultiplier?["atk"] ?? 0.5
+			self.createLevelInRect(levelMult: levelMultiplier)
+			if levelMultiplier > 0.25 && levelMultiplier < 0.70 {
+				UIColor.yellow.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier >= 0.70 {
+				UIColor.green.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.25 && levelMultiplier > 0.1 {
+				UIColor.orange.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.1 {
+				UIColor.red.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else {
+				UIColor.green.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			}
+		case "defLevel2":
+			let levelMultiplier = rectMultiplier?["def"] ?? 0.5
+			self.createLevelInRect(levelMult: levelMultiplier)
+			if levelMultiplier > 0.32 && levelMultiplier < 0.59 {
+				UIColor.yellow.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier >= 0.59 {
+				UIColor.green.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.32 && levelMultiplier > 0.19 {
+				UIColor.orange.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.19 {
+				UIColor.red.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else {
+				UIColor.green.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			}
+		case "spaLevel2":
+			let levelMultiplier = rectMultiplier?["spa"] ?? 0.5
+			self.createLevelInRect(levelMult: levelMultiplier)
+			if levelMultiplier > 0.38 && levelMultiplier < 0.55 {
+				UIColor.yellow.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier >= 0.55 {
+				UIColor.green.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.38 && levelMultiplier > 0.21 {
+				UIColor.orange.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.21 {
+				UIColor.red.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else {
+				UIColor.green.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			}
+		case "spdLevel2":
+			let levelMultiplier = rectMultiplier?["spd"] ?? 0.5
+			self.createLevelInRect(levelMult: levelMultiplier)
+			if levelMultiplier > 0.32 && levelMultiplier < 0.44 {
+				UIColor.yellow.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier >= 0.44 {
+				UIColor.green.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.32 && levelMultiplier > 0.20 {
+				UIColor.orange.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.20 {
+				UIColor.red.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else {
+				UIColor.green.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			}
+		case "speLevel2":
+			let levelMultiplier = rectMultiplier?["spe"] ?? 0.5
+			self.createLevelInRect(levelMult: levelMultiplier)
+			if levelMultiplier > 0.39 && levelMultiplier < 0.55 {
+				UIColor.yellow.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier >= 0.55 {
+				UIColor.green.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.39 && levelMultiplier > 0.22 {
+				UIColor.orange.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else if levelMultiplier <= 0.22 {
+				UIColor.red.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
+			} else {
+				UIColor.green.setFill()
+				levelPath.fill(with: .colorBurn, alpha: 0.9)
 			}
 		default:
 			print("something wrong with draw switch for Levels based on access. identifier")
@@ -201,4 +334,10 @@ class LevelView: UIView {
 		
 	}
 	
+}
+
+extension LevelView: PokemonSelectionDelegate {
+	func pokemonSelected(_ newPokemon: Pokemon) {
+		pokemon = newPokemon
+	}
 }
