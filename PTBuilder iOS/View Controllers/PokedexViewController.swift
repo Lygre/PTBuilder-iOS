@@ -43,10 +43,10 @@ class PokedexViewController: UITableViewController {
 			fatalError("Not an instance of PokedexTableViewCell")
 		}
 		
-		pokemon = pokedex![indexPath.row]
+		let pokemon = pokedex![indexPath.row]
 		
-		cell.pokemonName.text = pokemon!.species
-		cell.pokemonImage.image = UIImage(named: dexNumToSprite(pokemon!)!)
+		cell.pokemonName.text = pokemon.species
+		cell.pokemonImage.image = UIImage(named: dexNumToSprite(pokemon)!)
 		
 		return cell
 	}
@@ -54,10 +54,11 @@ class PokedexViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let selectedPokemon = pokedex?[indexPath.row]
 		let presenter = self.splitViewController?.viewControllers.last as? PokedexDetailViewController
+		print(presenter.debugDescription)
 		presenter?.pokemonSelected(selectedPokemon!)
 		pokemon = selectedPokemon
 		selectedDetailMember2 = selectedPokemon
-		presenter?.pokemonSelected(pokemon!)
+		
 		
 	}
 
@@ -116,4 +117,12 @@ class PokedexViewController: UITableViewController {
     }
     */
 
+}
+
+extension PokedexViewController: PokemonSelectionDelegate {
+	func pokemonSelected(_ newPokemon: Pokemon) {
+		pokemon = newPokemon
+	}
+	
+	
 }

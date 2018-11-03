@@ -233,6 +233,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 	
 	
 	func refreshUI() {
+		
 		loadViewIfNeeded()
 
 		

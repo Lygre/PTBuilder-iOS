@@ -2109,7 +2109,7 @@
                                 <connections>
                                     <outlet property="pokemonImage" destination="9z7-mU-KRy" id="VpR-oc-qGE"/>
                                     <outlet property="pokemonName" destination="eqd-SM-QkE" id="bd0-ok-d1m"/>
-                                    <segue destination="f57-Ak-dzp" kind="showDetail" identifier="showDetailDex" trigger="accessoryAction" id="dhI-LD-u9W"/>
+                                    <segue destination="f57-Ak-dzp" kind="showDetail" id="RY2-iT-efg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -2260,7 +2260,7 @@
             <objects>
                 <navigationController id="Oum-vw-Khk" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I0N-OH-mhp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -2402,7 +2402,7 @@
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dhI-LD-u9W"/>
+        <segue reference="RY2-iT-efg"/>
         <segue reference="vTu-ry-fWT"/>
     </inferredMetricsTieBreakers>
 </document>

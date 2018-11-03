@@ -63,19 +63,19 @@ class PokedexDetailViewController: UIViewController {
 		let width: CGFloat = 200.0
 		let height: CGFloat = 21.0
 		
-		let hpLevelView = LevelViewPokedex(frame: CGRect(x: 760.0, y: 480.0, width: width, height: height))
-		let atkLevelView = LevelViewPokedex(frame: CGRect(x: 760.0, y: 534.0, width: width, height: height))
-		let defLevelView = LevelViewPokedex(frame: CGRect(x: 760.0, y: 588.0, width: width, height: height))
-		let spaLevelView = LevelViewPokedex(frame: CGRect(x: 760.0, y: 642.0, width: width, height: height))
-		let spdLevelView = LevelViewPokedex(frame: CGRect(x: 760.0, y: 696.0, width: width, height: height))
-		let speLevelView = LevelViewPokedex(frame: CGRect(x: 760.0, y: 750.0, width: width, height: height))
+		let hpLevelView2 = LevelViewPokedex(frame: CGRect(x: 760.0, y: 480.0, width: width, height: height))
+		let atkLevelView2 = LevelViewPokedex(frame: CGRect(x: 760.0, y: 534.0, width: width, height: height))
+		let defLevelView2 = LevelViewPokedex(frame: CGRect(x: 760.0, y: 588.0, width: width, height: height))
+		let spaLevelView2 = LevelViewPokedex(frame: CGRect(x: 760.0, y: 642.0, width: width, height: height))
+		let spdLevelView2 = LevelViewPokedex(frame: CGRect(x: 760.0, y: 696.0, width: width, height: height))
+		let speLevelView2 = LevelViewPokedex(frame: CGRect(x: 760.0, y: 750.0, width: width, height: height))
 		
-		hpLevelView.accessibilityIdentifier = "hpLevel2"
-		atkLevelView.accessibilityIdentifier = "atkLevel2"
-		defLevelView.accessibilityIdentifier = "defLevel2"
-		spaLevelView.accessibilityIdentifier = "spaLevel2"
-		spdLevelView.accessibilityIdentifier = "spdLevel2"
-		speLevelView.accessibilityIdentifier = "speLevel2"
+		hpLevelView2.accessibilityIdentifier = "hpLevel2"
+		atkLevelView2.accessibilityIdentifier = "atkLevel2"
+		defLevelView2.accessibilityIdentifier = "defLevel2"
+		spaLevelView2.accessibilityIdentifier = "spaLevel2"
+		spdLevelView2.accessibilityIdentifier = "spdLevel2"
+		speLevelView2.accessibilityIdentifier = "speLevel2"
 		
 		//		hpLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
 		//		atkLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
@@ -84,38 +84,40 @@ class PokedexDetailViewController: UIViewController {
 		//		spdLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
 		//		speLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
 		
-		self.view.addSubview(hpLevelView)
-		self.view.addSubview(atkLevelView)
-		self.view.addSubview(defLevelView)
-		self.view.addSubview(spaLevelView)
-		self.view.addSubview(spdLevelView)
-		self.view.addSubview(speLevelView)
+		self.view.addSubview(hpLevelView2)
+		self.view.addSubview(atkLevelView2)
+		self.view.addSubview(defLevelView2)
+		self.view.addSubview(spaLevelView2)
+		self.view.addSubview(spdLevelView2)
+		self.view.addSubview(speLevelView2)
 		// Do any additional setup after loading the view.
 	}
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 	}
-    /*
+	/*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+		
     }
-    */
+*/
 
 	
 	func refreshUI() {
 		loadViewIfNeeded()
-		
-		selectedDetailMember2 = pokemon
+//		reloadInputViews()
+		loadView()
 		pokemon?.level = 100
 		pokemon?.nature = "hardy"
 		pokemon?.calcStatsMutating()
 		pokemon?.calcVirtualStatsMutating()
 		monImageView.image = UIImage(named: (dexNumToSprite(pokemon!) ?? "0.png"))
 		monNameLabel.text = pokemon?.species
+		print(pokemon?.species)
 		switch (pokemon?.abilities.count) {
 		case 1:
 			ability1Label.text = pokemon?.abilities[0]
