@@ -63,12 +63,12 @@ class PokedexDetailViewController: UIViewController {
 		let width: CGFloat = 200.0
 		let height: CGFloat = 21.0
 		
-		let hpLevelView2 = LevelViewPokedex(frame: CGRect(x: 760.0, y: 480.0, width: width, height: height))
-		let atkLevelView2 = LevelViewPokedex(frame: CGRect(x: 760.0, y: 534.0, width: width, height: height))
-		let defLevelView2 = LevelViewPokedex(frame: CGRect(x: 760.0, y: 588.0, width: width, height: height))
-		let spaLevelView2 = LevelViewPokedex(frame: CGRect(x: 760.0, y: 642.0, width: width, height: height))
-		let spdLevelView2 = LevelViewPokedex(frame: CGRect(x: 760.0, y: 696.0, width: width, height: height))
-		let speLevelView2 = LevelViewPokedex(frame: CGRect(x: 760.0, y: 750.0, width: width, height: height))
+		let hpLevelView2 = LevelViewPokedex(frame: CGRect(x: 172.0, y: 480.0, width: width, height: height))
+		let atkLevelView2 = LevelViewPokedex(frame: CGRect(x: 172.0, y: 534.0, width: width, height: height))
+		let defLevelView2 = LevelViewPokedex(frame: CGRect(x: 172.0, y: 588.0, width: width, height: height))
+		let spaLevelView2 = LevelViewPokedex(frame: CGRect(x: 172.0, y: 642.0, width: width, height: height))
+		let spdLevelView2 = LevelViewPokedex(frame: CGRect(x: 172.0, y: 696.0, width: width, height: height))
+		let speLevelView2 = LevelViewPokedex(frame: CGRect(x: 172.0, y: 750.0, width: width, height: height))
 		
 		hpLevelView2.accessibilityIdentifier = "hpLevel2"
 		atkLevelView2.accessibilityIdentifier = "atkLevel2"
