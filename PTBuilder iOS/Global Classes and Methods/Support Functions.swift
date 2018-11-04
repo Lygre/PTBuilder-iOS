@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 // Function to convert Array of Pokemon objects to string array of their names
 
 func convertPokemonToDict(_ pokemon: [Pokemon]) -> [[String: AnyObject]] {
@@ -157,6 +157,15 @@ func dexNumToSpriteUsingSpecies(_ monName: String) -> String? {
 	spriteName = spriteName! + ".png"
 	
 	return spriteName ?? "0.png"
+}
+
+func itemToIcon(_ item: Item) -> UIImage {
+	var itemImage: UIImage = UIImage(named: "0.png")!
+	
+	var itemName: String = item.name.replacingOccurrences(of: " ", with: "-").lowercased()
+	let imgName: String = "\(itemName).png"
+	itemImage = UIImage(named: imgName)!
+	return itemImage
 }
 
 func dexNumToSpriteUsingNum(_ num: Int) -> String? {

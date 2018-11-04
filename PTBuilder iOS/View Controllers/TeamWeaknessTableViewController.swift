@@ -20,6 +20,8 @@ class TeamWeaknessTableViewController: UITableViewController {
 		}
 	}
 	
+	var suggestedMons: [Pokemon] = findSuggestedMons(team: teamMaster)
+	
 	@IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
 	
 	@IBOutlet var teamWeaknessTableView: UITableView!
@@ -34,13 +36,16 @@ class TeamWeaknessTableViewController: UITableViewController {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-
+		Dex.initializeDex()
+		Dex.defineTypeMatchups()
+		
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
 //		refreshUI()
+		suggestedMons = findSuggestedMons(team: teamMaster)
 		setupView()
 		fetchTeamData()
 		refreshTableControl.addTarget(self, action: #selector(refreshTeamData(_:)), for: .valueChanged)
@@ -71,6 +76,12 @@ class TeamWeaknessTableViewController: UITableViewController {
 			}
 		} else if teamSectionToDisplay == "Team Coverage" {
 			return 1
+		} else if teamSectionToDisplay == "Team Attributes" {
+			return 1
+		} else if teamSectionToDisplay == "Suggested Mons" {
+			if suggestedMons.count > 0 {
+				return suggestedMons.count
+			} else { return 1 }
 		} else { return 1 }
 		
     }
@@ -90,6 +101,10 @@ class TeamWeaknessTableViewController: UITableViewController {
 			return 90.0
 		} else if teamSectionToDisplay == "Team Coverage" {
 			return 300.0
+		} else if teamSectionToDisplay == "Team Attributes" {
+			return 180
+		} else if teamSectionToDisplay == "Suggested Mons" {
+			return 180
 		} else { return 90.0 }
 	}
 	
@@ -244,6 +259,51 @@ class TeamWeaknessTableViewController: UITableViewController {
 			
 			return cell
 			
+		} else if teamSectionToDisplay == "Team Attributes" {
+			cellIdentifier = "TeamAttributesTableViewCell"
+			guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TeamAttributesTableViewCell
+				else {
+					fatalError("Not an instance of TeamAttributesTableViewCell")
+			}
+			
+			let teamAttributes = team.determineAttributes()
+			var attributesDict: [String: UIImage] = [:]
+			for (attribute, bool) in teamAttributes {
+				switch (bool) {
+				case true:
+					attributesDict[attribute] = UIImage(named: "greenCheck.png")
+				case false:
+					attributesDict[attribute] = UIImage(named: "redX.png")
+				}
+			}
+			cell.stealthRockBool.image = attributesDict["Stealth Rock"]
+			cell.stickywebBool.image = attributesDict["Sticky Web"]
+			cell.spikesBool.image = attributesDict["Spikes"]
+			cell.lightscreenBool.image = attributesDict["Light Screen"]
+			cell.reflectBool.image = attributesDict["Reflect"]
+			cell.auroraveilBool.image = attributesDict["Aurora Veil"]
+			cell.defogBool.image = attributesDict["Defog"]
+			cell.rapidspinBool.image = attributesDict["Rapid Spin"]
+			cell.tauntBool.image = attributesDict["Taunt"]
+			cell.phaserBool.image = attributesDict["Phaser"]
+			
+			return cell
+			
+		} else if teamSectionToDisplay == "Suggested Mons" {
+			cellIdentifier = "SuggestedMonTableViewCell"
+			guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? SuggestedMonTableViewCell
+				else {
+					fatalError("Not an instance of TeamAttributesTableViewCell")
+			}
+			
+//			suggestedMons = findSuggestedMons(team: team)
+//			var mon = suggestedMons[indexPath.row]
+			
+			cell.suggestedMonImage.image = UIImage(named: "\(suggestedMons[indexPath.row].num).png")
+			cell.suggestedMonLabel.text = "\(suggestedMons[indexPath.row].species)"
+			
+			return cell
+			
 		} else {
 			cellIdentifier = "TeamWeaknessTableViewCell"
 			guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TeamWeaknessTableViewCell
@@ -328,7 +388,7 @@ class TeamWeaknessTableViewController: UITableViewController {
 		print("Fetching team Data")
 		
 		self.team = teamMaster
-		
+		self.suggestedMons = findSuggestedMons(team: self.team)
 		self.updateView()
 		self.refreshTableControl.endRefreshing()
 		self.activityIndicatorView.stopAnimating()

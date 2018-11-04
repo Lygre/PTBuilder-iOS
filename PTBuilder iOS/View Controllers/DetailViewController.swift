@@ -16,6 +16,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 	@IBOutlet weak var pokemonNameLabel: UILabel!
 	@IBOutlet weak var spriteImageView: UIImageView!
 	@IBOutlet weak var itemLabel: UILabel!
+	@IBOutlet weak var itemImage: UIImageView!
 	@IBOutlet weak var abilityLabel: UILabel!
 	@IBOutlet weak var natureLabel: UILabel!
 	@IBOutlet weak var levelLabel: UILabel!
@@ -242,6 +243,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 		natureLabel.text = pokemon?.nature
 		abilityLabel.text = pokemon?.ability
 		itemLabel.text = pokemon?.item.name
+		itemImage.image = itemToIcon((pokemon?.item)!)
 		levelLabel.text = pokemon?.level.description
 		move1Label.text = pokemon?.move1.name
 		move2Label.text = pokemon?.move2.name
