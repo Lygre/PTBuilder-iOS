@@ -2320,220 +2320,217 @@
                                     <constraint firstAttribute="width" constant="42" id="EuM-RQ-YXg"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="C0z-Jn-hBM">
-                                <rect key="frame" x="131" y="247" width="96" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="KAw-Cx-YpG">
+                                <rect key="frame" x="27.5" y="247" width="936" height="183"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dark" translatesAutoresizingMaskIntoConstraints="NO" id="e9V-Nw-f27">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="39"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="7aE-SE-UfO">
-                                        <rect key="frame" x="0.0" y="60" width="96" height="39"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="alT-ao-NgL">
-                                <rect key="frame" x="235" y="247" width="96" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dragon" translatesAutoresizingMaskIntoConstraints="NO" id="zXv-4M-Ipa">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="39"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="KEn-gp-YQV">
-                                        <rect key="frame" x="0.0" y="60" width="96" height="39"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="JE7-S8-RkC">
-                                <rect key="frame" x="20" y="247" width="96" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bug" translatesAutoresizingMaskIntoConstraints="NO" id="hpk-9S-ROP">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="39"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="XzJ-cn-Gsk">
-                                        <rect key="frame" x="0.0" y="60" width="96" height="39"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="TJf-8I-TBG">
-                                <rect key="frame" x="658" y="247" width="96" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fire" translatesAutoresizingMaskIntoConstraints="NO" id="dC6-OR-oBa">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="OfG-vz-QJb">
-                                        <rect key="frame" x="0.0" y="59" width="96" height="40"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="B7d-zd-g8G">
-                                <rect key="frame" x="346" y="247" width="96" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Electric" translatesAutoresizingMaskIntoConstraints="NO" id="r4b-LP-taU">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="39"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="4nT-Xn-8Au">
-                                        <rect key="frame" x="0.0" y="60" width="96" height="39"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="pAm-kb-3zF">
-                                <rect key="frame" x="450" y="247" width="96" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fairy" translatesAutoresizingMaskIntoConstraints="NO" id="gjf-fu-O3B">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="39"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="5V5-hc-Mz1">
-                                        <rect key="frame" x="0.0" y="60" width="96" height="39"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="GYj-qO-Qvw">
-                                <rect key="frame" x="554" y="247" width="96" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fighting" translatesAutoresizingMaskIntoConstraints="NO" id="30b-hi-U43">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="38"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="lnB-6l-78n">
-                                        <rect key="frame" x="0.0" y="61" width="96" height="38"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="WUA-8F-R2O">
-                                <rect key="frame" x="762" y="247" width="96" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flying" translatesAutoresizingMaskIntoConstraints="NO" id="efZ-H3-DWe">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="37"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="Rvc-qU-3CX">
-                                        <rect key="frame" x="0.0" y="62" width="96" height="37"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="WbR-AS-25t">
-                                <rect key="frame" x="866" y="247" width="96" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ghost" translatesAutoresizingMaskIntoConstraints="NO" id="7Ja-8G-vMF">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="FVv-gY-pAJ">
-                                        <rect key="frame" x="0.0" y="59" width="96" height="40"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="F7j-34-PM6">
-                                <rect key="frame" x="20" y="353" width="96" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grass" translatesAutoresizingMaskIntoConstraints="NO" id="YJu-aV-kzf">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="39"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="rEO-Id-gLp">
-                                        <rect key="frame" x="0.0" y="60" width="96" height="39"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="OQW-dW-fUn">
-                                <rect key="frame" x="131" y="353" width="96" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ground" translatesAutoresizingMaskIntoConstraints="NO" id="KPw-pO-bMF">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="fzp-jW-924">
-                                        <rect key="frame" x="0.0" y="59" width="96" height="40"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="5GQ-e8-cAk">
-                                <rect key="frame" x="235" y="353" width="96" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ice" translatesAutoresizingMaskIntoConstraints="NO" id="frc-ai-Kz5">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="39"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="3b3-1X-zWD">
-                                        <rect key="frame" x="0.0" y="60" width="96" height="39"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="00s-H2-0ND">
-                                <rect key="frame" x="346" y="353" width="96" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Normal" translatesAutoresizingMaskIntoConstraints="NO" id="E88-fh-eif">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="38"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="2U9-5l-WjC">
-                                        <rect key="frame" x="0.0" y="61" width="96" height="38"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="tYw-FQ-LSO">
-                                <rect key="frame" x="450" y="353" width="96" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poison" translatesAutoresizingMaskIntoConstraints="NO" id="qBP-6e-wJF">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="39"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="G0e-1f-RjU">
-                                        <rect key="frame" x="0.0" y="60" width="96" height="39"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="oPP-rn-nn1">
-                                <rect key="frame" x="554" y="353" width="96" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Psychic" translatesAutoresizingMaskIntoConstraints="NO" id="BZW-K0-gjO">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="hHF-kn-ZOo">
-                                        <rect key="frame" x="0.0" y="59" width="96" height="40"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="eLC-tY-qaw">
-                                <rect key="frame" x="658" y="353" width="96" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock" translatesAutoresizingMaskIntoConstraints="NO" id="qZY-Zp-tQc">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="37"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="eBF-sa-Nfj">
-                                        <rect key="frame" x="0.0" y="62" width="96" height="37"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Gc7-r8-VGh">
-                                <rect key="frame" x="762" y="353" width="96" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Steel" translatesAutoresizingMaskIntoConstraints="NO" id="EiU-Mo-xJH">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="37"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="x4o-rD-aMa">
-                                        <rect key="frame" x="0.0" y="62" width="96" height="37"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="A39-JT-BAT">
-                                <rect key="frame" x="866" y="353" width="96" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Water" translatesAutoresizingMaskIntoConstraints="NO" id="ouS-O1-X1m">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="39"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="E67-Z2-vPi">
-                                        <rect key="frame" x="0.0" y="60" width="96" height="39"/>
-                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="bpF-GX-dES">
+                                        <rect key="frame" x="0.0" y="0.0" width="936" height="88"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JE7-S8-RkC">
+                                                <rect key="frame" x="0.0" y="0.0" width="96" height="88"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bug" translatesAutoresizingMaskIntoConstraints="NO" id="hpk-9S-ROP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="XzJ-cn-Gsk">
+                                                        <rect key="frame" x="0.0" y="48" width="96" height="40"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="C0z-Jn-hBM">
+                                                <rect key="frame" x="105" y="0.0" width="96" height="88"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dark" translatesAutoresizingMaskIntoConstraints="NO" id="e9V-Nw-f27">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="7aE-SE-UfO">
+                                                        <rect key="frame" x="0.0" y="48" width="96" height="40"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="alT-ao-NgL">
+                                                <rect key="frame" x="210" y="0.0" width="96" height="88"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dragon" translatesAutoresizingMaskIntoConstraints="NO" id="zXv-4M-Ipa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="KEn-gp-YQV">
+                                                        <rect key="frame" x="0.0" y="48" width="96" height="40"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="B7d-zd-g8G">
+                                                <rect key="frame" x="315" y="0.0" width="96" height="88"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Electric" translatesAutoresizingMaskIntoConstraints="NO" id="r4b-LP-taU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="4nT-Xn-8Au">
+                                                        <rect key="frame" x="0.0" y="48" width="96" height="40"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pAm-kb-3zF">
+                                                <rect key="frame" x="420" y="0.0" width="96" height="88"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fairy" translatesAutoresizingMaskIntoConstraints="NO" id="gjf-fu-O3B">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="5V5-hc-Mz1">
+                                                        <rect key="frame" x="0.0" y="48" width="96" height="40"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GYj-qO-Qvw">
+                                                <rect key="frame" x="525" y="0.0" width="96" height="88"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fighting" translatesAutoresizingMaskIntoConstraints="NO" id="30b-hi-U43">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="lnB-6l-78n">
+                                                        <rect key="frame" x="0.0" y="48" width="96" height="40"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TJf-8I-TBG">
+                                                <rect key="frame" x="630" y="0.0" width="96" height="88"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fire" translatesAutoresizingMaskIntoConstraints="NO" id="dC6-OR-oBa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="OfG-vz-QJb">
+                                                        <rect key="frame" x="0.0" y="48" width="96" height="40"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WUA-8F-R2O">
+                                                <rect key="frame" x="735" y="0.0" width="96" height="88"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flying" translatesAutoresizingMaskIntoConstraints="NO" id="efZ-H3-DWe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="Rvc-qU-3CX">
+                                                        <rect key="frame" x="0.0" y="48" width="96" height="40"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WbR-AS-25t">
+                                                <rect key="frame" x="840" y="0.0" width="96" height="88"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ghost" translatesAutoresizingMaskIntoConstraints="NO" id="7Ja-8G-vMF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="FVv-gY-pAJ">
+                                                        <rect key="frame" x="0.0" y="48" width="96" height="40"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="YXh-mY-Cx8">
+                                        <rect key="frame" x="0.0" y="95" width="936" height="88"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F7j-34-PM6">
+                                                <rect key="frame" x="0.0" y="0.0" width="96" height="88"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grass" translatesAutoresizingMaskIntoConstraints="NO" id="YJu-aV-kzf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="rEO-Id-gLp">
+                                                        <rect key="frame" x="0.0" y="48" width="96" height="40"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OQW-dW-fUn">
+                                                <rect key="frame" x="105" y="0.0" width="96" height="88"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ground" translatesAutoresizingMaskIntoConstraints="NO" id="KPw-pO-bMF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="fzp-jW-924">
+                                                        <rect key="frame" x="0.0" y="48" width="96" height="40"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5GQ-e8-cAk">
+                                                <rect key="frame" x="210" y="0.0" width="96" height="88"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ice" translatesAutoresizingMaskIntoConstraints="NO" id="frc-ai-Kz5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="3b3-1X-zWD">
+                                                        <rect key="frame" x="0.0" y="48" width="96" height="40"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="00s-H2-0ND">
+                                                <rect key="frame" x="315" y="0.0" width="96" height="88"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Normal" translatesAutoresizingMaskIntoConstraints="NO" id="E88-fh-eif">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="2U9-5l-WjC">
+                                                        <rect key="frame" x="0.0" y="48" width="96" height="40"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tYw-FQ-LSO">
+                                                <rect key="frame" x="420" y="0.0" width="96" height="88"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poison" translatesAutoresizingMaskIntoConstraints="NO" id="qBP-6e-wJF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="G0e-1f-RjU">
+                                                        <rect key="frame" x="0.0" y="48" width="96" height="40"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oPP-rn-nn1">
+                                                <rect key="frame" x="525" y="0.0" width="96" height="88"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Psychic" translatesAutoresizingMaskIntoConstraints="NO" id="BZW-K0-gjO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="hHF-kn-ZOo">
+                                                        <rect key="frame" x="0.0" y="48" width="96" height="40"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eLC-tY-qaw">
+                                                <rect key="frame" x="630" y="0.0" width="96" height="88"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock" translatesAutoresizingMaskIntoConstraints="NO" id="qZY-Zp-tQc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="eBF-sa-Nfj">
+                                                        <rect key="frame" x="0.0" y="48" width="96" height="40"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gc7-r8-VGh">
+                                                <rect key="frame" x="735" y="0.0" width="96" height="88"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Steel" translatesAutoresizingMaskIntoConstraints="NO" id="EiU-Mo-xJH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="x4o-rD-aMa">
+                                                        <rect key="frame" x="0.0" y="48" width="96" height="40"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="A39-JT-BAT">
+                                                <rect key="frame" x="840" y="0.0" width="96" height="88"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Water" translatesAutoresizingMaskIntoConstraints="NO" id="ouS-O1-X1m">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune" translatesAutoresizingMaskIntoConstraints="NO" id="E67-Z2-vPi">
+                                                        <rect key="frame" x="0.0" y="48" width="96" height="40"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -2541,9 +2538,11 @@
                         <constraints>
                             <constraint firstItem="1kB-HG-JhB" firstAttribute="leading" secondItem="bYY-E0-yem" secondAttribute="trailing" constant="8" id="14Z-ed-gpI"/>
                             <constraint firstItem="G2R-cN-FIo" firstAttribute="top" secondItem="e5B-Ac-4v3" secondAttribute="bottom" constant="301" id="18P-Qu-3QX"/>
+                            <constraint firstItem="KAw-Cx-YpG" firstAttribute="centerX" secondItem="hNb-A7-M5E" secondAttribute="centerX" id="8r8-ff-FwG"/>
                             <constraint firstItem="mcF-6h-f7r" firstAttribute="top" secondItem="WEL-NR-aj7" secondAttribute="top" constant="80" id="D0G-ya-rgY"/>
                             <constraint firstItem="1kB-HG-JhB" firstAttribute="top" secondItem="WEL-NR-aj7" secondAttribute="top" id="Iv1-4i-rth"/>
                             <constraint firstItem="s9n-ZL-M3H" firstAttribute="leading" secondItem="G2R-cN-FIo" secondAttribute="trailing" constant="8" id="MbC-CM-QAu"/>
+                            <constraint firstItem="KAw-Cx-YpG" firstAttribute="top" secondItem="1kB-HG-JhB" secondAttribute="bottom" constant="47" id="OtS-Hf-dk9"/>
                             <constraint firstItem="s9n-ZL-M3H" firstAttribute="top" secondItem="e5B-Ac-4v3" secondAttribute="bottom" constant="301" id="PEb-Uy-ZS4"/>
                             <constraint firstItem="aFg-5M-ZFQ" firstAttribute="top" secondItem="mcF-6h-f7r" secondAttribute="bottom" constant="9" id="PZ3-Tw-BPB"/>
                             <constraint firstItem="WEL-NR-aj7" firstAttribute="trailing" secondItem="G9K-xm-gF1" secondAttribute="trailing" constant="536.5" id="Q9a-hI-zpI"/>

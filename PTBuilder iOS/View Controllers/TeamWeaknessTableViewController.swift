@@ -299,7 +299,7 @@ class TeamWeaknessTableViewController: UITableViewController {
 //			suggestedMons = findSuggestedMons(team: team)
 //			var mon = suggestedMons[indexPath.row]
 			
-			cell.suggestedMonImage.image = UIImage(named: "\(suggestedMons[indexPath.row].num).png")
+			cell.suggestedMonImage.image = UIImage(named: dexNumToSprite(suggestedMons[indexPath.row]) ?? "0.png")
 			cell.suggestedMonLabel.text = "\(suggestedMons[indexPath.row].species)"
 			
 			return cell
