@@ -37,6 +37,26 @@ class PokedexDetailViewController: UIViewController {
 	@IBOutlet weak var actualSPDLabel: UILabel!
 	@IBOutlet weak var actualSPELabel: UILabel!
 	
+	@IBOutlet weak var bugWeaknessImage: UIImageView!
+	@IBOutlet weak var darkWeaknessImage: UIImageView!
+	@IBOutlet weak var dragonWeaknessImage: UIImageView!
+	@IBOutlet weak var electricWeaknessImage: UIImageView!
+	@IBOutlet weak var fairyWeaknessImage: UIImageView!
+	@IBOutlet weak var fightingWeaknessImage: UIImageView!
+	@IBOutlet weak var fireWeaknessImage: UIImageView!
+	@IBOutlet weak var flyingWeaknessImage: UIImageView!
+	@IBOutlet weak var ghostWeaknessImage: UIImageView!
+	@IBOutlet weak var grassWeaknessImage: UIImageView!
+	@IBOutlet weak var groundWeaknessImage: UIImageView!
+	@IBOutlet weak var iceWeaknessImage: UIImageView!
+	@IBOutlet weak var normalWeaknessImage: UIImageView!
+	@IBOutlet weak var poisonWeaknessImage: UIImageView!
+	@IBOutlet weak var psychicWeaknessImage: UIImageView!
+	@IBOutlet weak var rockWeaknessImage: UIImageView!
+	@IBOutlet weak var steelWeaknessImage: UIImageView!
+	@IBOutlet weak var waterWeaknessImage: UIImageView!
+	
+	
 	var pokemon: Pokemon? {
 		didSet {
 			refreshUI()
@@ -146,16 +166,52 @@ class PokedexDetailViewController: UIViewController {
 		actualSPALabel.text = "\(pokemon!.actualStats["spa"]!)"
 		actualSPDLabel.text = "\(pokemon!.actualStats["spd"]!)"
 		actualSPELabel.text = "\(pokemon!.actualStats["spe"]!)"
+		var weaknessToImageDict: [String: UIImage] = [:]
+		if let monWeaknesses = pokemon?.getPokemonWeaknesses(pokemonName: pokemon!) {
+			
+			
+			for (type, vector) in monWeaknesses {
+				switch vector {
+				case 0:
+					weaknessToImageDict[type] = UIImage(named: "immune.png")
+				case 1:
+					weaknessToImageDict[type] = UIImage(named: "neutral.png")
+				case 2:
+					weaknessToImageDict[type] = UIImage(named: "weak2.png")
+				case 4:
+					weaknessToImageDict[type] = UIImage(named: "weak4.png")
+				case -2:
+					weaknessToImageDict[type] = UIImage(named: "resist2.png")
+				case -4:
+					weaknessToImageDict[type] = UIImage(named: "resist4.png")
+				default:
+					weaknessToImageDict[type] = UIImage(named: "0.png")
+					print("Problem with vector to image switch")
+				}
+				
+			}
+		} else {
+			print("problem")
+		}
+		bugWeaknessImage.image = weaknessToImageDict["Bug"]
+		darkWeaknessImage.image = weaknessToImageDict["Dark"]
+		dragonWeaknessImage.image = weaknessToImageDict["Dragon"]
+		electricWeaknessImage.image = weaknessToImageDict["Electric"]
+		fairyWeaknessImage.image = weaknessToImageDict["Fairy"]
+		fightingWeaknessImage.image = weaknessToImageDict["Fighting"]
+		fireWeaknessImage.image = weaknessToImageDict["Fire"]
+		flyingWeaknessImage.image = weaknessToImageDict["Flying"]
+		ghostWeaknessImage.image = weaknessToImageDict["Ghost"]
+		grassWeaknessImage.image = weaknessToImageDict["Grass"]
+		groundWeaknessImage.image = weaknessToImageDict["Ground"]
+		iceWeaknessImage.image = weaknessToImageDict["Ice"]
+		normalWeaknessImage.image = weaknessToImageDict["Normal"]
+		poisonWeaknessImage.image = weaknessToImageDict["Poison"]
+		psychicWeaknessImage.image = weaknessToImageDict["Psychic"]
+		rockWeaknessImage.image = weaknessToImageDict["Rock"]
+		steelWeaknessImage.image = weaknessToImageDict["Steel"]
+		waterWeaknessImage.image = weaknessToImageDict["Water"]
 		
-//		hpLevelView.
-		
-//		hpLevelView?.pokemonSelected(pokemon!)
-//		atkLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
-//		defLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
-//		spaLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
-//		spdLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
-//		speLevelView?.pokemonSelected(pokemon ?? Dex.searchDex(searchParam: "bulbasaur")[0])
-//
 	}
 	
 
