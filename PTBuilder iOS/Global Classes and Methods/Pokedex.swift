@@ -803,7 +803,7 @@ struct Dex {
 	static func searchDex(searchParam: String) -> [Pokemon] {
 		var searchResults = [Pokemon]()
 		// Determination of method type for string searchDex method
-		let searchStringLower = searchParam.lowercased()
+		let searchStringLower = searchParam.replacingOccurrences(of: " ", with: "").lowercased()
 		// Search by Type
 		if typeListLower.contains(searchStringLower) {
 			for mon in Dex.dexArray {

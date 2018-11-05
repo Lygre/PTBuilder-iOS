@@ -29,7 +29,7 @@
                                     <constraint firstAttribute="height" constant="36" id="gey-qL-H0D"/>
                                     <constraint firstAttribute="width" constant="219" id="qC5-gD-xe5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2533,12 +2533,25 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGy-Vw-LJM">
+                                <rect key="frame" x="590" y="100" width="132" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="RfN-Hy-2U7"/>
+                                    <constraint firstAttribute="height" constant="30" id="vEN-wz-TjH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Add To Team"/>
+                                <connections>
+                                    <action selector="addToTeam:" destination="f57-Ak-dzp" eventType="touchUpInside" id="11x-gD-7Ms"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="1kB-HG-JhB" firstAttribute="leading" secondItem="bYY-E0-yem" secondAttribute="trailing" constant="8" id="14Z-ed-gpI"/>
                             <constraint firstItem="G2R-cN-FIo" firstAttribute="top" secondItem="e5B-Ac-4v3" secondAttribute="bottom" constant="301" id="18P-Qu-3QX"/>
                             <constraint firstItem="KAw-Cx-YpG" firstAttribute="centerX" secondItem="hNb-A7-M5E" secondAttribute="centerX" id="8r8-ff-FwG"/>
+                            <constraint firstItem="kGy-Vw-LJM" firstAttribute="top" secondItem="bYY-E0-yem" secondAttribute="bottom" constant="30" id="AWo-Y2-hao"/>
                             <constraint firstItem="mcF-6h-f7r" firstAttribute="top" secondItem="WEL-NR-aj7" secondAttribute="top" constant="80" id="D0G-ya-rgY"/>
                             <constraint firstItem="1kB-HG-JhB" firstAttribute="top" secondItem="WEL-NR-aj7" secondAttribute="top" id="Iv1-4i-rth"/>
                             <constraint firstItem="s9n-ZL-M3H" firstAttribute="leading" secondItem="G2R-cN-FIo" secondAttribute="trailing" constant="8" id="MbC-CM-QAu"/>
@@ -2555,6 +2568,7 @@
                             <constraint firstItem="G9K-xm-gF1" firstAttribute="leading" secondItem="s9n-ZL-M3H" secondAttribute="trailing" constant="216" id="ufB-PE-kGZ"/>
                             <constraint firstItem="G9K-xm-gF1" firstAttribute="top" secondItem="WEL-NR-aj7" secondAttribute="top" constant="460" id="vEF-ZS-CJj"/>
                             <constraint firstItem="e5B-Ac-4v3" firstAttribute="top" secondItem="aFg-5M-ZFQ" secondAttribute="bottom" constant="6.5" id="wuJ-xS-xfv"/>
+                            <constraint firstItem="1kB-HG-JhB" firstAttribute="leading" secondItem="kGy-Vw-LJM" secondAttribute="trailing" constant="8" id="zOu-gY-aBG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WEL-NR-aj7"/>
                     </view>

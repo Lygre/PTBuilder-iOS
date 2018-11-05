@@ -63,7 +63,7 @@ class PokedexDetailViewController: UIViewController {
 		}
 	}
 	
-
+	var team: Team = teamMaster
 	
 	
 	var abilitiesArray: [String] = []
@@ -135,7 +135,7 @@ class PokedexDetailViewController: UIViewController {
 		pokemon?.nature = "hardy"
 		pokemon?.calcStatsMutating()
 		pokemon?.calcVirtualStatsMutating()
-		monImageView.image = UIImage(named: (dexNumToSprite(pokemon!) ?? "0.png"))
+		monImageView.image = UIImage(named: dexNumToSpriteUsingSpecies((pokemon?.species)!) ?? "Bulbasaur")
 		monNameLabel.text = pokemon?.species
 		print(pokemon?.species)
 		switch (pokemon?.abilities.count) {
@@ -215,6 +215,12 @@ class PokedexDetailViewController: UIViewController {
 	}
 	
 
+	@IBAction func addToTeam(_ sender: Any) {
+		team.addMember(pokemon!)
+		teamMaster = team
+	}
+	
+	
 	
 }
 

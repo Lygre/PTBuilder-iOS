@@ -120,7 +120,7 @@ class TeamWeaknessTableViewController: UITableViewController {
 			switch (indexPath.section) {
 			// Configure the cell...
 			case 1:
-				let monImage = UIImage(named: "\(team.members[indexPath.row].num).png")
+				let monImage = UIImage(named: dexNumToSpriteUsingSpecies(team.members[indexPath.row].species)!)
 				cell.monImageView.image = monImage ?? UIImage(named: "defaultPhoto")
 				
 				let mon = team.members[indexPath.row]

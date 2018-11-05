@@ -239,7 +239,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
 		
 		pokemonNameLabel.text = pokemon?.species
-		spriteImageView.image = pokemon?.monSprite
+		spriteImageView.image = UIImage(named: dexNumToSpriteUsingSpecies((pokemon?.species)!) ?? "Bulbasaur")
 		natureLabel.text = pokemon?.nature
 		abilityLabel.text = pokemon?.ability
 		itemLabel.text = pokemon?.item.name
