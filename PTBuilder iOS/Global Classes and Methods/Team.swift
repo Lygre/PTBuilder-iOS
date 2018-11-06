@@ -8,6 +8,7 @@
 import UIKit
 import Foundation
 
+
 class Team: NSObject {
 	@objc dynamic var members: [Pokemon]
 	@objc dynamic var teamWeaknesses: [String: Int]
@@ -33,6 +34,13 @@ class Team: NSObject {
 		
 		super.init()
 	}
+	
+//	required init(from: Decoder) throws {
+//
+//	}
+//	func encode(to encoder: Encoder) throws {
+//
+//	}
 	// Moving on to Team methods
 	// Method for calculating team weaknesses
 	func determineTeamWeaknesses() -> [String: Int] {
@@ -299,6 +307,7 @@ class Team: NSObject {
 		self.members.append(pokemon)
 	}
 	
+
 //	func removeMember(_ index: Int) {
 //
 //		self.members.remove(at: index)

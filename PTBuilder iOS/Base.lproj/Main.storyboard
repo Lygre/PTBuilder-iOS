@@ -2740,10 +2740,117 @@
             </objects>
             <point key="canvasLocation" x="750" y="1714"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Saved Teams Table View Controller-->
+        <scene sceneID="uGs-rC-GbS">
+            <objects>
+                <tableViewController id="SNu-9u-Adm" customClass="SavedTeamsTableViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KyX-f3-cp8">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="yDe-Mb-n1K">
+                            <rect key="frame" x="0.0" y="178" width="1366" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="Item" id="Hky-uJ-v5T"/>
+                            </items>
+                        </toolbar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SavedTeamsTableViewCell" rowHeight="150" id="y0w-rO-IEJ" customClass="SavedTeamsTableViewCell" customModule="PTBuilder_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="1366" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y0w-rO-IEJ" id="EkM-pl-G0i">
+                                    <rect key="frame" x="0.0" y="0.0" width="1366" height="149.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBf-Pc-Sao">
+                                            <rect key="frame" x="20" y="57" width="175" height="36"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="175" id="BIq-6l-Ys3"/>
+                                                <constraint firstAttribute="height" constant="36" id="I6e-hJ-J4P"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="106" translatesAutoresizingMaskIntoConstraints="NO" id="Z9R-QI-lHf">
+                                            <rect key="frame" x="240" y="26" width="1106" height="97.5"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="YC4-r6-F1i">
+                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="97.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="96" id="aE9-pY-VYD"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="HZJ-cx-vbJ">
+                                                    <rect key="frame" x="202" y="0.0" width="96" height="97.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="96" id="8pY-l8-iuc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="uer-7c-cIj">
+                                                    <rect key="frame" x="404" y="0.0" width="96" height="97.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="96" id="B0G-Aj-T7s"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="vVO-xJ-Bfv">
+                                                    <rect key="frame" x="606" y="0.0" width="96" height="97.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="96" id="dpD-ou-4MX"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="lzB-tA-Vbk">
+                                                    <rect key="frame" x="808" y="0.0" width="96" height="97.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="96" id="KRB-xf-UDi"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="gKF-1Z-q9b">
+                                                    <rect key="frame" x="1010" y="0.0" width="96" height="97.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="96" id="mqJ-oU-mxT"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="YBf-Pc-Sao" firstAttribute="centerY" secondItem="EkM-pl-G0i" secondAttribute="centerY" id="PU6-Ji-u6j"/>
+                                        <constraint firstItem="Z9R-QI-lHf" firstAttribute="centerY" secondItem="EkM-pl-G0i" secondAttribute="centerY" id="SUv-15-LIO"/>
+                                        <constraint firstItem="Z9R-QI-lHf" firstAttribute="trailing" secondItem="EkM-pl-G0i" secondAttribute="trailingMargin" id="St1-6x-vSE"/>
+                                        <constraint firstItem="YBf-Pc-Sao" firstAttribute="leading" secondItem="EkM-pl-G0i" secondAttribute="leading" constant="20" id="qYC-ja-7c0"/>
+                                        <constraint firstItem="Z9R-QI-lHf" firstAttribute="top" secondItem="EkM-pl-G0i" secondAttribute="topMargin" constant="11" id="wKE-4X-qqH"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="mon1Image" destination="YC4-r6-F1i" id="YA8-9f-6FI"/>
+                                    <outlet property="mon2Image" destination="HZJ-cx-vbJ" id="h4i-KL-X85"/>
+                                    <outlet property="mon3Image" destination="uer-7c-cIj" id="Rrd-b6-1Ah"/>
+                                    <outlet property="mon4Image" destination="vVO-xJ-Bfv" id="jHS-EV-SyE"/>
+                                    <outlet property="mon5Image" destination="lzB-tA-Vbk" id="nFF-v6-RE0"/>
+                                    <outlet property="mon6Image" destination="gKF-1Z-q9b" id="eFt-HU-ZWt"/>
+                                    <outlet property="savedTeamName" destination="YBf-Pc-Sao" id="ZqN-ny-R9S"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="SNu-9u-Adm" id="dan-El-Tia"/>
+                            <outlet property="delegate" destination="SNu-9u-Adm" id="02C-QV-hVh"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="savedTeamsTableView" destination="KyX-f3-cp8" id="9GI-cz-DzW"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sJR-vH-3bK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1961.6398243045387" y="-616.40625"/>
+        </scene>
+        <!--PokemonTableViewController-->
         <scene sceneID="jf7-qh-AY8">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="hzE-p3-wVt" customClass="PokemonTableViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PokemonTableViewController" title="PokemonTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="hzE-p3-wVt" customClass="PokemonTableViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qSN-QL-lBP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2753,10 +2860,61 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <viewLayoutGuide key="safeArea" id="8e3-e5-qav"/>
                             <items>
-                                <barButtonItem title="Remove" id="j7f-6a-yLs">
+                                <barButtonItem title="Edit" id="j7f-6a-yLs">
                                     <connections>
                                         <action selector="removeMember:" destination="hzE-p3-wVt" id="joz-6M-noz"/>
                                     </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" id="e4t-xX-K7o">
+                                    <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qvb-qt-IME">
+                                        <rect key="frame" x="56.5" y="5" width="84" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Save Team"/>
+                                        <connections>
+                                            <action selector="saveTeam:" destination="hzE-p3-wVt" eventType="touchUpInside" id="gFY-4t-ENw"/>
+                                        </connections>
+                                    </button>
+                                </barButtonItem>
+                                <barButtonItem title="Reset" style="plain" id="tAp-HK-R7A">
+                                    <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ade-p9-g3M">
+                                        <rect key="frame" x="140.5" y="7" width="54" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetSavedTeams:" destination="hzE-p3-wVt" eventType="touchUpInside" id="hUo-4q-qOl"/>
+                                            <action selector="resetTeams:" destination="3xY-HT-Lwq" eventType="touchUpInside" id="Thi-uq-PTd"/>
+                                        </connections>
+                                    </button>
+                                </barButtonItem>
+                                <barButtonItem style="plain" id="CYI-XY-iSp">
+                                    <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tSN-PF-mfS">
+                                        <rect key="frame" x="194.5" y="7" width="75" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Load Team"/>
+                                        <connections>
+                                            <segue destination="SNu-9u-Adm" kind="presentation" id="jwF-dV-P1Z"/>
+                                        </connections>
+                                    </button>
+                                </barButtonItem>
+                                <barButtonItem style="plain" id="REf-vh-Dq5">
+                                    <view key="customView" contentMode="scaleToFill" id="y9L-Yc-agG">
+                                        <rect key="frame" x="269.5" y="5.5" width="53" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0gK-J5-RBs">
+                                                <rect key="frame" x="4" y="2" width="45" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="saveTeamNameEndEditing:" destination="hzE-p3-wVt" eventType="editingDidEnd" id="CqN-hp-UOy"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </barButtonItem>
                             </items>
                         </toolbar>
@@ -2808,17 +2966,20 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="x3a-qN-iQO"/>
                     <connections>
+                        <outlet property="teamName" destination="0gK-J5-RBs" id="RqC-nx-SPp"/>
+                        <outlet property="teamNameTextView" destination="y9L-Yc-agG" id="I92-f2-vCg"/>
                         <outlet property="teamTableView" destination="qSN-QL-lBP" id="y5o-Ad-Y4M"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rrv-dU-AfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3xY-HT-Lwq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2259.9609375" y="100.58565153733528"/>
+            <point key="canvasLocation" x="2259.8828696925329" y="100.1953125"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--PokemonNavigationController-->
         <scene sceneID="SAF-Kg-gRG">
             <objects>
-                <navigationController id="Oum-vw-Khk" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="PokemonNavigationController" storyboardIdentifier="PokemonNavigationController" title="PokemonNavigationController" id="Oum-vw-Khk" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I0N-OH-mhp">
                         <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2975,7 +3136,7 @@
         <image name="taunt" width="72" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RY2-iT-efg"/>
+        <segue reference="QWj-vj-rUt"/>
         <segue reference="vTu-ry-fWT"/>
     </inferredMetricsTieBreakers>
 </document>

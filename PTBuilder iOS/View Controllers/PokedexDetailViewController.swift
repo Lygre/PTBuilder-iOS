@@ -218,6 +218,9 @@ class PokedexDetailViewController: UIViewController {
 	@IBAction func addToTeam(_ sender: Any) {
 		team.addMember(pokemon!)
 		teamMaster = team
+//		let teamView: UISplitViewController = storyboard?.instantiateViewController(withIdentifier: "teamMembersView") as! UISplitViewController
+//		self.show(teamView, sender: self)
+//		reloadInputViews()
 	}
 	
 	

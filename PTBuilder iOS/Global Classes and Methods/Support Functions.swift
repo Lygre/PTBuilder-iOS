@@ -141,12 +141,13 @@ func dexNumToSprite(_ mon: Pokemon) -> String? {
 	return spriteName!
 }
 
-func dexNumToSpriteUsingSpecies(_ monName: String) -> String? {
-	let mon = Dex.searchDex(searchParam: monName)[0]
+func dexNumToSpriteUsingSpecies(_ monName: String?) -> String? {
+	guard let mon: Pokemon = Dex.searchDex(searchParam: monName!)[0] else { let mon = Pokemon() }
 	let dexNum: Int? = mon.num
 	var spriteName: String?
 	
 	spriteName = "\(dexNum ?? 0)"
+	
 	
 	if mon.species.contains("-Alola") {
 		spriteName = spriteName! + "-alola"
@@ -165,7 +166,9 @@ func dexNumToSpriteUsingSpecies(_ monName: String) -> String? {
 	}
 	
 	spriteName = spriteName! + ".png"
-	
+	if monName == nil {
+		spriteName = "0.png"
+	}
 	return spriteName ?? "0.png"
 }
 

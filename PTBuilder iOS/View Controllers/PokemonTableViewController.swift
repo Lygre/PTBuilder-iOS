@@ -23,15 +23,21 @@ class PokemonTableViewController: UITableViewController {
 	
 	@IBOutlet var teamTableView: UITableView!
 	
+	@IBOutlet weak var teamName: UITextField!
+	
+	@IBOutlet weak var teamNameTextView: UIView!
+	
+	@objc dynamic var userDefaults = UserDefaults.standard
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		Dex.initializeDex()
 		Dex.defineTypeMatchups()
 		ItemDex.initializeItemDex()
 		MoveDex.initializeMoveDex()
-	
+		team = teamMaster
 //		loadSamplePokemon()
-		
+		self.teamNameTextView.isHidden = true
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -136,7 +142,83 @@ class PokemonTableViewController: UITableViewController {
 //		teamMaster.members.append(pokemon)
 		team.members.append(pokemon)
 	}
-
+	func exportTeamStandalone() -> String {
+		let numberOfTeamMembers = teamTableView.numberOfRows(inSection: 0)
+		var output: String = ""
+		
+		if numberOfTeamMembers > 0 {
+			for mon in self.team.members {
+				output.append("\(mon.species) @ \(mon.item.name)\n")
+				output.append("Ability: \(mon.ability)\n")
+				if mon.eVs != ["hp": 0, "atk": 0, "def": 0, "spa": 0, "spd": 0, "spe": 0] {
+					var evString: String = "EVs: "
+					for (stat, value) in mon.eVs {
+						if value != 0 {
+							evString.append("\(value) \(stat) - ")
+						}
+					}
+					evString = evString.replacingOccurrences(of: "-", with: "/")
+					evString.removeLast(3)
+					evString.append("\n")
+					output.append(evString)
+					
+				}
+				var natureString: String = "\(mon.nature)"
+				natureString = natureString.capitalized
+				natureString.append(" Nature\n")
+				output.append(natureString)
+				
+				if mon.iVs != ["hp": 31, "atk": 31, "def": 31, "spa": 31, "spd": 31, "spe": 31] {
+					var ivString: String = "IVs: "
+					for (stat, value) in mon.iVs {
+						if value != 31 {
+							ivString.append("\(value) \(stat) - ")
+						}
+					}
+					ivString = ivString.replacingOccurrences(of: "-", with: "/")
+					ivString.removeLast(3)
+					ivString.append("\n")
+					output.append(ivString)
+					
+				}
+				
+				//come back later and address IV exceptions here
+				output.append("- \(mon.move1.name)\n")
+				output.append("- \(mon.move2.name)\n")
+				output.append("- \(mon.move3.name)\n")
+				output.append("- \(mon.move4.name)\n")
+				output.append("\n")
+			}
+		}
+		return output
+	}
+	
+	func saveTeamFromString(teamName: String) {
+		let teamToSave: String = self.exportTeamStandalone()
+		var savedTeams = userDefaults.dictionary(forKey: "savedTeams") ?? [:]
+		savedTeams[teamName] = teamToSave
+		userDefaults.setValue(savedTeams, forKey: "savedTeams")
+		print(userDefaults.dictionaryRepresentation())
+	}
+	
+	func loadTeam(team: Team) {
+		self.team = team
+		teamMaster = team
+	}
+	
+	@IBAction func saveTeam(_ sender: Any) {
+		self.teamNameTextView.isHidden = false
+	}
+	
+	@IBAction func saveTeamNameEndEditing(_ sender: Any) {
+		saveTeamFromString(teamName: teamName.text ?? "hi2")
+		self.teamNameTextView.isHidden = true
+	}
+	
+	
+	@IBAction func resetSavedTeams(_ sender: Any) {
+		UserDefaults.standard.setValue("", forKey: "savedTeams")
+	}
 	
 	
 	@IBAction func removeMember(_ sender: Any) {

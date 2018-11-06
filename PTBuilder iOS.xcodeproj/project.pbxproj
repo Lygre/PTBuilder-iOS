@@ -39,6 +39,8 @@
 		9FF00AF42180E1D000DB9BE8 /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF00AF32180E1D000DB9BE8 /* TeamTableViewController.swift */; };
 		9FF00AF62180E1F500DB9BE8 /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF00AF52180E1F500DB9BE8 /* TeamDetailViewController.swift */; };
 		9FF00AF82180E39500DB9BE8 /* TeamOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF00AF72180E39500DB9BE8 /* TeamOverviewTableViewCell.swift */; };
+		9FF3579B21913E1E00858A7E /* SavedTeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3579A21913E1E00858A7E /* SavedTeamsTableViewController.swift */; };
+		9FF3579D219140D500858A7E /* SavedTeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3579C219140D500858A7E /* SavedTeamsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		9FF00AF32180E1D000DB9BE8 /* TeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
 		9FF00AF52180E1F500DB9BE8 /* TeamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
 		9FF00AF72180E39500DB9BE8 /* TeamOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamOverviewTableViewCell.swift; sourceTree = "<group>"; };
+		9FF3579A21913E1E00858A7E /* SavedTeamsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTeamsTableViewController.swift; sourceTree = "<group>"; };
+		9FF3579C219140D500858A7E /* SavedTeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTeamsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +188,7 @@
 		9FE7BF7B21861E92001EEDA8 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9FF3579A21913E1E00858A7E /* SavedTeamsTableViewController.swift */,
 				9F983A2E218BD75F003F4584 /* PokedexViewController.swift */,
 				9F983A34218CA126003F4584 /* PokedexDetailViewController.swift */,
 				9F983A32218C0331003F4584 /* PokedexSearch.swift */,
@@ -211,6 +216,7 @@
 		9FE7BF7D21861ED5001EEDA8 /* Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
+				9FF3579C219140D500858A7E /* SavedTeamsTableViewCell.swift */,
 				9F4DB0C8218E83B700076625 /* SuggestedMonTableViewCell.swift */,
 				9F983A30218BFC63003F4584 /* PokedexTableViewCell.swift */,
 				9FB3F2E021828446009AB5AB /* TeamWeaknessTableViewCell.swift */,
@@ -385,7 +391,9 @@
 				9FB3F2E121828446009AB5AB /* TeamWeaknessTableViewCell.swift in Sources */,
 				9F983A2C218B4FFE003F4584 /* LevelView.swift in Sources */,
 				9F61A4A7217BEF20002A78A8 /* Pokemon.swift in Sources */,
+				9FF3579D219140D500858A7E /* SavedTeamsTableViewCell.swift in Sources */,
 				9F61A4AB217BEF56002A78A8 /* Team.swift in Sources */,
+				9FF3579B21913E1E00858A7E /* SavedTeamsTableViewController.swift in Sources */,
 				9F9E53CD217E8AB5009D4C56 /* PokemonPropertyPickerView.swift in Sources */,
 				9FB3F2DF21828395009AB5AB /* TeamWeaknessTableViewController.swift in Sources */,
 				9F61A4A5217BEEAF002A78A8 /* Pokedex.swift in Sources */,
