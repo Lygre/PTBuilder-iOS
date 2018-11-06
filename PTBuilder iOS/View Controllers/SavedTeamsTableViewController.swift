@@ -49,14 +49,14 @@ class SavedTeamsTableViewController: UITableViewController {
 
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		
-		let selectedTeam = loadableTeamArray[indexPath.row]
+		selectedTeam = loadableTeamArray[indexPath.row]
 		
 		
 		//		if let detailViewController = delegate as? DetailViewController, let detail
-		let presenter = self.presentingViewController as? PokemonTableViewController
-		
-		presenter?.loadTeam(team: selectedTeam)
-		show(presentingViewController!, sender: self)
+//		let presenter = self.presentingViewController as? PokemonTableViewController
+//
+//		presenter?.loadTeam(team: selectedTeam)
+//		show(presentingViewController!, sender: self)
 //		selectedDetailMember = selectedPokemon
 	}
 	
@@ -131,13 +131,18 @@ class SavedTeamsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.destination is UISplitViewController {
+			let vc = segue.destination as! UISplitViewController
+			let vc2 = vc.viewControllers.first as? PokemonTableViewController
+			teamMaster = self.selectedTeam!
+		}
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 }

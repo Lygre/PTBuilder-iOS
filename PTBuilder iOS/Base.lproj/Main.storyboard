@@ -2752,7 +2752,11 @@
                             <rect key="frame" x="0.0" y="178" width="1366" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
-                                <barButtonItem title="Item" id="Hky-uJ-v5T"/>
+                                <barButtonItem title="Load Selected Team" id="Hky-uJ-v5T">
+                                    <connections>
+                                        <segue destination="gu1-qd-EFT" kind="presentation" id="u6A-BF-ga1"/>
+                                    </connections>
+                                </barButtonItem>
                             </items>
                         </toolbar>
                         <prototypes>
@@ -3136,7 +3140,8 @@
         <image name="taunt" width="72" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="u6A-BF-ga1"/>
         <segue reference="QWj-vj-rUt"/>
-        <segue reference="vTu-ry-fWT"/>
+        <segue reference="2Uw-e2-fDd"/>
     </inferredMetricsTieBreakers>
 </document>
