@@ -37,7 +37,9 @@ class PokemonTableViewController: UITableViewController {
 		MoveDex.initializeMoveDex()
 		team = teamMaster
 //		loadSamplePokemon()
+//		self.view.autoresizingMask = .flexibleBottomMargin
 		self.teamNameTextView.isHidden = true
+		self.restorationIdentifier = "PokemonTableViewController"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -47,6 +49,8 @@ class PokemonTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+	
+	
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

@@ -24,6 +24,7 @@
 		9F61A4A9217BEF3E002A78A8 /* Support Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4A8217BEF3E002A78A8 /* Support Functions.swift */; };
 		9F61A4AB217BEF56002A78A8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4AA217BEF56002A78A8 /* Team.swift */; };
 		9F61A4AD217BEF7B002A78A8 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4AC217BEF7B002A78A8 /* Calculator.swift */; };
+		9F8946042193599900015FE2 /* PrimaryTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8946032193599900015FE2 /* PrimaryTabBarViewController.swift */; };
 		9F983A2C218B4FFE003F4584 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F983A2B218B4FFE003F4584 /* LevelView.swift */; };
 		9F983A2F218BD75F003F4584 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F983A2E218BD75F003F4584 /* PokedexViewController.swift */; };
 		9F983A31218BFC63003F4584 /* PokedexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F983A30218BFC63003F4584 /* PokedexTableViewCell.swift */; };
@@ -84,6 +85,7 @@
 		9F61A4A8217BEF3E002A78A8 /* Support Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Support Functions.swift"; sourceTree = "<group>"; };
 		9F61A4AA217BEF56002A78A8 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		9F61A4AC217BEF7B002A78A8 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		9F8946032193599900015FE2 /* PrimaryTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTabBarViewController.swift; sourceTree = "<group>"; };
 		9F983A2B218B4FFE003F4584 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
 		9F983A2D218BC8E7003F4584 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9F983A2E218BD75F003F4584 /* PokedexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				9F9E53C8217E4FB5009D4C56 /* DetailViewController.swift */,
 				9F983A2B218B4FFE003F4584 /* LevelView.swift */,
 				9F11283A218E0CD10025F468 /* LevelViewPokedex.swift */,
+				9F8946032193599900015FE2 /* PrimaryTabBarViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				9F61A4AB217BEF56002A78A8 /* Team.swift in Sources */,
 				9FF3579B21913E1E00858A7E /* SavedTeamsTableViewController.swift in Sources */,
 				9F9E53CD217E8AB5009D4C56 /* PokemonPropertyPickerView.swift in Sources */,
+				9F8946042193599900015FE2 /* PrimaryTabBarViewController.swift in Sources */,
 				9FB3F2DF21828395009AB5AB /* TeamWeaknessTableViewController.swift in Sources */,
 				9F61A4A5217BEEAF002A78A8 /* Pokedex.swift in Sources */,
 				9F983A35218CA126003F4584 /* PokedexDetailViewController.swift in Sources */,

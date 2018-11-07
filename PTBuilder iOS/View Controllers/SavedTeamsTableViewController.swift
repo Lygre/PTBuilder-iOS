@@ -140,6 +140,7 @@ class SavedTeamsTableViewController: UITableViewController {
 			let vc = segue.destination as! UISplitViewController
 			let vc2 = vc.viewControllers.first as? PokemonTableViewController
 			teamMaster = self.selectedTeam!
+		
 		}
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
