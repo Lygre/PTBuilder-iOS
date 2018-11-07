@@ -136,12 +136,23 @@ class SavedTeamsTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.destination is UISplitViewController {
-			let vc = segue.destination as! UISplitViewController
-			let vc2 = vc.viewControllers.first as? PokemonTableViewController
+		if segue.destination is PrimaryTabBarViewController {
+//			let vc = segue.destination as! UISplitViewController
+//			let vc2 = vc.viewControllers.first as? PokemonTableViewController
 			teamMaster = self.selectedTeam!
 		
 		}
+		
+//		if let barVC = segue.destination as? UITabBarController {
+//			barVC.viewControllers?.forEach {
+//				if let vc = $0 as? PokemonTableViewController {
+//					teamMaster = self.selectedTeam!
+//					vc.team = self.selectedTeam!
+//				}
+//			}
+//		}
+		
+		
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
