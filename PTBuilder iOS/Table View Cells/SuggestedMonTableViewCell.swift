@@ -13,6 +13,7 @@ class SuggestedMonTableViewCell: UITableViewCell {
 	
 	@IBOutlet weak var suggestedMonImage: UIImageView!
 	@IBOutlet weak var suggestedMonLabel: UILabel!
+	@IBOutlet weak var addToTeamButton: UIButton!
 	
     override func awakeFromNib() {
         super.awakeFromNib()

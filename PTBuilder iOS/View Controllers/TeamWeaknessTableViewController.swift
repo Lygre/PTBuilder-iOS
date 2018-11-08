@@ -51,6 +51,10 @@ class TeamWeaknessTableViewController: UITableViewController {
 		refreshTableControl.addTarget(self, action: #selector(refreshTeamData(_:)), for: .valueChanged)
     }
 
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		updateView()
+	}
     // MARK: - Table view data source
 	
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -107,7 +111,11 @@ class TeamWeaknessTableViewController: UITableViewController {
 			return 180
 		} else { return 90.0 }
 	}
-	
+	/*
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		// program behavior when selecting a row
+	}
+	*/
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		var cellIdentifier = ""
 		
@@ -298,9 +306,23 @@ class TeamWeaknessTableViewController: UITableViewController {
 			
 //			suggestedMons = findSuggestedMons(team: team)
 //			var mon = suggestedMons[indexPath.row]
-			
-			cell.suggestedMonImage.image = UIImage(named: dexNumToSprite(suggestedMons[indexPath.row]) ?? "0.png")
-			cell.suggestedMonLabel.text = "\(suggestedMons[indexPath.row].species)"
+			if team.members.count > 5 {
+				cell.addToTeamButton.isHidden = true
+			} else {
+				cell.addToTeamButton.isHidden = false
+			}
+			if suggestedMons.count > 0 {
+				if let monImageName = dexNumToSpriteUsingSpecies(suggestedMons[indexPath.row].species) {
+					cell.suggestedMonImage.image = UIImage(named: monImageName)
+				} else { cell.suggestedMonImage.image = UIImage(named: "0.png") }
+				
+				let monSpeciesName = suggestedMons[indexPath.row].species
+				cell.suggestedMonLabel.text = monSpeciesName
+			} else {
+				cell.suggestedMonImage.image = UIImage(named: "0.png")
+				cell.suggestedMonLabel.text = "No Suggested Pokemon"
+			}
+		
 			
 			return cell
 			
@@ -348,15 +370,18 @@ class TeamWeaknessTableViewController: UITableViewController {
     }
     */
 
-    /*
+	
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+		if segue.destination is PrimaryTabBarViewController {
+			teamMaster = self.team
+		}
     }
-    */
+	
 
 	func refreshUI() {
 //		self.teamWeaknessTableView.reloadData()
@@ -365,6 +390,12 @@ class TeamWeaknessTableViewController: UITableViewController {
 //			self.teamWeaknessTableView.reloadData()
 //		}
 	}
+	
+	@IBAction func addSuggestedMonToTeam(_ sender: Any) {
+		self.team.members.append(suggestedMons[(teamWeaknessTableView.indexPathForSelectedRow?.row)!])
+		
+	}
+	
 	
 	private func setupView() {
 		setupTableView()
