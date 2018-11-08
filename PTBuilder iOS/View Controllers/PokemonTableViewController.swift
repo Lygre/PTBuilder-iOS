@@ -90,6 +90,7 @@ class PokemonTableViewController: UITableViewController {
         return true
     }
     */
+	/*
 	override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
 		print("oh it was this one")
 		team.members.remove(at: indexPath.row)
@@ -99,20 +100,24 @@ class PokemonTableViewController: UITableViewController {
 //		vc?.updateTeam(team)
 //		vc?.fetchTeamData()
 	}
+	*/
+	override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+		return "Remove"
+	}
 	
-	/*
     // Override to support editing the table view.
 	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
 			print("oh hi")
 			team.members.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.deleteRows(at: [indexPath], with: .left)
+			teamTableView.reloadData()
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-	*/
+	
 	override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
 //		print("stfu")
 		self.teamTableView.endUpdates()

@@ -803,7 +803,7 @@ struct Dex {
 	static func searchDex(searchParam: String) -> [Pokemon] {
 		var searchResults = [Pokemon]()
 		// Determination of method type for string searchDex method
-		let searchStringLower = searchParam.lowercased()
+		let searchStringLower = searchParam.replacingOccurrences(of: " ", with: "").lowercased()
 		// Search by Type
 		if typeListLower.contains(searchStringLower) {
 			for mon in Dex.dexArray {
@@ -816,7 +816,9 @@ struct Dex {
 		} else {
 			// Search by Name
 			for mon in Dex.dexArray {
-				if mon.species.lowercased().contains(searchStringLower) {
+				if mon.species.lowercased() == searchStringLower {
+					searchResults.append(mon)
+				} else if mon.species.lowercased().contains(searchStringLower) {
 					searchResults.append(mon)
 				}
 				//search by Learnable move --- THIS NEEDS FIXING

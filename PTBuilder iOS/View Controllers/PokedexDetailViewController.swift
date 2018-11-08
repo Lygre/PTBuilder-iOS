@@ -221,8 +221,8 @@ class PokedexDetailViewController: UIViewController {
 		if (pokemon?.species.contains("-Mega"))! {
 			let lowerSpecies = pokemon?.species.lowercased()
 			let nameIndex = lowerSpecies!.startIndex..<lowerSpecies!.firstIndex(of: "-")!
-			let megaStoneSearchString: String = String(lowerSpecies![nameIndex]) + "ite"
-//			print(megaStoneSearchString)
+			var megaStoneSearchString: String = String(lowerSpecies![nameIndex]) + "ite"
+			if lowerSpecies == "mawile-mega" { megaStoneSearchString = "mawilite" }
 			pokemon?.item = ItemDex.searchItemDex(searchParam: megaStoneSearchString)
 		}
 		self.team.addMember(pokemon!)

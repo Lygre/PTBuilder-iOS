@@ -2714,7 +2714,7 @@
             <objects>
                 <navigationController id="PYk-ib-JcT" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gb2-ME-wwR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -2936,7 +2936,7 @@
                             </items>
                         </toolbar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="PokemonTableViewCell" editingAccessoryType="detailDisclosureButton" rowHeight="90" id="YXt-rR-yNW" customClass="PokemonTableViewCell" customModule="PTBuilder_iOS" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="PokemonTableViewCell" rowHeight="90" id="YXt-rR-yNW" customClass="PokemonTableViewCell" customModule="PTBuilder_iOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YXt-rR-yNW" id="f6t-qD-LeT">
@@ -3156,6 +3156,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="NO4-LE-HD5"/>
         <segue reference="QWj-vj-rUt"/>
-        <segue reference="2Uw-e2-fDd"/>
+        <segue reference="vTu-ry-fWT"/>
     </inferredMetricsTieBreakers>
 </document>

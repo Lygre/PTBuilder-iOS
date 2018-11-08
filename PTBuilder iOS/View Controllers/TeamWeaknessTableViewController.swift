@@ -392,8 +392,18 @@ class TeamWeaknessTableViewController: UITableViewController {
 	}
 	
 	@IBAction func addSuggestedMonToTeam(_ sender: Any) {
-		self.team.members.append(suggestedMons[(teamWeaknessTableView.indexPathForSelectedRow?.row)!])
-		
+		var pokemonToAdd: Pokemon?
+		if let pokemon: Pokemon? = suggestedMons[((teamWeaknessTableView.indexPathForSelectedRow?.row)!)] {
+			if (pokemon?.species.contains("-Mega"))! {
+				let lowerSpecies = pokemon?.species.lowercased()
+				let nameIndex = lowerSpecies!.startIndex..<lowerSpecies!.firstIndex(of: "-")!
+				var megaStoneSearchString: String = String(lowerSpecies![nameIndex]) + "ite"
+				if lowerSpecies == "mawile-mega" { megaStoneSearchString = "mawilite" }
+				pokemonToAdd = pokemon
+				pokemonToAdd?.item = ItemDex.searchItemDex(searchParam: megaStoneSearchString)
+			}
+			self.team.members.append(pokemonToAdd!)
+		} else { print("Unable to Add suggested Mon") }
 	}
 	
 	
