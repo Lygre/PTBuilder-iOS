@@ -2543,6 +2543,7 @@
                                 <state key="normal" title="Add To Team"/>
                                 <connections>
                                     <action selector="addToTeam:" destination="f57-Ak-dzp" eventType="touchUpInside" id="11x-gD-7Ms"/>
+                                    <segue destination="49e-Tb-3d3" kind="presentation" id="BOD-JC-cR8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2860,7 +2861,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" id="1i8-Qi-hRy">
-                            <rect key="frame" x="0.0" y="18" width="0.0" height="44"/>
+                            <rect key="frame" x="0.0" y="118" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <viewLayoutGuide key="safeArea" id="8e3-e5-qav"/>
                             <items>
@@ -3141,6 +3142,7 @@
         <image name="taunt" width="72" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="BOD-JC-cR8"/>
         <segue reference="QWj-vj-rUt"/>
         <segue reference="2Uw-e2-fDd"/>
     </inferredMetricsTieBreakers>

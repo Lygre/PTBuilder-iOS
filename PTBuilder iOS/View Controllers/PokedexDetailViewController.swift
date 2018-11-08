@@ -115,16 +115,18 @@ class PokedexDetailViewController: UIViewController {
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 	}
-	/*
+	
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-		
+		if segue.destination is PrimaryTabBarViewController {
+			teamMaster = self.team
+		}
     }
-*/
+
 
 	
 	func refreshUI() {
@@ -216,11 +218,14 @@ class PokedexDetailViewController: UIViewController {
 	
 
 	@IBAction func addToTeam(_ sender: Any) {
-		team.addMember(pokemon!)
-		teamMaster = team
-//		let teamView: UISplitViewController = storyboard?.instantiateViewController(withIdentifier: "teamMembersView") as! UISplitViewController
-//		self.show(teamView, sender: self)
-//		reloadInputViews()
+		if (pokemon?.species.contains("-Mega"))! {
+			let lowerSpecies = pokemon?.species.lowercased()
+			let nameIndex = lowerSpecies!.startIndex..<lowerSpecies!.firstIndex(of: "-")!
+			let megaStoneSearchString: String = String(lowerSpecies![nameIndex]) + "ite"
+//			print(megaStoneSearchString)
+			pokemon?.item = ItemDex.searchItemDex(searchParam: megaStoneSearchString)
+		}
+		self.team.addMember(pokemon!)
 	}
 	
 	
