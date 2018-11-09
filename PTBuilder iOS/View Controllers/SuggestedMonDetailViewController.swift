@@ -10,17 +10,18 @@ import UIKit
 
 class SuggestedMonDetailViewController: UIViewController {
 
-	var pokemon: Pokemon? {
-		didSet {
-			refreshUI()
-		}
-	}
+	var pokemon: Pokemon?
 	
 	@IBOutlet weak var monNameLabel: UILabel!
+	@IBOutlet weak var monImageView: UIImageView!
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-
+		Dex.initializeDex()
+		Dex.defineTypeMatchups()
+		ItemDex.initializeItemDex()
+		MoveDex.initializeMoveDex()
+		refreshUI()
         // Do any additional setup after loading the view.
     }
     
@@ -37,9 +38,17 @@ class SuggestedMonDetailViewController: UIViewController {
 
 	
 	func refreshUI() {
-		if let monName = pokemon?.species {
-			monNameLabel.text = monName
-		} else { monNameLabel.text = "Error" }
+		if let suggestedDetailMon = pokemon {
+			monNameLabel.text = suggestedDetailMon.species
+			monImageView.image = suggestedDetailMon.monSprite
+		} else {
+			monNameLabel.text = "Error"
+			monImageView.image = UIImage(named: "0.png")
+		}
 	}
+		
+		
+		
+	
 	
 }

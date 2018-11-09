@@ -102,8 +102,9 @@ class TeamWeaknessTableViewController: UITableViewController {
     }
     */
 	override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-		pokemon = suggestedMons[indexPath.row]
+		self.pokemon = suggestedMons[indexPath.row]
 //		self.popoverPresentationController
+		
 	}
 	
 	//set modular row height varying by section to display
@@ -386,6 +387,12 @@ class TeamWeaknessTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
 		if segue.destination is PrimaryTabBarViewController {
 			teamMaster = self.team
+		}
+		if segue.destination is SuggestedMonDetailViewController {
+			let vc = segue.destination as! SuggestedMonDetailViewController
+			self.pokemon = suggestedMons[((teamWeaknessTableView.indexPathForSelectedRow?.row)!)]
+			vc.pokemon = self.pokemon
+			print(vc.pokemon)
 		}
     }
 	
