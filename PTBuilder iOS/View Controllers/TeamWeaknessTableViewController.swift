@@ -20,6 +20,8 @@ class TeamWeaknessTableViewController: UITableViewController {
 		}
 	}
 	
+	var pokemon: Pokemon?
+	
 	var suggestedMons: [Pokemon] = findSuggestedMons(team: teamMaster)
 	
 	@IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
@@ -99,6 +101,11 @@ class TeamWeaknessTableViewController: UITableViewController {
         return cell
     }
     */
+	override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+		pokemon = suggestedMons[indexPath.row]
+//		self.popoverPresentationController
+	}
+	
 	//set modular row height varying by section to display
 	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		if teamSectionToDisplay == "Team Weaknesses" {

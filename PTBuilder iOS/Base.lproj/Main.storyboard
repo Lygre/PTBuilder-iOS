@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="width" secondItem="mKi-js-cFP" secondAttribute="height" multiplier="17:9" constant="-68" id="mLt-F4-L45"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgI-9C-Mty">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgI-9C-Mty">
                                 <rect key="frame" x="625" y="33" width="219" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="gey-qL-H0D"/>
@@ -2018,11 +2018,11 @@
                                     <outlet property="tauntBool" destination="Epg-mh-Bft" id="kkI-fe-4JI"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SuggestedMonTableViewCell" id="3C7-jC-dg2" customClass="SuggestedMonTableViewCell" customModule="PTBuilder_iOS" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="SuggestedMonTableViewCell" id="3C7-jC-dg2" customClass="SuggestedMonTableViewCell" customModule="PTBuilder_iOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="719" width="990.5" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3C7-jC-dg2" id="sVl-0S-RuX">
-                                    <rect key="frame" x="0.0" y="0.0" width="990.5" height="199.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="918.5" height="199.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0e-un-2tJ">
@@ -2043,7 +2043,7 @@
                                             </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwz-gb-mwj">
-                                            <rect key="frame" x="837" y="82.5" width="111" height="35"/>
+                                            <rect key="frame" x="777" y="82.5" width="111" height="35"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                             <state key="normal" title="Add To Team"/>
                                             <connections>
@@ -2157,7 +2157,7 @@
                                     <constraint firstAttribute="width" constant="240" id="pn7-Xt-oDq"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokémon Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYY-E0-yem">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokémon Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYY-E0-yem">
                                 <rect key="frame" x="458" y="20" width="264" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="264" id="CXw-8G-EeF"/>
@@ -2936,7 +2936,7 @@
                             </items>
                         </toolbar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="PokemonTableViewCell" rowHeight="90" id="YXt-rR-yNW" customClass="PokemonTableViewCell" customModule="PTBuilder_iOS" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" showsReorderControl="YES" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="PokemonTableViewCell" rowHeight="90" id="YXt-rR-yNW" customClass="PokemonTableViewCell" customModule="PTBuilder_iOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YXt-rR-yNW" id="f6t-qD-LeT">
@@ -2944,7 +2944,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9E-6b-H2c">
-                                            <rect key="frame" x="113" y="7" width="177" height="59"/>
+                                            <rect key="frame" x="167" y="7" width="177" height="59"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="177" id="N9W-Hs-nao"/>
                                             </constraints>
@@ -2953,7 +2953,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="YCt-GE-c3G">
-                                            <rect key="frame" x="16" y="3" width="72" height="66"/>
+                                            <rect key="frame" x="70" y="3" width="72" height="66"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="YCt-GE-c3G" secondAttribute="height" multiplier="12:11" id="U4e-cT-L85"/>
                                                 <constraint firstAttribute="width" constant="72" id="smz-Zd-TQP"/>
@@ -2961,7 +2961,7 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="K9E-6b-H2c" secondAttribute="trailing" constant="69" id="G6i-EB-EjM"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="K9E-6b-H2c" secondAttribute="trailing" constant="15" id="G6i-EB-EjM"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="K9E-6b-H2c" secondAttribute="bottom" constant="9" id="GvE-IF-FhZ"/>
                                         <constraint firstItem="K9E-6b-H2c" firstAttribute="top" secondItem="f6t-qD-LeT" secondAttribute="topMargin" constant="-8" id="SnW-m6-kPV"/>
                                         <constraint firstItem="YCt-GE-c3G" firstAttribute="bottom" secondItem="K9E-6b-H2c" secondAttribute="bottom" constant="3" id="eSH-oH-vy6"/>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9F11283B218E0CD10025F468 /* LevelViewPokedex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F11283A218E0CD10025F468 /* LevelViewPokedex.swift */; };
+		9F20FDF22194BBBA00724DBE /* SuggestedMonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F20FDF12194BBBA00724DBE /* SuggestedMonDetailViewController.swift */; };
 		9F36B787217CCCF60013DAAF /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36B786217CCCF60013DAAF /* PokemonTableViewCell.swift */; };
 		9F36B789217CCF9F0013DAAF /* PokemonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36B788217CCF9F0013DAAF /* PokemonTableViewController.swift */; };
 		9F4DB0C7218E44D500076625 /* TeamAttributesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4DB0C6218E44D500076625 /* TeamAttributesTableViewCell.swift */; };
@@ -63,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		9F11283A218E0CD10025F468 /* LevelViewPokedex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewPokedex.swift; sourceTree = "<group>"; };
+		9F20FDF12194BBBA00724DBE /* SuggestedMonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedMonDetailViewController.swift; sourceTree = "<group>"; };
 		9F36B786217CCCF60013DAAF /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
 		9F36B788217CCF9F0013DAAF /* PokemonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewController.swift; sourceTree = "<group>"; };
 		9F4DB0C6218E44D500076625 /* TeamAttributesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamAttributesTableViewCell.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				9F983A2B218B4FFE003F4584 /* LevelView.swift */,
 				9F11283A218E0CD10025F468 /* LevelViewPokedex.swift */,
 				9F8946032193599900015FE2 /* PrimaryTabBarViewController.swift */,
+				9F20FDF12194BBBA00724DBE /* SuggestedMonDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				9F983A2C218B4FFE003F4584 /* LevelView.swift in Sources */,
 				9F61A4A7217BEF20002A78A8 /* Pokemon.swift in Sources */,
 				9FF3579D219140D500858A7E /* SavedTeamsTableViewCell.swift in Sources */,
+				9F20FDF22194BBBA00724DBE /* SuggestedMonDetailViewController.swift in Sources */,
 				9F61A4AB217BEF56002A78A8 /* Team.swift in Sources */,
 				9FF3579B21913E1E00858A7E /* SavedTeamsTableViewController.swift in Sources */,
 				9F9E53CD217E8AB5009D4C56 /* PokemonPropertyPickerView.swift in Sources */,

@@ -20,7 +20,7 @@ class PokemonTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
 //		self.editingAccessoryType.rawValue(2)
-		self.editingAccessoryType = AccessoryType.detailDisclosureButton
+//		self.editingAccessoryType = AccessoryType.detailDisclosureButton
 //		self.editingStyle = EditingStyle.delete
     }
 
