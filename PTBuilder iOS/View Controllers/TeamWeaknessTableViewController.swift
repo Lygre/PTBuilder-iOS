@@ -53,9 +53,19 @@ class TeamWeaknessTableViewController: UITableViewController {
 		refreshTableControl.addTarget(self, action: #selector(refreshTeamData(_:)), for: .valueChanged)
     }
 
+	@IBAction func unwindToTeamOverview(unwindSegue: UIStoryboardSegue) {
+		
+	}
+	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-		updateView()
+//		Dex.initializeDex()
+//		Dex.defineTypeMatchups()
+//		suggestedMons = findSuggestedMons(team: teamMaster)
+//		setupView()
+//		fetchTeamData()
+//		updateView()
+//		refreshTableControl.addTarget(self, action: #selector(refreshTeamData(_:)), for: .valueChanged)
 	}
     // MARK: - Table view data source
 	

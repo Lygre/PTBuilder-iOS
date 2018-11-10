@@ -17,6 +17,7 @@ class TeamTableViewController: UITableViewController {
 	
 	@IBOutlet var teamOverviewTableView: UITableView!
 	
+	var selectedSection: String?
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,10 +59,13 @@ class TeamTableViewController: UITableViewController {
 	
 
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let selectedSection = teamSections[indexPath.row]
-		//		if let detailViewController = delegate as? DetailViewController, let detail
-		let presenter = self.splitViewController?.viewControllers.last as? TeamWeaknessTableViewController
-		presenter?.sectionSelected(selectedSection)
+		self.selectedSection = teamSections[indexPath.row]
+		performSegue(withIdentifier: "showTeamOverview", sender: TeamOverviewTableViewCell.self)
+//		presenter.pushViewController(rootTV, animated: true)
+		//		presenter?.sectionSelected(selectedSection)
+		
+		
+		
 		
 	}
 	
@@ -100,14 +104,23 @@ class TeamTableViewController: UITableViewController {
     }
     */
 
-    /*
+	
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+		if segue.destination is UINavigationController {
+			let detailNavController = segue.destination as! UINavigationController
+			let viewControllers = detailNavController.viewControllers
+			print(viewControllers.debugDescription)
+			let teamOverViewDetail = detailNavController.viewControllers[0] as! TeamWeaknessTableViewController
+			teamOverViewDetail.teamWeaknessTableView = UITableView()
+			teamOverViewDetail.teamSectionToDisplay = self.selectedSection
+		}
+		
     }
-    */
+	
 
 }
