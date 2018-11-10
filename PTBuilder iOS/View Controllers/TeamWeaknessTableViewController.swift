@@ -13,12 +13,12 @@ class TeamWeaknessTableViewController: UITableViewController {
 //	internal let refreshControl = UIRefreshControl()
 	private let refreshTableControl = UIRefreshControl()
 	
-	var team: Team = teamMaster {
-		didSet {
-//			refreshUI()
-			updateView()
-		}
-	}
+	var team: Team = teamMaster
+//		didSet {
+////			refreshUI()
+//			updateView()
+//		}
+	
 	
 	var pokemon: Pokemon?
 	
@@ -421,21 +421,21 @@ class TeamWeaknessTableViewController: UITableViewController {
 	}
 	
 	
-	private func setupView() {
+	func setupView() {
 		setupTableView()
 		setupActivityIndicatorView()
 	}
 	
-	private func setupTableView() {
+	func setupTableView() {
 		teamWeaknessTableView.refreshControl = refreshTableControl
 	}
 	
-	private func setupActivityIndicatorView() {
+	func setupActivityIndicatorView() {
 		self.activityIndicatorView.hidesWhenStopped = true
 		activityIndicatorView.startAnimating()
 	}
 	
-	private func updateView() {
+	func updateView() {
 		teamWeaknessTableView.reloadData()
 	}
 	
