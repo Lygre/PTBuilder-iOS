@@ -2065,7 +2065,6 @@
                                     <outlet property="addToTeamButton" destination="lwz-gb-mwj" id="S7H-zt-OJu"/>
                                     <outlet property="suggestedMonImage" destination="TJq-sf-MXP" id="A3m-KO-R5l"/>
                                     <outlet property="suggestedMonLabel" destination="t0e-un-2tJ" id="YyL-iR-BuJ"/>
-                                    <segue destination="920-Ii-tMf" kind="show" identifier="suggestedMonDetailSegue" trigger="accessoryAction" id="Qp5-L4-wgV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -2078,16 +2077,17 @@
                     <connections>
                         <outlet property="activityIndicatorView" destination="M9m-dZ-x5p" id="amZ-0q-N3f"/>
                         <outlet property="teamWeaknessTableView" destination="Gec-Vd-lgT" id="ZAt-4J-qUW"/>
+                        <segue destination="920-Ii-tMf" kind="show" identifier="suggestedMonDetailSegue" id="Mlv-us-8MH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="owy-nv-vqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2237.481698389458" y="2204.8828125"/>
         </scene>
-        <!--Suggested Mon Detail View-->
+        <!--suggestedMonDetailView-->
         <scene sceneID="ale-4k-Z4m">
             <objects>
-                <viewController id="920-Ii-tMf" customClass="SuggestedMonDetailViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="suggestedMonDetailView" title="suggestedMonDetailView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="920-Ii-tMf" customClass="SuggestedMonDetailViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xm7-kz-Wt7">
                         <rect key="frame" x="0.0" y="0.0" width="990.5" height="924"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

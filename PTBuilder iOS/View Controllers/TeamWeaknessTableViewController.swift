@@ -20,7 +20,7 @@ class TeamWeaknessTableViewController: UITableViewController {
 //		}
 	
 	
-	var pokemon: Pokemon?
+	var pokemon: Pokemon = Pokemon()
 	
 	var suggestedMons: [Pokemon] = findSuggestedMons(team: teamMaster)
 	
@@ -111,9 +111,15 @@ class TeamWeaknessTableViewController: UITableViewController {
         return cell
     }
     */
+	
 	override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
 		self.pokemon = suggestedMons[indexPath.row]
+		performSegue(withIdentifier: "suggestedMonDetailSegue", sender: nil)
+//		self.teamWeaknessTableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+		
 //		self.popoverPresentationController
+//		self.performSegue(withIdentifier: "suggestedMonDetailSegue", sender: self)
+		
 		
 	}
 	
@@ -400,9 +406,10 @@ class TeamWeaknessTableViewController: UITableViewController {
 		}
 		if segue.destination is SuggestedMonDetailViewController {
 			let vc = segue.destination as! SuggestedMonDetailViewController
-			self.pokemon = suggestedMons[((teamWeaknessTableView.indexPathForSelectedRow?.row)!)]
-			vc.pokemon = self.pokemon
-			print(vc.pokemon)
+//			self.pokemon = suggestedMons[((teamWeaknessTableView.indexPathForSelectedRow?.row)!)]
+			vc.pokemonSelected(pokemon)
+//			self.performSegue(withIdentifier: "suggestedMonDetailSegue", sender: self)
+			print(vc.pokemon?.species)
 		}
     }
 	
@@ -429,6 +436,8 @@ class TeamWeaknessTableViewController: UITableViewController {
 			self.team.members.append(pokemonToAdd!)
 		} else { print("Unable to Add suggested Mon") }
 	}
+	
+	
 	
 	
 	func setupView() {

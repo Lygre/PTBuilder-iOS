@@ -8,15 +8,14 @@
 
 import UIKit
 
-class SuggestedMonDetailViewController: UIViewController, UINavigationBarDelegate {
+class SuggestedMonDetailViewController: UIViewController {
 
 	var pokemon: Pokemon?
-	var delegate: UINavigationBarDelegate?
-	var backButton: UINavigationItem?
+	
 	
 	@IBOutlet weak var monNameLabel: UILabel!
 	@IBOutlet weak var monImageView: UIImageView!
-	@IBOutlet weak var navigationBar: UINavigationBar!
+	
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +24,15 @@ class SuggestedMonDetailViewController: UIViewController, UINavigationBarDelegat
 		ItemDex.initializeItemDex()
 		MoveDex.initializeMoveDex()
 		refreshUI()
-		self.delegate = self
         // Do any additional setup after loading the view.
 		
     }
     
 
-	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+//		refreshUI()
+	}
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -50,6 +51,8 @@ class SuggestedMonDetailViewController: UIViewController, UINavigationBarDelegat
 	}
 	
 	func refreshUI() {
+		loadViewIfNeeded()
+//		loadView()
 		if let suggestedDetailMon = pokemon {
 			monNameLabel.text = suggestedDetailMon.species
 			monImageView.image = suggestedDetailMon.monSprite
@@ -63,4 +66,10 @@ class SuggestedMonDetailViewController: UIViewController, UINavigationBarDelegat
 		
 	
 	
+}
+
+extension SuggestedMonDetailViewController: PokemonSelectionDelegate {
+	func pokemonSelected(_ newPokemon: Pokemon) {
+		pokemon = newPokemon
+	}
 }
