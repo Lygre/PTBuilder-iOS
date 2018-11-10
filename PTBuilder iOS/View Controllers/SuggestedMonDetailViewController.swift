@@ -73,7 +73,7 @@ class SuggestedMonDetailViewController: UIViewController {
 //		loadView()
 		if let suggestedDetailMon = pokemon {
 			monNameLabel.text = suggestedDetailMon.species
-			monImageView.image = suggestedDetailMon.monSprite
+			monImageView.image = UIImage(named: dexNumToSpriteUsingSpecies(suggestedDetailMon.species)!)
 			var weaknessToImageDict: [String: UIImage] = [:]
 			let monWeaknesses = suggestedDetailMon.getPokemonWeaknesses(pokemonName: suggestedDetailMon)
 				
