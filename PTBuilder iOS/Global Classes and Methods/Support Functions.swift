@@ -142,7 +142,7 @@ func dexNumToSprite(_ mon: Pokemon) -> String? {
 }
 
 func dexNumToSpriteUsingSpecies(_ monName: String?) -> String? {
-	guard let mon: Pokemon = Dex.searchDex(searchParam: monName!)[0] else { let mon = Pokemon() }
+	guard let mon: Pokemon = Dex.searchDex(searchParam: monName!)[0] else { let mon = Dex.searchDex(searchParam: "Bulbasaur")[0] }
 	let dexNum: Int? = mon.num
 	var spriteName: String?
 	

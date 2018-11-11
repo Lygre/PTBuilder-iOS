@@ -16,6 +16,8 @@ class PokedexViewController: UITableViewController {
 	
 	var searchDelegate: UISearchBarDelegate?
 	
+	
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
