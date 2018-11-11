@@ -132,7 +132,7 @@ class PokedexDetailViewController: UIViewController {
 	func refreshUI() {
 		loadViewIfNeeded()
 //		reloadInputViews()
-		loadView()
+//		loadView()
 		pokemon?.level = 100
 		pokemon?.nature = "hardy"
 		pokemon?.calcStatsMutating()
@@ -217,15 +217,22 @@ class PokedexDetailViewController: UIViewController {
 	}
 	
 
-	@IBAction func addToTeam(_ sender: Any) {
-		if (pokemon?.species.contains("-Mega"))! {
-			let lowerSpecies = pokemon?.species.lowercased()
-			let nameIndex = lowerSpecies!.startIndex..<lowerSpecies!.firstIndex(of: "-")!
-			var megaStoneSearchString: String = String(lowerSpecies![nameIndex]) + "ite"
-			if lowerSpecies == "mawile-mega" { megaStoneSearchString = "mawilite" }
-			pokemon?.item = ItemDex.searchItemDex(searchParam: megaStoneSearchString)
-		}
-		self.team.addMember(pokemon!)
+	@IBAction func addToTeam(_ sender: UIButton) {
+		if let pokemon = pokemon {
+			if (pokemon.species.contains("-Mega")) {
+				let lowerSpecies = pokemon.species.lowercased()
+				let nameIndex = lowerSpecies.startIndex..<lowerSpecies.firstIndex(of: "-")!
+				var megaStoneSearchString: String = String(lowerSpecies[nameIndex]) + "ite"
+				if lowerSpecies == "mawile-mega" { megaStoneSearchString = "mawilite" }
+				
+				pokemon.item = ItemDex.searchItemDex(searchParam: megaStoneSearchString)
+			}
+			self.team.members.append(pokemon)
+			let vc = self.splitViewController?.viewControllers[0] as! UINavigationController
+			let masterView = vc.viewControllers[0] as! PokedexViewController
+			masterView.performSegue(withIdentifier: "addPokedexMonToTeamMasterSegue", sender: nil)
+//			performSegue(withIdentifier: "addSuggestedMonToTeamSegue", sender: nil)
+		} else { print("Unable to Add suggested Mon") }
 	}
 	
 	

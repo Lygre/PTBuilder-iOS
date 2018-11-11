@@ -422,18 +422,24 @@ class TeamWeaknessTableViewController: UITableViewController {
 //		}
 	}
 	
-	@IBAction func addSuggestedMonToTeam(_ sender: Any) {
+	@IBAction func addSuggestedMonToTeam(_ sender: UIButton) {
 		var pokemonToAdd: Pokemon?
-		if let pokemon: Pokemon? = suggestedMons[((teamWeaknessTableView.indexPathForSelectedRow?.row)!)] {
-			if (pokemon?.species.contains("-Mega"))! {
-				let lowerSpecies = pokemon?.species.lowercased()
-				let nameIndex = lowerSpecies!.startIndex..<lowerSpecies!.firstIndex(of: "-")!
-				var megaStoneSearchString: String = String(lowerSpecies![nameIndex]) + "ite"
+		let buttonPosition = sender.convert(CGPoint(), to:tableView)
+		let indexPath = tableView.indexPathForRow(at:buttonPosition)
+		if let pokemon: Pokemon = suggestedMons[(indexPath?.row)!] {
+			if (pokemon.species.contains("-Mega")) {
+				let lowerSpecies = pokemon.species.lowercased()
+				let nameIndex = lowerSpecies.startIndex..<lowerSpecies.firstIndex(of: "-")!
+				var megaStoneSearchString: String = String(lowerSpecies[nameIndex]) + "ite"
 				if lowerSpecies == "mawile-mega" { megaStoneSearchString = "mawilite" }
 				pokemonToAdd = pokemon
 				pokemonToAdd?.item = ItemDex.searchItemDex(searchParam: megaStoneSearchString)
 			}
-			self.team.members.append(pokemonToAdd!)
+			self.team.members.append(pokemon)
+			let vc = self.splitViewController?.viewControllers[0] as! UINavigationController
+			let masterView = vc.viewControllers[0] as! TeamTableViewController
+			masterView.performSegue(withIdentifier: "addSuggestedMonToTeamMasterSegue", sender: nil)
+			performSegue(withIdentifier: "addSuggestedMonToTeamSegue", sender: nil)
 		} else { print("Unable to Add suggested Mon") }
 	}
 	
