@@ -232,7 +232,18 @@ func dexNumToSpriteUsingNum(_ num: Int) -> String? {
 //	return monWeaknessDictTransformed
 //	
 //}
-
+func roundToMultipleFour(value: Float) -> Int {
+	var fractionNum = value / 4.0
+	let roundedNum = Int(floorf(fractionNum))
+	return roundedNum * 4
+	
+}
+func roundToMultipleFourFloatOutput(value: Float) -> Float {
+	var fractionNum = value / 4.0
+	let roundedNum = floorf(fractionNum)
+	return roundedNum * 4.0
+	
+}
 
 // Import mon from text
 func importMonFromShowdown(showdownExportText: String) -> Pokemon {

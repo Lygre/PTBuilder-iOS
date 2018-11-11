@@ -205,6 +205,30 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 	
 	@IBAction func sliderChanged(_ sender: Any) {
 		//set current pokemon's EVs based on updated slider values
+		var sliderValues: [String: Float] = [:]
+		sliderValues = [
+			"hp": hpEVSlider.value,
+			"atk": atkEVSlider.value,
+			"def": defEVSlider.value,
+			"spa": spaEVSlider.value,
+			"spd": spdEVSlider.value,
+			"spe": speEVSlider.value
+		]
+		sliderValues["hp"] = roundToMultipleFourFloatOutput(value: hpEVSlider.value)
+		sliderValues["atk"] = roundToMultipleFourFloatOutput(value: atkEVSlider.value)
+		sliderValues["def"] = roundToMultipleFourFloatOutput(value: defEVSlider.value)
+		sliderValues["spa"] = roundToMultipleFourFloatOutput(value: spaEVSlider.value)
+		sliderValues["spd"] = roundToMultipleFourFloatOutput(value: spdEVSlider.value)
+		sliderValues["spe"] = roundToMultipleFourFloatOutput(value: speEVSlider.value)
+		
+		hpEVSlider.value = sliderValues["hp"] ?? 0.0
+		atkEVSlider.value = sliderValues["atk"] ?? 0.0
+		defEVSlider.value = sliderValues["def"] ?? 0.0
+		spaEVSlider.value = sliderValues["spa"] ?? 0.0
+		spdEVSlider.value = sliderValues["spd"] ?? 0.0
+		speEVSlider.value = sliderValues["spe"] ?? 0.0
+		
+		
 		pokemon?.eVs["hp"] = Int.init(hpEVSlider.value)
 		pokemon?.eVs["atk"] = Int.init(atkEVSlider.value)
 		pokemon?.eVs["def"] = Int.init(defEVSlider.value)
