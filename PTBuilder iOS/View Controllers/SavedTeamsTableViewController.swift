@@ -131,6 +131,17 @@ class SavedTeamsTableViewController: UITableViewController {
     }
     */
 
+	
+	@IBAction func loadSelectedTeam(_ sender: Any) {
+		if let teamToLoad = self.selectedTeam {
+			teamMaster = teamToLoad
+			let masterNavVc = self.splitViewController?.viewControllers[0] as! UINavigationController
+			let masterVc = masterNavVc.viewControllers[0] as! PokemonTableViewController
+			masterVc.team = teamMaster
+			masterVc.refreshTable()
+		}
+	}
+	
     
     // MARK: - Navigation
 

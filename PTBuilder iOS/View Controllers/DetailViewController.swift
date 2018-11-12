@@ -255,7 +255,9 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 		refreshUI()
 	}
 	
-	
+	func showSavedTeams() {
+		performSegue(withIdentifier: "showSavedTeamsSegue", sender: nil)
+	}
 	
 	func refreshUI() {
 		

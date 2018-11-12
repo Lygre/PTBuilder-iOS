@@ -210,6 +210,10 @@ class PokemonTableViewController: UITableViewController {
 		print(userDefaults.dictionaryRepresentation())
 	}
 	
+	func refreshTable() {
+		teamTableView.reloadData()
+	}
+	
 	func loadTeam(team: Team) {
 		self.team = team
 		teamMaster = team
@@ -229,6 +233,11 @@ class PokemonTableViewController: UITableViewController {
 		UserDefaults.standard.setValue("", forKey: "savedTeams")
 	}
 	
+	
+	@IBAction func loadTeamClicked(_ sender: Any) {
+		let detailVc = self.splitViewController?.viewControllers.last as! DetailViewController
+		detailVc.showSavedTeams()
+	}
 	
 	@IBAction func removeMember(_ sender: Any) {
 		let editModeEnabled: Bool = teamTableView.isEditing
