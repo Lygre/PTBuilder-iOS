@@ -239,7 +239,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 		pokemon?.calcVirtualStatsMutating()
 		refreshUI()
 		
-		print(pokemon?.eVs["hp"], pokemon?.eVs["atk"])
+//		print(pokemon?.eVs["hp"], pokemon?.eVs["atk"])
 		print(pokemon?.virtualStats)
 	}
 	
