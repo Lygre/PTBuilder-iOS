@@ -376,7 +376,7 @@ func loadSavedTeam(teamString: String) -> Team {
 			}
 			if line.contains("Ability: ") {
 				let abilityStartIndex = line.firstIndex(of: " ")
-				let abilityEndIndex = line.index(line.endIndex, offsetBy: -1)
+				let abilityEndIndex = line.index(line.endIndex, offsetBy: 0)
 				let abilityIndex = line.index(after: abilityStartIndex!)..<abilityEndIndex
 				ability = String(line[abilityIndex])
 			}
