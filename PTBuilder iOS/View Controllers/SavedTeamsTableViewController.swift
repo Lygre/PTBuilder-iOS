@@ -104,18 +104,31 @@ class SavedTeamsTableViewController: UITableViewController {
     }
     */
 
-    /*
+	
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+//			deleteSavedTeam()
+			deleteSavedTeam(indexPathForTeamInSource: indexPath.row)
+			loadableTeamArray.remove(at: indexPath.row)
+			
+            tableView.deleteRows(at: [indexPath], with: .left)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
-
+	
+	func deleteSavedTeam(indexPathForTeamInSource: Int) {
+		var savedTeams = availableTeams
+		for (teamName, teamRawString) in savedTeams! {
+			if loadSavedTeam(teamString: teamRawString as! String) == loadableTeamArray[indexPathForTeamInSource] {
+				savedTeams![teamName] = nil
+				availableTeams![teamName] = nil
+				UserDefaults.standard.setValue(savedTeams, forKey: "savedTeams")
+			}
+		}
+	}
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {

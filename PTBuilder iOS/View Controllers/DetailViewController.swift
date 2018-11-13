@@ -372,19 +372,55 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 			self.pokemonPropertyPicker.reloadAllComponents()
 		case 4:
 			let learnset = pokemon?.getPokemonLearnset(pokemon: pokemon!).sorted()
-			propertyPickerData = learnset!
+			var learnsetAsMoves: [Move] = []
+			for move in learnset! {
+				let moveVersion: Move = MoveDex.searchMovedex(searchParam: move)
+				learnsetAsMoves.append(moveVersion)
+			}
+			var learnsetAsReformattedStrings: [String] = []
+			for move in learnsetAsMoves {
+				learnsetAsReformattedStrings.append(move.name)
+			}
+			propertyPickerData = learnsetAsReformattedStrings
 			self.pokemonPropertyPicker.reloadAllComponents()
 		case 5:
 			let learnset = pokemon?.getPokemonLearnset(pokemon: pokemon!).sorted()
-			propertyPickerData = learnset!
+			var learnsetAsMoves: [Move] = []
+			for move in learnset! {
+				let moveVersion: Move = MoveDex.searchMovedex(searchParam: move)
+				learnsetAsMoves.append(moveVersion)
+			}
+			var learnsetAsReformattedStrings: [String] = []
+			for move in learnsetAsMoves {
+				learnsetAsReformattedStrings.append(move.name)
+			}
+			propertyPickerData = learnsetAsReformattedStrings
 			self.pokemonPropertyPicker.reloadAllComponents()
 		case 6:
 			let learnset = pokemon?.getPokemonLearnset(pokemon: pokemon!).sorted()
-			propertyPickerData = learnset!
+			var learnsetAsMoves: [Move] = []
+			for move in learnset! {
+				let moveVersion: Move = MoveDex.searchMovedex(searchParam: move)
+				learnsetAsMoves.append(moveVersion)
+			}
+			var learnsetAsReformattedStrings: [String] = []
+			for move in learnsetAsMoves {
+				learnsetAsReformattedStrings.append(move.name)
+			}
+			propertyPickerData = learnsetAsReformattedStrings
 			self.pokemonPropertyPicker.reloadAllComponents()
 		case 7:
 			let learnset = pokemon?.getPokemonLearnset(pokemon: pokemon!).sorted()
-			propertyPickerData = learnset!
+			var learnsetAsMoves: [Move] = []
+			for move in learnset! {
+				let moveVersion: Move = MoveDex.searchMovedex(searchParam: move)
+				learnsetAsMoves.append(moveVersion)
+			}
+			var learnsetAsReformattedStrings: [String] = []
+			for move in learnsetAsMoves {
+				learnsetAsReformattedStrings.append(move.name)
+			}
+			propertyPickerData = learnsetAsReformattedStrings
 			self.pokemonPropertyPicker.reloadAllComponents()
 		default:
 			print("oops. Something went wrong in the switch")
