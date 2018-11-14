@@ -3145,7 +3145,7 @@
         <scene sceneID="jf7-qh-AY8">
             <objects>
                 <tableViewController storyboardIdentifier="PokemonTableViewController" title="PokemonTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="hzE-p3-wVt" customClass="PokemonTableViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qSN-QL-lBP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qSN-QL-lBP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="924"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3246,9 +3246,11 @@
                                         <constraint firstItem="YCt-GE-c3G" firstAttribute="top" secondItem="f6t-qD-LeT" secondAttribute="top" constant="3" id="nIF-by-pye"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <gestureRecognizers/>
                                 <connections>
                                     <outlet property="pokemonImageView" destination="YCt-GE-c3G" id="ZFl-4Q-m2h"/>
                                     <outlet property="pokemonNameLabel" destination="K9E-6b-H2c" id="15h-iG-EJZ"/>
+                                    <outletCollection property="gestureRecognizers" destination="nNo-fv-f2M" appends="YES" id="g9a-bG-z04"/>
                                     <segue destination="NKZ-h8-eda" kind="showDetail" identifier="showDetail" id="vTu-ry-fWT"/>
                                 </connections>
                             </tableViewCell>
@@ -3267,6 +3269,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rrv-dU-AfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="3xY-HT-Lwq" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="left" id="nNo-fv-f2M">
+                    <connections>
+                        <action selector="swipedToRemoveMember:" destination="hzE-p3-wVt" id="9Yu-yH-jM4"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2259.8828696925329" y="100.1953125"/>
         </scene>

@@ -12,7 +12,13 @@ import UIKit
 
 class PokemonTableViewController: UITableViewController {
 
-	var team: Team = teamMaster
+	let refreshTableControl = UIRefreshControl()
+	
+	var team: Team = teamMaster {
+		didSet {
+			teamTableView.reloadData()
+		}
+	}
 	var detailViewController: DetailViewController?
 	
 	var delegate: PokemonSelectionDelegate?
@@ -20,6 +26,8 @@ class PokemonTableViewController: UITableViewController {
 	var delegateForTeam: TeamSectionSelectionDelegate?
 	
 	var pokemon: Pokemon?
+	
+//	@IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
 	
 	@IBOutlet var teamTableView: UITableView!
 	
@@ -35,12 +43,26 @@ class PokemonTableViewController: UITableViewController {
 		Dex.defineTypeMatchups()
 		ItemDex.initializeItemDex()
 		MoveDex.initializeMoveDex()
-		team = teamMaster
+//		refreshTable()
+//		teamMembers = team.members
+//		team = teamMaster
 //		loadSamplePokemon()
 //		self.view.autoresizingMask = .flexibleBottomMargin
 		self.teamNameTextView.isHidden = true
 		self.restorationIdentifier = "PokemonTableViewController"
-        // Uncomment the following line to preserve selection between presentations
+		
+//		self.teamTableView.dataSource = self
+//		self.teamTableView.delegate = self
+		
+		//-------Activity view attempt
+		setupView()
+		fetchTeamData()
+		refreshTableControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+		refreshTableControl.addTarget(self, action: #selector(refreshTeamData(_:)), for: .valueChanged)
+		self.teamTableView.addSubview(refreshTableControl)
+//		self.teamTableView.register(PokedexTableViewCell.self, forCellReuseIdentifier: "PokemonTableViewCell")
+		
+		// Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -49,7 +71,18 @@ class PokemonTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		setupView()
+		fetchTeamData()
+	}
 	
+//	override func viewWillAppear(_ animated: Bool) {
+//		refreshTable()
+//	}
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+	}
 	
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -90,19 +123,23 @@ class PokemonTableViewController: UITableViewController {
         return true
     }
     */
-	/*
+	
 	override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
 		print("oh it was this one")
 		team.members.remove(at: indexPath.row)
 		tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.left)
 		teamMaster = team
-		let vc = storyboard?.instantiateViewController(withIdentifier: "teamWeaknessTableController") as? TeamWeaknessTableViewController
+//		let vc = storyboard?.instantiateViewController(withIdentifier: "teamWeaknessTableController") as? TeamWeaknessTableViewController
 //		vc?.updateTeam(team)
 //		vc?.fetchTeamData()
 	}
-	*/
+	
 	override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
 		return "Remove"
+	}
+	
+	override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+		return .delete
 	}
 	
     // Override to support editing the table view.
@@ -110,17 +147,20 @@ class PokemonTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
 			print("oh hi")
+			print(indexPath.row, indexPath)
 			team.members.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .left)
-			teamTableView.reloadData()
+			fetchTeamData()
+			print((tableView.dataSource as! PokemonTableViewController).team.members)
+//			refreshTable()
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
 	
 	override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//		print("stfu")
-		self.teamTableView.endUpdates()
+		updateView()
+		print("stfu")
+		tableView.endUpdates()
 	}
 
     /*
@@ -211,7 +251,36 @@ class PokemonTableViewController: UITableViewController {
 	}
 	
 	func refreshTable() {
+		DispatchQueue.main.async {
+			self.teamTableView.reloadData()
+		}
+//		teamTableView.reloadData()
+	}
+	
+	func setupView() {
+		setupTableView()
+//		setupActivityIndicatorView()
+	}
+	
+	func setupTableView() {
+		teamTableView.refreshControl = refreshTableControl
+	}
+	
+//	func setupActivityIndicatorView() {
+//		self.activityIndicatorView.hidesWhenStopped = true
+//		activityIndicatorView.startAnimating()
+//	}
+	
+	func updateView() {
 		teamTableView.reloadData()
+	}
+	
+	func fetchTeamData() {
+		print("Fetching Team Data")
+		self.team = teamMaster
+		self.updateView()
+		self.refreshTableControl.endRefreshing()
+//		self.activityIndicatorView.stopAnimating()
 	}
 	
 	func loadTeam(team: Team) {
@@ -250,6 +319,17 @@ class PokemonTableViewController: UITableViewController {
 //		vc?.teamWeaknessTableView.reloadData()
 	}
 	
+	@IBAction func swipedToRemoveMember(_ sender: Any) {
+		let swipePosition = (sender as AnyObject).convert(CGPoint(), to:tableView)
+		let indexPath = tableView.indexPathForRow(at: swipePosition)
+		team.members.remove(at: indexPath!.row)
+		tableView.deleteRows(at: [indexPath!], with: UITableView.RowAnimation.left)
+		teamMaster = team
+	}
 	
+	
+	@objc func refreshTeamData(_ sender: Any) {
+		fetchTeamData()
+	}
 	
 }

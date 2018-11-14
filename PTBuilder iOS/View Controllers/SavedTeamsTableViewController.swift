@@ -120,13 +120,15 @@ class SavedTeamsTableViewController: UITableViewController {
     }
 	
 	func deleteSavedTeam(indexPathForTeamInSource: Int) {
-		var savedTeams = availableTeams
-		for (teamName, teamRawString) in savedTeams! {
-			if loadSavedTeam(teamString: teamRawString as! String) == loadableTeamArray[indexPathForTeamInSource] {
+		var savedTeams = UserDefaults.standard.dictionary(forKey: "savedTeams")
+		for (teamName, _) in savedTeams! {
+			if selectedTeam == loadableTeamArray[indexPathForTeamInSource] {
 				savedTeams![teamName] = nil
 				availableTeams![teamName] = nil
+				UserDefaults.standard.removeObject(forKey: "savedTeams")
 				UserDefaults.standard.setValue(savedTeams, forKey: "savedTeams")
 			}
+			
 		}
 	}
     /*
