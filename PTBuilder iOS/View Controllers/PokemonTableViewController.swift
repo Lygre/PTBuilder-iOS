@@ -123,7 +123,7 @@ class PokemonTableViewController: UITableViewController {
         return true
     }
     */
-	
+	/*
 	override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
 		print("oh it was this one")
 		team.members.remove(at: indexPath.row)
@@ -133,7 +133,7 @@ class PokemonTableViewController: UITableViewController {
 //		vc?.updateTeam(team)
 //		vc?.fetchTeamData()
 	}
-	
+	*/
 	override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
 		return "Remove"
 	}
@@ -146,20 +146,16 @@ class PokemonTableViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-			print("oh hi")
-			print(indexPath.row, indexPath)
 			team.members.remove(at: indexPath.row)
 			fetchTeamData()
-			print((tableView.dataSource as! PokemonTableViewController).team.members)
-//			refreshTable()
+
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
 	
 	override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-		updateView()
-		print("stfu")
+	
 		tableView.endUpdates()
 	}
 
@@ -254,22 +250,16 @@ class PokemonTableViewController: UITableViewController {
 		DispatchQueue.main.async {
 			self.teamTableView.reloadData()
 		}
-//		teamTableView.reloadData()
 	}
 	
 	func setupView() {
 		setupTableView()
-//		setupActivityIndicatorView()
 	}
 	
 	func setupTableView() {
 		teamTableView.refreshControl = refreshTableControl
 	}
 	
-//	func setupActivityIndicatorView() {
-//		self.activityIndicatorView.hidesWhenStopped = true
-//		activityIndicatorView.startAnimating()
-//	}
 	
 	func updateView() {
 		teamTableView.reloadData()
@@ -280,7 +270,7 @@ class PokemonTableViewController: UITableViewController {
 		self.team = teamMaster
 		self.updateView()
 		self.refreshTableControl.endRefreshing()
-//		self.activityIndicatorView.stopAnimating()
+
 	}
 	
 	func loadTeam(team: Team) {
