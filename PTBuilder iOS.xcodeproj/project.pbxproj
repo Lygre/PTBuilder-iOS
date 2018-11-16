@@ -13,6 +13,11 @@
 		9F36B789217CCF9F0013DAAF /* PokemonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36B788217CCF9F0013DAAF /* PokemonTableViewController.swift */; };
 		9F4DB0C7218E44D500076625 /* TeamAttributesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4DB0C6218E44D500076625 /* TeamAttributesTableViewCell.swift */; };
 		9F4DB0C9218E83B700076625 /* SuggestedMonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4DB0C8218E83B700076625 /* SuggestedMonTableViewCell.swift */; };
+		9F560484219F1D7300E40183 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F560483219F1D7300E40183 /* CalculatorViewController.swift */; };
+		9F560485219F1D7300E40183 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F560483219F1D7300E40183 /* CalculatorViewController.swift */; };
+		9F560487219F3F4300E40183 /* CalculatorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F560486219F3F4300E40183 /* CalculatorTableViewController.swift */; };
+		9F560488219F3F4300E40183 /* CalculatorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F560486219F3F4300E40183 /* CalculatorTableViewController.swift */; };
+		9F56048A219F455800E40183 /* MyUIPlaygroundFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB56C3D219DD8210064FE57 /* MyUIPlaygroundFramework.framework */; };
 		9F5F35B6219DED6200234205 /* Pokedex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4A4217BEEAF002A78A8 /* Pokedex.swift */; };
 		9F5F35B7219DED6600234205 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4A6217BEF20002A78A8 /* Pokemon.swift */; };
 		9F5F35B8219DED8500234205 /* Support Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4A8217BEF3E002A78A8 /* Support Functions.swift */; };
@@ -104,6 +109,8 @@
 		9F36B788217CCF9F0013DAAF /* PokemonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewController.swift; sourceTree = "<group>"; };
 		9F4DB0C6218E44D500076625 /* TeamAttributesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamAttributesTableViewCell.swift; sourceTree = "<group>"; };
 		9F4DB0C8218E83B700076625 /* SuggestedMonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedMonTableViewCell.swift; sourceTree = "<group>"; };
+		9F560483219F1D7300E40183 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		9F560486219F3F4300E40183 /* CalculatorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTableViewController.swift; sourceTree = "<group>"; };
 		9F61A471217BEE13002A78A8 /* PTBuilder iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PTBuilder iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F61A474217BEE13002A78A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F61A476217BEE13002A78A8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F56048A219F455800E40183 /* MyUIPlaygroundFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +186,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F560489219F455800E40183 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9F61A468217BEE13002A78A8 = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +201,7 @@
 				9F61A495217BEE16002A78A8 /* PTBuilder iOSUITests */,
 				9FB56C3E219DD8210064FE57 /* MyUIPlaygroundFramework */,
 				9F61A472217BEE13002A78A8 /* Products */,
+				9F560489219F455800E40183 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -262,6 +278,8 @@
 				9F11283A218E0CD10025F468 /* LevelViewPokedex.swift */,
 				9F8946032193599900015FE2 /* PrimaryTabBarViewController.swift */,
 				9F20FDF12194BBBA00724DBE /* SuggestedMonDetailViewController.swift */,
+				9F560483219F1D7300E40183 /* CalculatorViewController.swift */,
+				9F560486219F3F4300E40183 /* CalculatorTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -479,8 +497,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F560487219F3F4300E40183 /* CalculatorTableViewController.swift in Sources */,
 				9F9E53C9217E4FB5009D4C56 /* DetailViewController.swift in Sources */,
 				9FE7BF8021862628001EEDA8 /* TeamCoverageTableViewCell.swift in Sources */,
+				9F560484219F1D7300E40183 /* CalculatorViewController.swift in Sources */,
 				9F983A33218C0331003F4584 /* PokedexSearch.swift in Sources */,
 				9F36B787217CCCF60013DAAF /* PokemonTableViewCell.swift in Sources */,
 				9F61A4A9217BEF3E002A78A8 /* Support Functions.swift in Sources */,
@@ -546,9 +566,11 @@
 				9FC73729219DE068002747FA /* TeamSectionSelectionDelegate.swift in Sources */,
 				9FC73720219DE057002747FA /* TeamWeaknessTableViewController.swift in Sources */,
 				9FC73723219DE057002747FA /* PokemonTableViewController.swift in Sources */,
+				9F560485219F1D7300E40183 /* CalculatorViewController.swift in Sources */,
 				9FC73726219DE057002747FA /* LevelViewPokedex.swift in Sources */,
 				9FC7371D219DE057002747FA /* PokedexDetailViewController.swift in Sources */,
 				9FB56C46219DD8850064FE57 /* TestSwift.swift in Sources */,
+				9F560488219F3F4300E40183 /* CalculatorTableViewController.swift in Sources */,
 				9FC7371E219DE057002747FA /* PokedexSearch.swift in Sources */,
 				9FC7372C219DE070002747FA /* PokemonPropertyPickerView.swift in Sources */,
 				9FC73721219DE057002747FA /* TeamTableViewController.swift in Sources */,

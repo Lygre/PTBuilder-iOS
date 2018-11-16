@@ -12,7 +12,7 @@
         <!--Detail View Controller-->
         <scene sceneID="1sd-a9-CLm">
             <objects>
-                <viewController id="NKZ-h8-eda" customClass="DetailViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NKZ-h8-eda" customClass="DetailViewController" customModule="MyUIPlaygroundFramework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qmj-ih-0jF">
                         <rect key="frame" x="0.0" y="0.0" width="990.5" height="974"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -776,7 +776,7 @@
         <!--Team Detail View Controller-->
         <scene sceneID="TiD-GZ-d4k">
             <objects>
-                <viewController id="fnt-YN-uA9" customClass="TeamDetailViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fnt-YN-uA9" customClass="TeamDetailViewController" customModule="MyUIPlaygroundFramework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9bn-Of-AAD">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1110,7 +1110,7 @@
         <!--teamWeaknessTableController-->
         <scene sceneID="LYH-hY-gMM">
             <objects>
-                <tableViewController storyboardIdentifier="teamWeaknessTableController" title="teamWeaknessTableController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uYR-uo-KGB" customClass="TeamWeaknessTableViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="teamWeaknessTableController" title="teamWeaknessTableController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uYR-uo-KGB" customClass="TeamWeaknessTableViewController" customModule="MyUIPlaygroundFramework" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="43" sectionFooterHeight="28" id="Gec-Vd-lgT">
                         <rect key="frame" x="0.0" y="0.0" width="990.5" height="924"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1120,7 +1120,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </activityIndicatorView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamWeaknessTableViewCell" rowHeight="150" id="5hQ-GR-nNK" customClass="TeamWeaknessTableViewCell" customModule="PTBuilder_iOS" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamWeaknessTableViewCell" rowHeight="150" id="5hQ-GR-nNK" customClass="TeamWeaknessTableViewCell" customModule="MyUIPlaygroundFramework" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="43" width="990.5" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5hQ-GR-nNK" id="WV7-HU-2M1">
@@ -1299,7 +1299,7 @@
                                     <outlet property="waterEfficacyImage" destination="oEl-Ah-GJD" id="hE4-7F-Df8"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamCoverageTableViewCell" rowHeight="326" id="HPL-9r-SMH" customClass="TeamCoverageTableViewCell" customModule="PTBuilder_iOS" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamCoverageTableViewCell" rowHeight="326" id="HPL-9r-SMH" customClass="TeamCoverageTableViewCell" customModule="MyUIPlaygroundFramework" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="193" width="990.5" height="326"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HPL-9r-SMH" id="BY3-hc-gos">
@@ -1815,7 +1815,7 @@
                                     <outlet property="waterSTABIndicator" destination="gU6-1L-HEn" id="w5Z-7g-f13"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamAttributesTableViewCell" id="MpH-Ly-a6C" customClass="TeamAttributesTableViewCell" customModule="PTBuilder_iOS" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamAttributesTableViewCell" id="MpH-Ly-a6C" customClass="TeamAttributesTableViewCell" customModule="MyUIPlaygroundFramework" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="519" width="990.5" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MpH-Ly-a6C" id="HHW-Py-cql">
@@ -2013,7 +2013,7 @@
                                     <outlet property="tauntBool" destination="Epg-mh-Bft" id="kkI-fe-4JI"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="SuggestedMonTableViewCell" id="3C7-jC-dg2" customClass="SuggestedMonTableViewCell" customModule="PTBuilder_iOS" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="SuggestedMonTableViewCell" id="3C7-jC-dg2" customClass="SuggestedMonTableViewCell" customModule="MyUIPlaygroundFramework" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="719" width="990.5" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3C7-jC-dg2" id="sVl-0S-RuX">
@@ -2082,7 +2082,7 @@
         <!--suggestedMonDetailView-->
         <scene sceneID="ale-4k-Z4m">
             <objects>
-                <viewController storyboardIdentifier="suggestedMonDetailView" title="suggestedMonDetailView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="920-Ii-tMf" customClass="SuggestedMonDetailViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="suggestedMonDetailView" title="suggestedMonDetailView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="920-Ii-tMf" customClass="SuggestedMonDetailViewController" customModule="MyUIPlaygroundFramework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xm7-kz-Wt7">
                         <rect key="frame" x="0.0" y="0.0" width="990.5" height="924"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2360,13 +2360,13 @@
         <!--Root View Controller-->
         <scene sceneID="gHW-vK-1PK">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="kar-tk-g5m" customClass="TeamTableViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="kar-tk-g5m" customClass="TeamTableViewController" customModule="MyUIPlaygroundFramework" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="saC-4V-Z8i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="924"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamOverviewTableViewCell" id="i3L-pA-AHv" customClass="TeamOverviewTableViewCell" customModule="PTBuilder_iOS" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamOverviewTableViewCell" id="i3L-pA-AHv" customClass="TeamOverviewTableViewCell" customModule="MyUIPlaygroundFramework" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="52"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i3L-pA-AHv" id="o71-O2-aL8">
@@ -2422,7 +2422,7 @@
         <!--Pokedex Detail View Controller-->
         <scene sceneID="xst-eV-Y6K">
             <objects>
-                <viewController id="f57-Ak-dzp" customClass="PokedexDetailViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="f57-Ak-dzp" customClass="PokedexDetailViewController" customModule="MyUIPlaygroundFramework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hNb-A7-M5E">
                         <rect key="frame" x="0.0" y="0.0" width="990.5" height="974"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2906,12 +2906,12 @@
         <!--Root View Controller-->
         <scene sceneID="1A1-wo-g6w">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="4Ym-np-ecB" customClass="PokedexViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="4Ym-np-ecB" customClass="PokedexViewController" customModule="MyUIPlaygroundFramework" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lyE-gu-1Vx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="924"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" misplaced="YES" placeholder="Pokemon" showsSearchResultsButton="YES" id="zCQ-Tr-og7" customClass="PokedexSearch" customModule="PTBuilder_iOS" customModuleProvider="target">
+                        <searchBar key="tableHeaderView" contentMode="redraw" misplaced="YES" placeholder="Pokemon" showsSearchResultsButton="YES" id="zCQ-Tr-og7" customClass="PokedexSearch" customModule="MyUIPlaygroundFramework" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -2924,7 +2924,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PokedexTableViewCell" rowHeight="120" id="70s-s5-aMp" customClass="PokedexTableViewCell" customModule="PTBuilder_iOS" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PokedexTableViewCell" rowHeight="120" id="70s-s5-aMp" customClass="PokedexTableViewCell" customModule="MyUIPlaygroundFramework" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="84" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="70s-s5-aMp" id="Sh6-Zk-9SC">
@@ -3002,6 +3002,238 @@
             </objects>
             <point key="canvasLocation" x="-878" y="1844"/>
         </scene>
+        <!--Calculator View Controller-->
+        <scene sceneID="l1r-Jj-YaG">
+            <objects>
+                <viewController id="oHW-5B-ZV4" customClass="CalculatorViewController" customModule="MyUIPlaygroundFramework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yFD-ON-RlG">
+                        <rect key="frame" x="0.0" y="0.0" width="990.5" height="974"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lep-su-Sb3">
+                                <rect key="frame" x="341" y="20" width="309" height="56.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terrain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBy-Va-1db">
+                                        <rect key="frame" x="128" y="0.0" width="53" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Oac-L1-ZsE">
+                                        <rect key="frame" x="0.0" y="28.5" width="309" height="29"/>
+                                        <segments>
+                                            <segment title="Electric"/>
+                                            <segment title="Grassy"/>
+                                            <segment title="Misty"/>
+                                            <segment title="Psychic"/>
+                                            <segment title="None"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="K4E-lH-yZC">
+                                <rect key="frame" x="376" y="84.5" width="239" height="56.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTU-qD-Byb">
+                                        <rect key="frame" x="87" y="0.0" width="64.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ODU-vL-UHe">
+                                        <rect key="frame" x="0.0" y="28.5" width="239" height="29"/>
+                                        <segments>
+                                            <segment title="Sun"/>
+                                            <segment title="Rain"/>
+                                            <segment title="Sand"/>
+                                            <segment title="Hail"/>
+                                            <segment title="None"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BGc-Ye-l1a">
+                                <rect key="frame" x="209" y="149" width="573" height="56.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soA-Al-fW3">
+                                        <rect key="frame" x="255" y="0.0" width="62.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="dFN-ZE-bHp">
+                                        <rect key="frame" x="0.0" y="28.5" width="573" height="28"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OjY-dO-wbM">
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="29"/>
+                                                <segments>
+                                                    <segment title="Reflect"/>
+                                                    <segment title="Light Screen"/>
+                                                    <segment title="Aurora Veil"/>
+                                                </segments>
+                                            </segmentedControl>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6Lf-2p-FMU">
+                                                <rect key="frame" x="298" y="0.0" width="275" height="29"/>
+                                                <segments>
+                                                    <segment title="Reflect"/>
+                                                    <segment title="Light Screen"/>
+                                                    <segment title="Aurora Veil"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="H2v-Hx-yJY">
+                                <rect key="frame" x="71" y="20" width="113" height="121"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Side" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="113" translatesAutoresizingMaskIntoConstraints="NO" id="502-2L-7s8">
+                                        <rect key="frame" x="0.0" y="0.0" width="113" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hfY-TQ-12G">
+                                        <rect key="frame" x="0.0" y="28" width="113" height="93"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="dUo-9i-qWf">
+                                <rect key="frame" x="806.5" y="20" width="113" height="121"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opposing Side" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29V-ME-quH">
+                                        <rect key="frame" x="0.0" y="0.0" width="113" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L2U-Gr-SHz">
+                                        <rect key="frame" x="0.0" y="28" width="113" height="93"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UFK-Nd-inD" firstAttribute="bottom" secondItem="H2v-Hx-yJY" secondAttribute="bottom" constant="833" id="3bJ-6T-eJ0"/>
+                            <constraint firstItem="H2v-Hx-yJY" firstAttribute="leading" secondItem="UFK-Nd-inD" secondAttribute="leading" constant="71" id="7RM-LD-BOJ"/>
+                            <constraint firstItem="lep-su-Sb3" firstAttribute="top" secondItem="H2v-Hx-yJY" secondAttribute="top" id="G6Q-YW-4gh"/>
+                            <constraint firstItem="H2v-Hx-yJY" firstAttribute="top" secondItem="UFK-Nd-inD" secondAttribute="top" id="Gp1-8u-V9G"/>
+                            <constraint firstItem="lep-su-Sb3" firstAttribute="centerX" secondItem="yFD-ON-RlG" secondAttribute="centerX" id="MgB-Ea-A2U"/>
+                            <constraint firstItem="UFK-Nd-inD" firstAttribute="trailing" secondItem="dUo-9i-qWf" secondAttribute="trailing" constant="71" id="Vqw-B5-JOQ"/>
+                            <constraint firstItem="H2v-Hx-yJY" firstAttribute="bottom" secondItem="dUo-9i-qWf" secondAttribute="bottom" id="gG0-Q8-coi"/>
+                            <constraint firstItem="BGc-Ye-l1a" firstAttribute="top" secondItem="K4E-lH-yZC" secondAttribute="bottom" constant="8" id="kVu-bC-9Vp"/>
+                            <constraint firstItem="K4E-lH-yZC" firstAttribute="centerX" secondItem="yFD-ON-RlG" secondAttribute="centerX" id="nad-Uu-i8s"/>
+                            <constraint firstItem="lep-su-Sb3" firstAttribute="top" secondItem="UFK-Nd-inD" secondAttribute="top" id="rkN-Pf-O3V"/>
+                            <constraint firstItem="BGc-Ye-l1a" firstAttribute="centerX" secondItem="yFD-ON-RlG" secondAttribute="centerX" id="vPw-Mf-YBC"/>
+                            <constraint firstItem="K4E-lH-yZC" firstAttribute="top" secondItem="lep-su-Sb3" secondAttribute="bottom" constant="8" id="vU1-Al-SyJ"/>
+                            <constraint firstItem="dUo-9i-qWf" firstAttribute="top" secondItem="H2v-Hx-yJY" secondAttribute="top" id="ywM-Y4-FB0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UFK-Nd-inD"/>
+                    </view>
+                    <connections>
+                        <outlet property="monImageSide1" destination="hfY-TQ-12G" id="ja8-0Y-thO"/>
+                        <outlet property="monImageSide2" destination="L2U-Gr-SHz" id="4Z9-Vj-1qg"/>
+                        <outlet property="screensControlSide1" destination="OjY-dO-wbM" id="Bce-Xd-ncE"/>
+                        <outlet property="screensControlSide2" destination="6Lf-2p-FMU" id="JdB-1j-8fT"/>
+                        <outlet property="terrainControl" destination="Oac-L1-ZsE" id="MDv-uJ-6va"/>
+                        <outlet property="weatherControl" destination="ODU-vL-UHe" id="hBK-tt-flH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vIH-4I-Uek" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1273.3528550512444" y="1007.8124999999999"/>
+        </scene>
+        <!--calculatorTableViewController-->
+        <scene sceneID="aWW-no-ZDw">
+            <objects>
+                <tableViewController storyboardIdentifier="calculatorTableViewController" title="calculatorTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="aN3-Q5-gtA" customClass="CalculatorTableViewController" customModule="MyUIPlaygroundFramework" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BMt-8y-H6v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="924"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="z4F-gC-eLW" customClass="PokemonTableViewCell" customModule="MyUIPlaygroundFramework" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z4F-gC-eLW" id="X2F-4f-JUp">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QAg-zK-VdY">
+                                            <rect key="frame" x="16" y="12" width="72" height="66"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="QAg-zK-VdY" secondAttribute="height" multiplier="12:11" id="SWl-XV-dTQ"/>
+                                                <constraint firstAttribute="width" constant="72" id="s8W-cb-wFn"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJy-cw-Xg7">
+                                            <rect key="frame" x="120" y="34.5" width="177" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="177" id="aaD-MV-JqV"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QAg-zK-VdY" firstAttribute="leading" secondItem="X2F-4f-JUp" secondAttribute="leading" constant="16" id="SyS-Bi-EDB"/>
+                                        <constraint firstItem="rJy-cw-Xg7" firstAttribute="centerY" secondItem="X2F-4f-JUp" secondAttribute="centerY" id="b2O-P6-mY9"/>
+                                        <constraint firstItem="QAg-zK-VdY" firstAttribute="centerY" secondItem="X2F-4f-JUp" secondAttribute="centerY" id="lhi-eG-B2n"/>
+                                        <constraint firstItem="rJy-cw-Xg7" firstAttribute="leading" secondItem="QAg-zK-VdY" secondAttribute="trailing" constant="32" id="nr4-FN-89H"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="pokemonImageView" destination="QAg-zK-VdY" id="5Y0-sM-Akg"/>
+                                    <outlet property="pokemonNameLabel" destination="rJy-cw-Xg7" id="gui-5C-ivC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aN3-Q5-gtA" id="9bG-Ex-hS4"/>
+                            <outlet property="delegate" destination="aN3-Q5-gtA" id="eAq-OV-WCC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="aZJ-fG-RNe"/>
+                    <connections>
+                        <outlet property="teamTableView" destination="BMt-8y-H6v" id="xSn-ft-228"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u0h-uR-xY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2043.3382137628109" y="1756.640625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Q5r-5Z-gse">
+            <objects>
+                <navigationController id="1z1-9m-Whh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qrF-Fo-OEz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aN3-Q5-gtA" kind="relationship" relationship="rootViewController" id="Hav-ix-ozu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ymf-vN-Ws4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2043" y="1008"/>
+        </scene>
+        <!--Calculator-->
+        <scene sceneID="z9e-nN-jlC">
+            <objects>
+                <splitViewController id="UFU-3G-5fa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Calculator" id="ao9-rk-TD6"/>
+                    <connections>
+                        <segue destination="1z1-9m-Whh" kind="relationship" relationship="masterViewController" id="jv0-fA-gdz"/>
+                        <segue destination="oHW-5B-ZV4" kind="relationship" relationship="detailViewController" id="3m2-WK-Reh"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cve-mR-C9i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1273" y="229"/>
+        </scene>
         <!--pokedexView-->
         <scene sceneID="NkM-Mz-cxL">
             <objects>
@@ -3033,7 +3265,7 @@
         <!--Saved Teams Table View Controller-->
         <scene sceneID="uGs-rC-GbS">
             <objects>
-                <tableViewController id="SNu-9u-Adm" customClass="SavedTeamsTableViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="SNu-9u-Adm" customClass="SavedTeamsTableViewController" customModule="MyUIPlaygroundFramework" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KyX-f3-cp8">
                         <rect key="frame" x="0.0" y="0.0" width="990.5" height="974"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3050,7 +3282,7 @@
                             </items>
                         </toolbar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SavedTeamsTableViewCell" rowHeight="150" id="y0w-rO-IEJ" customClass="SavedTeamsTableViewCell" customModule="PTBuilder_iOS" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SavedTeamsTableViewCell" rowHeight="150" id="y0w-rO-IEJ" customClass="SavedTeamsTableViewCell" customModule="MyUIPlaygroundFramework" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="990.5" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y0w-rO-IEJ" id="EkM-pl-G0i">
@@ -3144,7 +3376,7 @@
         <!--PokemonTableViewController-->
         <scene sceneID="jf7-qh-AY8">
             <objects>
-                <tableViewController storyboardIdentifier="PokemonTableViewController" title="PokemonTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="hzE-p3-wVt" customClass="PokemonTableViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PokemonTableViewController" title="PokemonTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="hzE-p3-wVt" customClass="PokemonTableViewController" customModule="MyUIPlaygroundFramework" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qSN-QL-lBP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="924"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3213,7 +3445,7 @@
                             </items>
                         </toolbar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" showsReorderControl="YES" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="PokemonTableViewCell" rowHeight="90" id="YXt-rR-yNW" customClass="PokemonTableViewCell" customModule="PTBuilder_iOS" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" showsReorderControl="YES" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="PokemonTableViewCell" rowHeight="90" id="YXt-rR-yNW" customClass="PokemonTableViewCell" customModule="MyUIPlaygroundFramework" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YXt-rR-yNW" id="f6t-qD-LeT">
@@ -3310,7 +3542,7 @@
         <!--firstView-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController storyboardIdentifier="firstView" title="firstView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9pv-A4-QxB" customClass="FirstViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="firstView" title="firstView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9pv-A4-QxB" customClass="FirstViewController" customModule="MyUIPlaygroundFramework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="974"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3383,7 +3615,7 @@
         <!--Pokédex-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController title="Pokédex" id="49e-Tb-3d3" customClass="PrimaryTabBarViewController" customModule="PTBuilder_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController title="Pokédex" id="49e-Tb-3d3" customClass="PrimaryTabBarViewController" customModule="MyUIPlaygroundFramework" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="50"/>
@@ -3395,6 +3627,7 @@
                         <segue destination="gu1-qd-EFT" kind="relationship" relationship="viewControllers" id="1DD-H1-5Py"/>
                         <segue destination="Txe-M5-LUL" kind="relationship" relationship="viewControllers" id="0bp-QC-SMt"/>
                         <segue destination="yNA-9f-f3R" kind="relationship" relationship="viewControllers" id="isN-E4-sRx"/>
+                        <segue destination="UFU-3G-5fa" kind="relationship" relationship="viewControllers" id="qzI-3C-Ggo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -3460,7 +3693,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="M65-Ay-8FF"/>
-        <segue reference="8bN-kV-Nk2"/>
+        <segue reference="1DD-H1-5Py"/>
         <segue reference="Qgc-tg-pk3"/>
         <segue reference="RY2-iT-efg"/>
         <segue reference="vTu-ry-fWT"/>
