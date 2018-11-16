@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 // Function to convert Array of Pokemon objects to string array of their names
 
-func convertPokemonToDict(_ pokemon: [Pokemon]) -> [[String: AnyObject]] {
+public func convertPokemonToDict(_ pokemon: [Pokemon]) -> [[String: AnyObject]] {
 	var result = [[String: AnyObject]]()
 	
 	for mon in pokemon {
@@ -49,7 +49,7 @@ func convertPokemonToDict(_ pokemon: [Pokemon]) -> [[String: AnyObject]] {
 	return result
 }
 
-func convertSinglePokemonToDict(_ pokemon: Pokemon) -> [String: AnyObject] {
+public func convertSinglePokemonToDict(_ pokemon: Pokemon) -> [String: AnyObject] {
 	var monDict = [String: AnyObject]()
 	
 	monDict["num"] = pokemon.num as AnyObject
@@ -81,7 +81,7 @@ func convertSinglePokemonToDict(_ pokemon: Pokemon) -> [String: AnyObject] {
 	return monDict
 }
 
-func makeDexToUseableMons(_ pokedex: [Pokemon]) -> [String: Pokemon] {
+public func makeDexToUseableMons(_ pokedex: [Pokemon]) -> [String: Pokemon] {
 	var aliasedDex = [String: Pokemon]()
 	for mon in pokedex {
 		let name = mon.species.lowercased().replacingOccurrences(of: " ", with: "")
@@ -90,7 +90,7 @@ func makeDexToUseableMons(_ pokedex: [Pokemon]) -> [String: Pokemon] {
 	return aliasedDex
 }
 
-func dexNumToIcon(_ mon: Pokemon) -> String? {
+public func dexNumToIcon(_ mon: Pokemon) -> String? {
 	let dexNum: Int? = mon.num
 	var iconName: String?
 	
@@ -114,7 +114,7 @@ func dexNumToIcon(_ mon: Pokemon) -> String? {
 	return iconName!
 }
 
-func dexNumToSprite(_ mon: Pokemon) -> String? {
+public func dexNumToSprite(_ mon: Pokemon) -> String? {
 	let dexNum: Int? = mon.num
 	var spriteName: String?
 	
@@ -141,7 +141,7 @@ func dexNumToSprite(_ mon: Pokemon) -> String? {
 	return spriteName!
 }
 
-func dexNumToSpriteUsingSpecies(_ monName: String?) -> String? {
+public func dexNumToSpriteUsingSpecies(_ monName: String?) -> String? {
 	guard let mon: Pokemon = Dex.searchDex(searchParam: monName!)[0] else { let mon = Dex.searchDex(searchParam: "Bulbasaur")[0] }
 	let dexNum: Int? = mon.num
 	var spriteName: String?
@@ -172,7 +172,7 @@ func dexNumToSpriteUsingSpecies(_ monName: String?) -> String? {
 	return spriteName ?? "0.png"
 }
 
-func itemToIcon(_ item: Item) -> UIImage {
+public func itemToIcon(_ item: Item) -> UIImage {
 	var itemImage: UIImage = UIImage(named: "0.png")!
 	
 	var itemName: String = item.name.replacingOccurrences(of: " ", with: "-").lowercased()
@@ -181,7 +181,7 @@ func itemToIcon(_ item: Item) -> UIImage {
 	return itemImage
 }
 
-func dexNumToSpriteUsingNum(_ num: Int) -> String? {
+public func dexNumToSpriteUsingNum(_ num: Int) -> String? {
 	let dexNum: Int? = num
 	var spriteName: String?
 	
@@ -232,13 +232,13 @@ func dexNumToSpriteUsingNum(_ num: Int) -> String? {
 //	return monWeaknessDictTransformed
 //	
 //}
-func roundToMultipleFour(value: Float) -> Int {
+public func roundToMultipleFour(value: Float) -> Int {
 	var fractionNum = value / 4.0
 	let roundedNum = Int(floorf(fractionNum))
 	return roundedNum * 4
 	
 }
-func roundToMultipleFourFloatOutput(value: Float) -> Float {
+public func roundToMultipleFourFloatOutput(value: Float) -> Float {
 	var fractionNum = value / 4.0
 	let roundedNum = floorf(fractionNum)
 	return roundedNum * 4.0
@@ -246,7 +246,7 @@ func roundToMultipleFourFloatOutput(value: Float) -> Float {
 }
 
 // Import mon from text
-func importMonFromShowdown(showdownExportText: String) -> Pokemon {
+public func importMonFromShowdown(showdownExportText: String) -> Pokemon {
 	let monImport = """
 	\(showdownExportText)
 	"""
@@ -338,7 +338,7 @@ func importMonFromShowdown(showdownExportText: String) -> Pokemon {
 	return constructedImportMon
 }
 
-func loadSavedTeam(teamString: String) -> Team {
+public func loadSavedTeam(teamString: String) -> Team {
 	
 	let teamImportString = """
 	\(teamString)

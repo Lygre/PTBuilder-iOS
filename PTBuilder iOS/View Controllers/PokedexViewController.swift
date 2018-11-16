@@ -23,7 +23,8 @@ class PokedexViewController: UITableViewController {
 		
 		Dex.initializeDex()
 		Dex.defineTypeMatchups()
-		pokedex = Dex.dexArray
+		let dex = Dex.init()
+		pokedex = dex.dexArray
 
         // Do any additional setup after loading the view.
     }
@@ -71,8 +72,8 @@ class PokedexViewController: UITableViewController {
 	
 	func calcStatistics(stat: String) {
 		var hpArray: [Int] = []
-		
-		for mon in Dex.dexArray {
+		let dex = Dex.init()
+		for mon in dex.dexArray {
 			hpArray.append(mon.baseStats[stat] ?? 1)
 		}
 		hpArray.sort()

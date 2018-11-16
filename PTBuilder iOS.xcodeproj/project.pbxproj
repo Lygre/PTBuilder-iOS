@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		9F36B789217CCF9F0013DAAF /* PokemonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36B788217CCF9F0013DAAF /* PokemonTableViewController.swift */; };
 		9F4DB0C7218E44D500076625 /* TeamAttributesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4DB0C6218E44D500076625 /* TeamAttributesTableViewCell.swift */; };
 		9F4DB0C9218E83B700076625 /* SuggestedMonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4DB0C8218E83B700076625 /* SuggestedMonTableViewCell.swift */; };
+		9F5F35B6219DED6200234205 /* Pokedex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4A4217BEEAF002A78A8 /* Pokedex.swift */; };
+		9F5F35B7219DED6600234205 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4A6217BEF20002A78A8 /* Pokemon.swift */; };
+		9F5F35B8219DED8500234205 /* Support Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4A8217BEF3E002A78A8 /* Support Functions.swift */; };
+		9F5F35B9219DED8500234205 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4AA217BEF56002A78A8 /* Team.swift */; };
+		9F5F35BA219DED8500234205 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A4AC217BEF7B002A78A8 /* Calculator.swift */; };
 		9F61A475217BEE13002A78A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A474217BEE13002A78A8 /* AppDelegate.swift */; };
 		9F61A477217BEE13002A78A8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A476217BEE13002A78A8 /* FirstViewController.swift */; };
 		9F61A47C217BEE13002A78A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F61A47A217BEE13002A78A8 /* Main.storyboard */; };
@@ -37,12 +42,42 @@
 		9FB3F2DD21822550009AB5AB /* TeamSectionSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB3F2DC21822550009AB5AB /* TeamSectionSelectionDelegate.swift */; };
 		9FB3F2DF21828395009AB5AB /* TeamWeaknessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB3F2DE21828395009AB5AB /* TeamWeaknessTableViewController.swift */; };
 		9FB3F2E121828446009AB5AB /* TeamWeaknessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB3F2E021828446009AB5AB /* TeamWeaknessTableViewCell.swift */; };
+		9FB56C41219DD8210064FE57 /* MyUIPlaygroundFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FB56C3F219DD8210064FE57 /* MyUIPlaygroundFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FB56C46219DD8850064FE57 /* TestSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB56C45219DD8850064FE57 /* TestSwift.swift */; };
+		9FC73711219DE010002747FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A474217BEE13002A78A8 /* AppDelegate.swift */; };
+		9FC73712219DE01E002747FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F61A47A217BEE13002A78A8 /* Main.storyboard */; };
+		9FC73713219DE042002747FA /* SavedTeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3579C219140D500858A7E /* SavedTeamsTableViewCell.swift */; };
+		9FC73714219DE045002747FA /* SuggestedMonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4DB0C8218E83B700076625 /* SuggestedMonTableViewCell.swift */; };
+		9FC73715219DE04C002747FA /* PokedexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F983A30218BFC63003F4584 /* PokedexTableViewCell.swift */; };
+		9FC73716219DE04C002747FA /* TeamWeaknessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB3F2E021828446009AB5AB /* TeamWeaknessTableViewCell.swift */; };
+		9FC73717219DE04C002747FA /* TeamCoverageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE7BF7F21862628001EEDA8 /* TeamCoverageTableViewCell.swift */; };
+		9FC73718219DE04C002747FA /* TeamAttributesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4DB0C6218E44D500076625 /* TeamAttributesTableViewCell.swift */; };
+		9FC73719219DE04C002747FA /* TeamOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF00AF72180E39500DB9BE8 /* TeamOverviewTableViewCell.swift */; };
+		9FC7371A219DE04C002747FA /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36B786217CCCF60013DAAF /* PokemonTableViewCell.swift */; };
+		9FC7371B219DE057002747FA /* SavedTeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3579A21913E1E00858A7E /* SavedTeamsTableViewController.swift */; };
+		9FC7371C219DE057002747FA /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F983A2E218BD75F003F4584 /* PokedexViewController.swift */; };
+		9FC7371D219DE057002747FA /* PokedexDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F983A34218CA126003F4584 /* PokedexDetailViewController.swift */; };
+		9FC7371E219DE057002747FA /* PokedexSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F983A32218C0331003F4584 /* PokedexSearch.swift */; };
+		9FC7371F219DE057002747FA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61A476217BEE13002A78A8 /* FirstViewController.swift */; };
+		9FC73720219DE057002747FA /* TeamWeaknessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB3F2DE21828395009AB5AB /* TeamWeaknessTableViewController.swift */; };
+		9FC73721219DE057002747FA /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF00AF32180E1D000DB9BE8 /* TeamTableViewController.swift */; };
+		9FC73722219DE057002747FA /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF00AF52180E1F500DB9BE8 /* TeamDetailViewController.swift */; };
+		9FC73723219DE057002747FA /* PokemonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36B788217CCF9F0013DAAF /* PokemonTableViewController.swift */; };
+		9FC73724219DE057002747FA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E53C8217E4FB5009D4C56 /* DetailViewController.swift */; };
+		9FC73725219DE057002747FA /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F983A2B218B4FFE003F4584 /* LevelView.swift */; };
+		9FC73726219DE057002747FA /* LevelViewPokedex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F11283A218E0CD10025F468 /* LevelViewPokedex.swift */; };
+		9FC73727219DE057002747FA /* PrimaryTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8946032193599900015FE2 /* PrimaryTabBarViewController.swift */; };
+		9FC73728219DE057002747FA /* SuggestedMonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F20FDF12194BBBA00724DBE /* SuggestedMonDetailViewController.swift */; };
+		9FC73729219DE068002747FA /* TeamSectionSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB3F2DC21822550009AB5AB /* TeamSectionSelectionDelegate.swift */; };
+		9FC7372A219DE068002747FA /* PokemonSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E53CA217E7A8E009D4C56 /* PokemonSelectionDelegate.swift */; };
+		9FC7372C219DE070002747FA /* PokemonPropertyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E53CC217E8AB5009D4C56 /* PokemonPropertyPickerView.swift */; };
 		9FE7BF8021862628001EEDA8 /* TeamCoverageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE7BF7F21862628001EEDA8 /* TeamCoverageTableViewCell.swift */; };
 		9FF00AF42180E1D000DB9BE8 /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF00AF32180E1D000DB9BE8 /* TeamTableViewController.swift */; };
 		9FF00AF62180E1F500DB9BE8 /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF00AF52180E1F500DB9BE8 /* TeamDetailViewController.swift */; };
 		9FF00AF82180E39500DB9BE8 /* TeamOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF00AF72180E39500DB9BE8 /* TeamOverviewTableViewCell.swift */; };
 		9FF3579B21913E1E00858A7E /* SavedTeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3579A21913E1E00858A7E /* SavedTeamsTableViewController.swift */; };
 		9FF3579D219140D500858A7E /* SavedTeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3579C219140D500858A7E /* SavedTeamsTableViewCell.swift */; };
+		9FFF0B82219DF77500394ACE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F61A47D217BEE16002A78A8 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +124,6 @@
 		9F61A4AC217BEF7B002A78A8 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		9F8946032193599900015FE2 /* PrimaryTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTabBarViewController.swift; sourceTree = "<group>"; };
 		9F983A2B218B4FFE003F4584 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
-		9F983A2D218BC8E7003F4584 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9F983A2E218BD75F003F4584 /* PokedexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
 		9F983A30218BFC63003F4584 /* PokedexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexTableViewCell.swift; sourceTree = "<group>"; };
 		9F983A32218C0331003F4584 /* PokedexSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexSearch.swift; sourceTree = "<group>"; };
@@ -100,6 +134,10 @@
 		9FB3F2DC21822550009AB5AB /* TeamSectionSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSectionSelectionDelegate.swift; sourceTree = "<group>"; };
 		9FB3F2DE21828395009AB5AB /* TeamWeaknessTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamWeaknessTableViewController.swift; sourceTree = "<group>"; };
 		9FB3F2E021828446009AB5AB /* TeamWeaknessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamWeaknessTableViewCell.swift; sourceTree = "<group>"; };
+		9FB56C3D219DD8210064FE57 /* MyUIPlaygroundFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyUIPlaygroundFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FB56C3F219DD8210064FE57 /* MyUIPlaygroundFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyUIPlaygroundFramework.h; sourceTree = "<group>"; };
+		9FB56C40219DD8210064FE57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FB56C45219DD8850064FE57 /* TestSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSwift.swift; sourceTree = "<group>"; };
 		9FE7BF7F21862628001EEDA8 /* TeamCoverageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeamCoverageTableViewCell.swift; path = "PTBuilder iOS/Table View Cells/TeamCoverageTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		9FF00AF32180E1D000DB9BE8 /* TeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
 		9FF00AF52180E1F500DB9BE8 /* TeamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +168,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9FB56C3A219DD8210064FE57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -139,6 +184,7 @@
 				9F61A473217BEE13002A78A8 /* PTBuilder iOS */,
 				9F61A48A217BEE16002A78A8 /* PTBuilder iOSTests */,
 				9F61A495217BEE16002A78A8 /* PTBuilder iOSUITests */,
+				9FB56C3E219DD8210064FE57 /* MyUIPlaygroundFramework */,
 				9F61A472217BEE13002A78A8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -149,6 +195,7 @@
 				9F61A471217BEE13002A78A8 /* PTBuilder iOS.app */,
 				9F61A487217BEE16002A78A8 /* PTBuilder iOSTests.xctest */,
 				9F61A492217BEE16002A78A8 /* PTBuilder iOSUITests.xctest */,
+				9FB56C3D219DD8210064FE57 /* MyUIPlaygroundFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,7 +213,6 @@
 				9F61A47F217BEE16002A78A8 /* LaunchScreen.storyboard */,
 				9F9E53CC217E8AB5009D4C56 /* PokemonPropertyPickerView.swift */,
 				9F61A482217BEE16002A78A8 /* Info.plist */,
-				9F983A2D218BC8E7003F4584 /* MyPlayground.playground */,
 			);
 			path = "PTBuilder iOS";
 			sourceTree = "<group>";
@@ -187,6 +233,16 @@
 				9F61A498217BEE16002A78A8 /* Info.plist */,
 			);
 			path = "PTBuilder iOSUITests";
+			sourceTree = "<group>";
+		};
+		9FB56C3E219DD8210064FE57 /* MyUIPlaygroundFramework */ = {
+			isa = PBXGroup;
+			children = (
+				9FB56C3F219DD8210064FE57 /* MyUIPlaygroundFramework.h */,
+				9FB56C40219DD8210064FE57 /* Info.plist */,
+				9FB56C45219DD8850064FE57 /* TestSwift.swift */,
+			);
+			path = MyUIPlaygroundFramework;
 			sourceTree = "<group>";
 		};
 		9FE7BF7B21861E92001EEDA8 /* View Controllers */ = {
@@ -248,6 +304,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		9FB56C38219DD8210064FE57 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FB56C41219DD8210064FE57 /* MyUIPlaygroundFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		9F61A470217BEE13002A78A8 /* PTBuilder iOS */ = {
 			isa = PBXNativeTarget;
@@ -302,6 +369,24 @@
 			productReference = 9F61A492217BEE16002A78A8 /* PTBuilder iOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		9FB56C3C219DD8210064FE57 /* MyUIPlaygroundFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FB56C44219DD8210064FE57 /* Build configuration list for PBXNativeTarget "MyUIPlaygroundFramework" */;
+			buildPhases = (
+				9FB56C38219DD8210064FE57 /* Headers */,
+				9FB56C39219DD8210064FE57 /* Sources */,
+				9FB56C3A219DD8210064FE57 /* Frameworks */,
+				9FB56C3B219DD8210064FE57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyUIPlaygroundFramework;
+			productName = MyUIPlaygroundFramework;
+			productReference = 9FB56C3D219DD8210064FE57 /* MyUIPlaygroundFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -326,10 +411,14 @@
 						CreatedOnToolsVersion = 10.0;
 						TestTargetID = 9F61A470217BEE13002A78A8;
 					};
+					9FB56C3C219DD8210064FE57 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
 				};
 			};
 			buildConfigurationList = 9F61A46C217BEE13002A78A8 /* Build configuration list for PBXProject "PTBuilder iOS" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -344,6 +433,7 @@
 				9F61A470217BEE13002A78A8 /* PTBuilder iOS */,
 				9F61A486217BEE16002A78A8 /* PTBuilder iOSTests */,
 				9F61A491217BEE16002A78A8 /* PTBuilder iOSUITests */,
+				9FB56C3C219DD8210064FE57 /* MyUIPlaygroundFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -370,6 +460,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FB56C3B219DD8210064FE57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FFF0B82219DF77500394ACE /* Assets.xcassets in Resources */,
+				9FC73712219DE01E002747FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +526,45 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F61A497217BEE16002A78A8 /* PTBuilder_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FB56C39219DD8210064FE57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F5F35B9219DED8500234205 /* Team.swift in Sources */,
+				9FC73713219DE042002747FA /* SavedTeamsTableViewCell.swift in Sources */,
+				9FC73727219DE057002747FA /* PrimaryTabBarViewController.swift in Sources */,
+				9F5F35B7219DED6600234205 /* Pokemon.swift in Sources */,
+				9FC7372A219DE068002747FA /* PokemonSelectionDelegate.swift in Sources */,
+				9FC73724219DE057002747FA /* DetailViewController.swift in Sources */,
+				9FC7371B219DE057002747FA /* SavedTeamsTableViewController.swift in Sources */,
+				9FC73716219DE04C002747FA /* TeamWeaknessTableViewCell.swift in Sources */,
+				9FC73725219DE057002747FA /* LevelView.swift in Sources */,
+				9FC7371A219DE04C002747FA /* PokemonTableViewCell.swift in Sources */,
+				9FC73729219DE068002747FA /* TeamSectionSelectionDelegate.swift in Sources */,
+				9FC73720219DE057002747FA /* TeamWeaknessTableViewController.swift in Sources */,
+				9FC73723219DE057002747FA /* PokemonTableViewController.swift in Sources */,
+				9FC73726219DE057002747FA /* LevelViewPokedex.swift in Sources */,
+				9FC7371D219DE057002747FA /* PokedexDetailViewController.swift in Sources */,
+				9FB56C46219DD8850064FE57 /* TestSwift.swift in Sources */,
+				9FC7371E219DE057002747FA /* PokedexSearch.swift in Sources */,
+				9FC7372C219DE070002747FA /* PokemonPropertyPickerView.swift in Sources */,
+				9FC73721219DE057002747FA /* TeamTableViewController.swift in Sources */,
+				9FC73728219DE057002747FA /* SuggestedMonDetailViewController.swift in Sources */,
+				9FC73711219DE010002747FA /* AppDelegate.swift in Sources */,
+				9FC73719219DE04C002747FA /* TeamOverviewTableViewCell.swift in Sources */,
+				9F5F35B8219DED8500234205 /* Support Functions.swift in Sources */,
+				9FC73722219DE057002747FA /* TeamDetailViewController.swift in Sources */,
+				9FC73717219DE04C002747FA /* TeamCoverageTableViewCell.swift in Sources */,
+				9FC73718219DE04C002747FA /* TeamAttributesTableViewCell.swift in Sources */,
+				9FC7371F219DE057002747FA /* FirstViewController.swift in Sources */,
+				9F5F35B6219DED6200234205 /* Pokedex.swift in Sources */,
+				9FC73715219DE04C002747FA /* PokedexTableViewCell.swift in Sources */,
+				9FC7371C219DE057002747FA /* PokedexViewController.swift in Sources */,
+				9F5F35BA219DED8500234205 /* Calculator.swift in Sources */,
+				9FC73714219DE045002747FA /* SuggestedMonTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +638,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -561,6 +700,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -699,6 +839,69 @@
 			};
 			name = Release;
 		};
+		9FB56C42219DD8210064FE57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = F54NBB76Q7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MyUIPlaygroundFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Lygre.MyUIPlaygroundFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9FB56C43219DD8210064FE57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = F54NBB76Q7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MyUIPlaygroundFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Lygre.MyUIPlaygroundFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -734,6 +937,15 @@
 			buildConfigurations = (
 				9F61A4A2217BEE16002A78A8 /* Debug */,
 				9F61A4A3217BEE16002A78A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FB56C44219DD8210064FE57 /* Build configuration list for PBXNativeTarget "MyUIPlaygroundFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FB56C42219DD8210064FE57 /* Debug */,
+				9FB56C43219DD8210064FE57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

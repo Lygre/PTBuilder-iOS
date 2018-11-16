@@ -9,15 +9,15 @@ import UIKit
 import Foundation
 
 
-class Team: NSObject {
-	@objc dynamic var members: [Pokemon]
-	@objc dynamic var teamWeaknesses: [String: Int]
-	@objc dynamic var teamCoverage: [String: [String: Bool]]
+public class Team: NSObject {
+	@objc public dynamic var members: [Pokemon]
+	@objc public dynamic var teamWeaknesses: [String: Int]
+	@objc public dynamic var teamCoverage: [String: [String: Bool]]
 	// [Type: [Coverage: Bool, STAB: Bool]]
-	@objc dynamic var additionalAttributes: [String: Bool]
+	@objc public dynamic var additionalAttributes: [String: Bool]
 	// stealthRocks, spikes, toxicSpikes, auroraVeil, lightScreen, reflect, statusMoves: thunderWave, willoWisp, slp status, toxic| defog, rapidSpin, regeneratorPivot, zMoveUser, mega
 	
-	override init() {
+	public override init() {
 		members = [Pokemon]()
 		teamWeaknesses = ["": 0]
 		teamCoverage = ["": ["": false]]
@@ -25,7 +25,7 @@ class Team: NSObject {
 		
 		super.init()
 	}
-	init(members: [Pokemon]) {
+	public init(members: [Pokemon]) {
 		self.members = members
 		
 		self.teamWeaknesses = ["": 0]
@@ -43,7 +43,7 @@ class Team: NSObject {
 //	}
 	// Moving on to Team methods
 	// Method for calculating team weaknesses
-	func determineTeamWeaknesses() -> [String: Int] {
+	public func determineTeamWeaknesses() -> [String: Int] {
 		var teamWeaknessDict: [String: Int] = ["Bug": 0,
 											   "Dark": 0,
 											   "Dragon": 0,
@@ -96,7 +96,7 @@ class Team: NSObject {
 		return teamWeaknessDict
 	}
 	
-	func determineCumulativeTeamWeaknessesUsingDoubles() -> [String: Double] {
+	public func determineCumulativeTeamWeaknessesUsingDoubles() -> [String: Double] {
 		var teamWeaknessDict: [String: Double] = ["Bug": 0.0,
 												  "Dark": 0.0,
 												  "Dragon": 0.0,
@@ -149,7 +149,7 @@ class Team: NSObject {
 		return teamWeaknessDict
 	}
 	
-	func determineCumulativeInteractionIconTable() -> [String: UIImage] {
+	public func determineCumulativeInteractionIconTable() -> [String: UIImage] {
 		var teamWeaknessDict: [String: Double]
 		
 		var teamWeaknessDictTransformed: [String: UIImage] = [:]
@@ -186,7 +186,7 @@ class Team: NSObject {
 	}
 	
 	// Method for calculating team type coverage
-	func determineTeamCoverage() -> [String: [String: Bool]] {
+	public func determineTeamCoverage() -> [String: [String: Bool]] {
 		var coverageDict = [String: [String: Bool]]()
 		for type in Dex.typeList {
 			coverageDict[type] = ["Coverage": false, "STAB": false]
@@ -270,7 +270,7 @@ class Team: NSObject {
 	}
 	
 	// Method for assessing additionalAttributes that team members allow us to meet
-	func determineAttributes() -> [String: Bool] {
+	public func determineAttributes() -> [String: Bool] {
 		var attrDict: [String: Bool] = [
 			"Stealth Rock": false,
 			"Sticky Web": false,
@@ -303,7 +303,7 @@ class Team: NSObject {
 		return attrDict
 	}
 	
-	func addMember(_ pokemon: Pokemon) {
+	public func addMember(_ pokemon: Pokemon) {
 		self.members.append(pokemon)
 	}
 	
@@ -312,7 +312,7 @@ class Team: NSObject {
 //
 //		self.members.remove(at: index)
 //	}
-		func removeMember(_ pokemonIndex: Int) {
+		public func removeMember(_ pokemonIndex: Int) {
 //			let index: Int = members.firstIndex(of: pokemon)!
 			self.members.remove(at: pokemonIndex)
 		}

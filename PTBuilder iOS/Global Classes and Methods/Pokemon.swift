@@ -8,31 +8,34 @@
 import UIKit
 import Foundation
 
-class Pokemon: NSObject {
-	@objc dynamic var num: Int
-	@objc dynamic var species: String
-	@objc dynamic var types: [String]
-	@objc dynamic var baseStats: [String: Int]
-	@objc dynamic var abilities: [String]
+let defaultImage: UIImage = UIImage(imageLiteralResourceName: "0.png")
+
+
+public class Pokemon: NSObject {
+	@objc public dynamic var num: Int
+	@objc public dynamic var species: String
+	@objc public dynamic var types: [String]
+	@objc public dynamic var baseStats: [String: Int]
+	@objc public dynamic var abilities: [String]
 	
-	@objc dynamic var level: Int
-	@objc dynamic var nature: String
-	@objc dynamic var ability: String
-	@objc dynamic var iVs: [String: Int]
-	@objc dynamic var eVs: [String: Int]
-	@objc dynamic var actualStats: [String: Int]
-	@objc dynamic var virtualStats: [String: Int]
-	@objc dynamic var move1: Move
-	@objc dynamic var move2: Move
-	@objc dynamic var move3: Move
-	@objc dynamic var move4: Move
-	@objc dynamic var item: Item
+	@objc public dynamic var level: Int
+	@objc public dynamic var nature: String
+	@objc public dynamic var ability: String
+	@objc public dynamic var iVs: [String: Int]
+	@objc public dynamic var eVs: [String: Int]
+	@objc public dynamic var actualStats: [String: Int]
+	@objc public dynamic var virtualStats: [String: Int]
+	@objc public dynamic var move1: Move
+	@objc public dynamic var move2: Move
+	@objc public dynamic var move3: Move
+	@objc public dynamic var move4: Move
+	@objc public dynamic var item: Item
 	
-	@objc dynamic var statBoosts: [String: Double]
+	@objc public dynamic var statBoosts: [String: Double]
 	
-	@objc dynamic var monSprite: UIImage
+	@objc public dynamic var monSprite: UIImage
 	//override init
-	override init() {
+	public override init() {
 		num = 0
 		species = "Missingno"
 		types = ["Normal", "Flying"]
@@ -54,12 +57,12 @@ class Pokemon: NSObject {
 		
 		statBoosts = ["atk": 1.0, "def": 1.0, "spa": 1.0, "spd": 1.0, "spe": 1.0]
 		
-		monSprite = UIImage(named: "0.png")!
+		monSprite = UIImage(named: "0.png") ?? defaultImage
 		
 		super.init()
 	}
 	// initialization from createDex
-	init(num: Int, species: String, types: [String], baseStats: [String: Int], abilities: [String]) {
+	public init(num: Int, species: String, types: [String], baseStats: [String: Int], abilities: [String]) {
 		self.num = num
 		self.species = species
 		self.types = types
@@ -82,12 +85,12 @@ class Pokemon: NSObject {
 		
 		self.statBoosts = ["atk": 1.0, "def": 1.0, "spa": 1.0, "spd": 1.0, "spe": 1.0]
 		
-		self.monSprite = UIImage(named: dexNumToSpriteUsingNum(num)!)!
+		self.monSprite = UIImage(named: dexNumToSpriteUsingNum(num) ?? "0.png") ?? defaultImage
 		
 		super.init()
 	}
 	// initialization from ?? creating a specific mon for team << ex.
-	init(species: String, level: Int, nature: String, ability: String, iVs: [String: Int], eVs: [String: Int], move1: Move, move2: Move, move3: Move, move4: Move, item: Item) {
+	public init(species: String, level: Int, nature: String, ability: String, iVs: [String: Int], eVs: [String: Int], move1: Move, move2: Move, move3: Move, move4: Move, item: Item) {
 		self.num = Dex.searchDex(searchParam: species)[0].num
 		self.species = species
 		self.types = Dex.searchDex(searchParam: species)[0].types
@@ -110,13 +113,13 @@ class Pokemon: NSObject {
 		
 		self.statBoosts = ["atk": 1.0, "def": 1.0, "spa": 1.0, "spd": 1.0, "spe": 1.0]
 		
-		self.monSprite = UIImage(named: dexNumToSpriteUsingSpecies(species)!)!
+		self.monSprite = UIImage(named: dexNumToSpriteUsingSpecies(species) ?? "0.png") ?? defaultImage
 		
 		super.init()
 	}
 	
 	// Methods for Pokemon
-	func getPokemonWeaknesses(pokemonName: Pokemon) -> [String: Int] {
+	public func getPokemonWeaknesses(pokemonName: Pokemon) -> [String: Int] {
 		
 		var pokemonWeakness = ["Bug": 0,
 							   "Dark": 0,
@@ -208,7 +211,7 @@ class Pokemon: NSObject {
 	}
 	
 	// creating method for calculating actual stats
-	static func calcStats(pokemon: Pokemon) -> [String: Int] {
+	public static func calcStats(pokemon: Pokemon) -> [String: Int] {
 		let nature: String = pokemon.nature.lowercased()
 		let baseStats: [String: Int] = pokemon.baseStats
 		var ivs = pokemon.iVs
@@ -233,7 +236,7 @@ class Pokemon: NSObject {
 		return actualStats
 	}
 	
-	func calcStatsMutating() {
+	public func calcStatsMutating() {
 		let pokemon: Pokemon = self
 		let nature: String = pokemon.nature.lowercased()
 		let baseStats: [String: Int] = pokemon.baseStats
@@ -261,7 +264,7 @@ class Pokemon: NSObject {
 	}
 	
 	//calc Max virtual stat values for Level indicators
-	static func calcMaxStats() -> [String: Int] {
+	public static func calcMaxStats() -> [String: Int] {
 		let natureMod: Double = 1.1
 		let level: Int = 100
 		let baseStats: [String: Int] = ["hp": 255, "atk": 190, "def": 230, "spa": 194, "spd": 230, "spe": 255]
@@ -282,7 +285,7 @@ class Pokemon: NSObject {
 		return maxStats
 	}
 	//calc virtual stats
-	static func calcVirtualStats(pokemon: Pokemon) -> [String: Int] {
+	public static func calcVirtualStats(pokemon: Pokemon) -> [String: Int] {
 		var virtuallyAlteredStats = [String]()
 		let actualStats: [String: Int] = pokemon.actualStats
 		var virtualStats: [String: Int] = actualStats
@@ -309,7 +312,7 @@ class Pokemon: NSObject {
 		//make something return an array of altered virtual stats for text color!!!-----Reminder!!!!!
 	}
 	
-	func calcVirtualStatsMutating() {
+	public func calcVirtualStatsMutating() {
 		let pokemon: Pokemon = self
 		var virtuallyAlteredStats = [String]()
 		let actualStats: [String: Int] = pokemon.actualStats
@@ -337,7 +340,7 @@ class Pokemon: NSObject {
 		//make something return an array of altered virtual stats for text color!!!-----Reminder!!!!!
 	}
 	//determine multipliers for drawing stat rectangles
-	func determineMultipliersForStatRectangles() -> [String: CGFloat] {
+	public func determineMultipliersForStatRectangles() -> [String: CGFloat] {
 		let baseStats = self.baseStats
 		var multiplierDict: [String: CGFloat] = [:]
 		
@@ -362,7 +365,7 @@ class Pokemon: NSObject {
 		return multiplierDict
 	}
 	// method to calc BST
-	static func calcBST(pokemon: Pokemon) -> Int {
+	public static func calcBST(pokemon: Pokemon) -> Int {
 		var bst = 0
 		for (_, value) in pokemon.baseStats {
 			bst += value
@@ -370,7 +373,7 @@ class Pokemon: NSObject {
 		return bst
 	}
 	// method to pull mon learnset array
-	func getPokemonLearnset(pokemon: Pokemon) -> [String] {
+	public func getPokemonLearnset(pokemon: Pokemon) -> [String] {
 		var learnsetSearchName: String = pokemon.species.lowercased()
 		
 		if learnsetSearchName.contains(" ") {
@@ -407,21 +410,21 @@ class Pokemon: NSObject {
 
 
 
-class Move: NSObject  {
-	@objc dynamic var accuracy: Int
-	@objc dynamic var basePower: Int
-	@objc dynamic var category: String
-	@objc dynamic var desc: String?
-	@objc dynamic var shortDesc: String?
+public class Move: NSObject  {
+	@objc public dynamic var accuracy: Int
+	@objc public dynamic var basePower: Int
+	@objc public dynamic var category: String
+	@objc public dynamic var desc: String
+	@objc public dynamic var shortDesc: String
 	// concatenated string form of move name = id
-	@objc dynamic var id: String
-	@objc dynamic var name: String
-	@objc dynamic var priority: Int
-	@objc dynamic var forceSwitch: Bool
-	@objc dynamic var target: String
-	@objc dynamic var type: String
+	@objc public dynamic var id: String
+	@objc public dynamic var name: String
+	@objc public dynamic var priority: Int
+	@objc public dynamic var forceSwitch: Bool
+	@objc public dynamic var target: String
+	@objc public dynamic var type: String
 	
-	override init() {
+	public override init() {
 		accuracy = 0
 		basePower = 0
 		category = "Physical"
@@ -436,7 +439,7 @@ class Move: NSObject  {
 		
 		super.init()
 	}
-	init(accuracy: Int, basePower: Int, category: String, desc: String, shortDesc: String, id: String, name: String, priority: Int, forceSwitch: Bool, target: String, type: String) {
+	public init(accuracy: Int, basePower: Int, category: String, desc: String, shortDesc: String, id: String, name: String, priority: Int, forceSwitch: Bool, target: String, type: String) {
 		self.accuracy = accuracy
 		self.basePower = basePower
 		self.category = category
@@ -451,14 +454,14 @@ class Move: NSObject  {
 		
 		super.init()
 	}
-	init(id: String) {
+	public init(id: String) {
 		let move = MoveDex.searchMovedex(searchParam: id)
 		
 		self.accuracy = move.accuracy
 		self.basePower = move.basePower
 		self.category = move.category
-		//		self.desc = move.desc
-		//		self.shortDesc = move.shortDesc
+				self.desc = move.desc
+				self.shortDesc = move.shortDesc
 		self.id = move.id
 		self.name = move.name
 		self.priority = move.priority
@@ -473,13 +476,13 @@ class Move: NSObject  {
 
 
 
-class Item: NSObject {
-	@objc dynamic var id: String //concatenated string form of item name
-	@objc dynamic var name: String
-	@objc dynamic var statMods: [String: Double]
-	@objc dynamic var desc: String
+public class Item: NSObject {
+	@objc public dynamic var id: String //concatenated string form of item name
+	@objc public dynamic var name: String
+	@objc public dynamic var statMods: [String: Double]
+	@objc public dynamic var desc: String
 	
-	override init() {
+	public override init() {
 		id = "imagiberry"
 		name = "Imagi Berry"
 		statMods = ["": 1.0]
@@ -487,7 +490,7 @@ class Item: NSObject {
 		
 		super.init()
 	}
-	init(id: String, name: String, statMods: [String: Double], desc: String) {
+	public init(id: String, name: String, statMods: [String: Double], desc: String) {
 		self.id = id
 		self.name = name
 		self.statMods = statMods

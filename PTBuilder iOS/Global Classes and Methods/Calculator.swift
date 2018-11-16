@@ -8,12 +8,12 @@
 
 import Foundation
 
-class Field: NSObject {
-	@objc dynamic var terrain: String
-	@objc dynamic var weather: String
-	@objc dynamic var screens: [String: Bool]
+public class Field: NSObject {
+	@objc public dynamic var terrain: String
+	@objc public dynamic var weather: String
+	@objc public dynamic var screens: [String: Bool]
 	
-	override init() {
+	public override init() {
 		terrain = "None"
 		weather = "None"
 		screens = ["Reflect": false,
@@ -21,7 +21,7 @@ class Field: NSObject {
 				   "Aurora Veil": false]
 		super.init()
 	}
-	init(terrain: String) {
+	public init(terrain: String) {
 		self.terrain = terrain
 		self.weather = "None"
 		self.screens = ["Reflect": false,
@@ -30,13 +30,13 @@ class Field: NSObject {
 	}
 }
 
-func calculateAllMoves(p1: Pokemon, p2: Pokemon, field: Field) {
+public func calculateAllMoves(p1: Pokemon, p2: Pokemon, field: Field) {
 	//checkStatBoost(p1, p2)
 	//var results = getDamageResult()
 	
 }
 
-func getDamageResult(attacker: Pokemon, defender: Pokemon, move: Move, field: Field) -> (ClosedRange<Int>, ClosedRange<Decimal>) {
+public func getDamageResult(attacker: Pokemon, defender: Pokemon, move: Move, field: Field) -> (ClosedRange<Int>, ClosedRange<Decimal>) {
 	var dmgResult: (ClosedRange<Int>, ClosedRange<Decimal>)
 	var _: Int = Int()
 	var finalD = Int()
@@ -152,11 +152,11 @@ func getDamageResult(attacker: Pokemon, defender: Pokemon, move: Move, field: Fi
 
 
 //----------------------------- Class-based resist search functions
-func resistSearch(types: [String]) -> [Pokemon] {
+public func resistSearch(types: [String]) -> [Pokemon] {
 	
 	var matchMons: [Pokemon] = [Pokemon]()
-	
-	for mon in Dex.dexArray {
+	let dex = Dex.init()
+	for mon in dex.dexArray {
 		let monWeaknessDict = mon.getPokemonWeaknesses(pokemonName: mon)
 		
 		var candidate: Bool = true
@@ -175,7 +175,7 @@ func resistSearch(types: [String]) -> [Pokemon] {
 	return matchMons
 }
 
-func findSuggestedMons(team: Team) -> [Pokemon] {
+public func findSuggestedMons(team: Team) -> [Pokemon] {
 	
 	let teamWeaknesses = team.determineCumulativeTeamWeaknessesUsingDoubles()
 	
