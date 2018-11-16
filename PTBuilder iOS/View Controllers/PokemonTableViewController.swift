@@ -39,8 +39,8 @@ class PokemonTableViewController: UITableViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		Dex.initializeDex()
-		Dex.defineTypeMatchups()
+//		Dex.initializeDex()
+//		Dex.defineTypeMatchups()
 		ItemDex.initializeItemDex()
 		MoveDex.initializeMoveDex()
 //		refreshTable()

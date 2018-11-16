@@ -70,8 +70,8 @@ class FirstViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
-		Dex.initializeDex()
-		Dex.defineTypeMatchups()
+//		Dex.initializeDex()
+//		Dex.defineTypeMatchups()
 		MoveDex.initializeMoveDex()
 		ItemDex.initializeItemDex()
 		for item in ItemDex.itemDexArray {

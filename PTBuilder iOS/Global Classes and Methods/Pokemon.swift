@@ -10,7 +10,7 @@ import Foundation
 
 let defaultImage: UIImage = UIImage(imageLiteralResourceName: "0.png")
 
-
+let dex = Dex.init()
 public class Pokemon: NSObject {
 	@objc public dynamic var num: Int
 	@objc public dynamic var species: String
@@ -147,7 +147,7 @@ public class Pokemon: NSObject {
 		
 		var immunities = [String]()
 		
-		let type1Chart: [String: Int] = Dex.typeMatchups[pokemonName.types[0]]!
+		let type1Chart: [String: Int] = dex.typeMatchups[pokemonName.types[0]]!
 		for (type, effectiv) in type1Chart {
 			if effectiv == weak {
 				pokemonWeakness[type] = 2
@@ -161,7 +161,7 @@ public class Pokemon: NSObject {
 			}
 		}
 		if pokemonName.types.count > 1 {
-			let type2Chart: [String: Int] = Dex.typeMatchups[pokemonName.types[1]]!
+			let type2Chart: [String: Int] = dex.typeMatchups[pokemonName.types[1]]!
 			for (type, effectiv) in type2Chart {
 				if effectiv == weak {
 					if pokemonWeakness[type]! != 0 {

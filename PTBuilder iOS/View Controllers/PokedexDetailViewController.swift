@@ -70,8 +70,8 @@ class PokedexDetailViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		Dex.initializeDex()
-		Dex.defineTypeMatchups()
+//		Dex.initializeDex()
+//		Dex.defineTypeMatchups()
 		MoveDex.initializeMoveDex()
 		ItemDex.initializeItemDex()
 		

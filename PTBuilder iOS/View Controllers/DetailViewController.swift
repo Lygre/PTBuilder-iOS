@@ -95,8 +95,8 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-		Dex.initializeDex()
-		Dex.defineTypeMatchups()
+//		Dex.initializeDex()
+//		Dex.defineTypeMatchups()
 		MoveDex.initializeMoveDex()
 		ItemDex.initializeItemDex()
         // Do any additional setup after loading the view.

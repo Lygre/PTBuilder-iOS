@@ -38,5 +38,6 @@ let movearray = MoveDex.moveDexArray
 //print(movearray)
 let dex = Dex.init()
 dex.dexArray
+Dex.searchDex(searchParam: "bulbasaur")
 // Present the view controller in the Live View window
 PlaygroundPage.current.liveView = MyViewController()

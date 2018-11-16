@@ -21,8 +21,8 @@ class PokedexViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		Dex.initializeDex()
-		Dex.defineTypeMatchups()
+//		Dex.initializeDex()
+//		Dex.defineTypeMatchups()
 		let dex = Dex.init()
 		pokedex = dex.dexArray
 

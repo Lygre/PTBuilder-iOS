@@ -38,8 +38,8 @@ class TeamWeaknessTableViewController: UITableViewController {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-		Dex.initializeDex()
-		Dex.defineTypeMatchups()
+//		Dex.initializeDex()
+//		Dex.defineTypeMatchups()
 		
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
