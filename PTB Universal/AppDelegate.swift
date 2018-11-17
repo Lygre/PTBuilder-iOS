@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  PTB Universal
+//  PTBuilder iOS
 //
-//  Created by Hugh Broome on 11/16/18.
+//  Created by Hugh Broome on 10/20/18.
 //  Copyright © 2018 Hugh Broome. All rights reserved.
 //
 
@@ -12,10 +12,21 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-
+	let dex = Dex.init()
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
+//		let tabBarViewController = self.window!.rootViewController as! UITabBarController
+//		print(tabBarViewController.viewControllers?.count)
+//		var splitViewController: UISplitViewController? = nil
+//		for viewController in tabBarViewController.viewControllers! {
+//			if viewController.title == "Master" {
+//				splitViewController = viewController as? UISplitViewController
+//			}
+//		}
+//		let navigationController = splitViewController!.viewControllers[splitViewController!.viewControllers.count-1] as! UINavigationController
+//		navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController!.displayModeButtonItem
+//		splitViewController!.delegate = self
 		return true
 	}
 

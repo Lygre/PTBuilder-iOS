@@ -3,27 +3,127 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F7BFFC1219F875F00048DD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFC0219F875F00048DD0 /* AppDelegate.swift */; };
-		9F7BFFC3219F875F00048DD0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFC2219F875F00048DD0 /* FirstViewController.swift */; };
-		9F7BFFC5219F875F00048DD0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFC4219F875F00048DD0 /* SecondViewController.swift */; };
-		9F7BFFC8219F875F00048DD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7BFFC6219F875F00048DD0 /* Main.storyboard */; };
+		9F7B0007219F881400048DD0 /* PokemonPropertyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFE2219F881300048DD0 /* PokemonPropertyPickerView.swift */; };
+		9F7B0008219F881400048DD0 /* PokemonPropertyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFE2219F881300048DD0 /* PokemonPropertyPickerView.swift */; };
+		9F7B0009219F881400048DD0 /* SuggestedMonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFE4219F881300048DD0 /* SuggestedMonTableViewCell.swift */; };
+		9F7B000A219F881400048DD0 /* SuggestedMonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFE4219F881300048DD0 /* SuggestedMonTableViewCell.swift */; };
+		9F7B000B219F881400048DD0 /* TeamWeaknessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFE5219F881300048DD0 /* TeamWeaknessTableViewCell.swift */; };
+		9F7B000C219F881400048DD0 /* TeamWeaknessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFE5219F881300048DD0 /* TeamWeaknessTableViewCell.swift */; };
+		9F7B000D219F881400048DD0 /* TeamCoverageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFE6219F881300048DD0 /* TeamCoverageTableViewCell.swift */; };
+		9F7B000E219F881400048DD0 /* TeamCoverageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFE6219F881300048DD0 /* TeamCoverageTableViewCell.swift */; };
+		9F7B000F219F881400048DD0 /* TeamOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFE7219F881300048DD0 /* TeamOverviewTableViewCell.swift */; };
+		9F7B0010219F881400048DD0 /* TeamOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFE7219F881300048DD0 /* TeamOverviewTableViewCell.swift */; };
+		9F7B0011219F881400048DD0 /* PokedexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFE8219F881300048DD0 /* PokedexTableViewCell.swift */; };
+		9F7B0012219F881400048DD0 /* PokedexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFE8219F881300048DD0 /* PokedexTableViewCell.swift */; };
+		9F7B0013219F881400048DD0 /* TeamAttributesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFE9219F881300048DD0 /* TeamAttributesTableViewCell.swift */; };
+		9F7B0014219F881400048DD0 /* TeamAttributesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFE9219F881300048DD0 /* TeamAttributesTableViewCell.swift */; };
+		9F7B0015219F881400048DD0 /* SavedTeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFEA219F881300048DD0 /* SavedTeamsTableViewCell.swift */; };
+		9F7B0016219F881400048DD0 /* SavedTeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFEA219F881300048DD0 /* SavedTeamsTableViewCell.swift */; };
+		9F7B0017219F881400048DD0 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFEB219F881300048DD0 /* PokemonTableViewCell.swift */; };
+		9F7B0018219F881400048DD0 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFEB219F881300048DD0 /* PokemonTableViewCell.swift */; };
+		9F7B0019219F881400048DD0 /* SuggestedMonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFED219F881400048DD0 /* SuggestedMonDetailViewController.swift */; };
+		9F7B001A219F881400048DD0 /* SuggestedMonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFED219F881400048DD0 /* SuggestedMonDetailViewController.swift */; };
+		9F7B001B219F881400048DD0 /* PokedexDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFEE219F881400048DD0 /* PokedexDetailViewController.swift */; };
+		9F7B001C219F881400048DD0 /* PokedexDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFEE219F881400048DD0 /* PokedexDetailViewController.swift */; };
+		9F7B001D219F881400048DD0 /* TeamWeaknessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFEF219F881400048DD0 /* TeamWeaknessTableViewController.swift */; };
+		9F7B001E219F881400048DD0 /* TeamWeaknessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFEF219F881400048DD0 /* TeamWeaknessTableViewController.swift */; };
+		9F7B001F219F881400048DD0 /* PokedexSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF0219F881400048DD0 /* PokedexSearch.swift */; };
+		9F7B0020219F881400048DD0 /* PokedexSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF0219F881400048DD0 /* PokedexSearch.swift */; };
+		9F7B0021219F881400048DD0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF1219F881400048DD0 /* FirstViewController.swift */; };
+		9F7B0022219F881400048DD0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF1219F881400048DD0 /* FirstViewController.swift */; };
+		9F7B0023219F881400048DD0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF2219F881400048DD0 /* DetailViewController.swift */; };
+		9F7B0024219F881400048DD0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF2219F881400048DD0 /* DetailViewController.swift */; };
+		9F7B0025219F881400048DD0 /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF3219F881400048DD0 /* TeamDetailViewController.swift */; };
+		9F7B0026219F881400048DD0 /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF3219F881400048DD0 /* TeamDetailViewController.swift */; };
+		9F7B0027219F881400048DD0 /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF4219F881400048DD0 /* TeamTableViewController.swift */; };
+		9F7B0028219F881400048DD0 /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF4219F881400048DD0 /* TeamTableViewController.swift */; };
+		9F7B0029219F881400048DD0 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF5219F881400048DD0 /* CalculatorViewController.swift */; };
+		9F7B002A219F881400048DD0 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF5219F881400048DD0 /* CalculatorViewController.swift */; };
+		9F7B002B219F881400048DD0 /* CalculatorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF6219F881400048DD0 /* CalculatorTableViewController.swift */; };
+		9F7B002C219F881400048DD0 /* CalculatorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF6219F881400048DD0 /* CalculatorTableViewController.swift */; };
+		9F7B002D219F881400048DD0 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF7219F881400048DD0 /* PokedexViewController.swift */; };
+		9F7B002E219F881400048DD0 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF7219F881400048DD0 /* PokedexViewController.swift */; };
+		9F7B002F219F881400048DD0 /* SavedTeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF8219F881400048DD0 /* SavedTeamsTableViewController.swift */; };
+		9F7B0030219F881400048DD0 /* SavedTeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF8219F881400048DD0 /* SavedTeamsTableViewController.swift */; };
+		9F7B0031219F881400048DD0 /* PokemonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF9219F881400048DD0 /* PokemonTableViewController.swift */; };
+		9F7B0032219F881400048DD0 /* PokemonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFF9219F881400048DD0 /* PokemonTableViewController.swift */; };
+		9F7B0033219F881400048DD0 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFFA219F881400048DD0 /* LevelView.swift */; };
+		9F7B0034219F881400048DD0 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFFA219F881400048DD0 /* LevelView.swift */; };
+		9F7B0035219F881400048DD0 /* LevelViewPokedex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFFB219F881400048DD0 /* LevelViewPokedex.swift */; };
+		9F7B0036219F881400048DD0 /* LevelViewPokedex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFFB219F881400048DD0 /* LevelViewPokedex.swift */; };
+		9F7B0037219F881400048DD0 /* PrimaryTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFFC219F881400048DD0 /* PrimaryTabBarViewController.swift */; };
+		9F7B0038219F881400048DD0 /* PrimaryTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFFC219F881400048DD0 /* PrimaryTabBarViewController.swift */; };
+		9F7B0039219F881400048DD0 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFFE219F881400048DD0 /* Calculator.swift */; };
+		9F7B003A219F881400048DD0 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFFE219F881400048DD0 /* Calculator.swift */; };
+		9F7B003B219F881400048DD0 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFFF219F881400048DD0 /* Team.swift */; };
+		9F7B003C219F881400048DD0 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BFFFF219F881400048DD0 /* Team.swift */; };
+		9F7B003D219F881400048DD0 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B0000219F881400048DD0 /* Pokemon.swift */; };
+		9F7B003E219F881400048DD0 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B0000219F881400048DD0 /* Pokemon.swift */; };
+		9F7B003F219F881400048DD0 /* Pokedex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B0001219F881400048DD0 /* Pokedex.swift */; };
+		9F7B0040219F881400048DD0 /* Pokedex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B0001219F881400048DD0 /* Pokedex.swift */; };
+		9F7B0041219F881400048DD0 /* Support Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B0002219F881400048DD0 /* Support Functions.swift */; };
+		9F7B0042219F881400048DD0 /* Support Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B0002219F881400048DD0 /* Support Functions.swift */; };
+		9F7B0043219F881400048DD0 /* TeamSectionSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B0004219F881400048DD0 /* TeamSectionSelectionDelegate.swift */; };
+		9F7B0044219F881400048DD0 /* TeamSectionSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B0004219F881400048DD0 /* TeamSectionSelectionDelegate.swift */; };
+		9F7B0045219F881400048DD0 /* PokemonSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B0005219F881400048DD0 /* PokemonSelectionDelegate.swift */; };
+		9F7B0046219F881400048DD0 /* PokemonSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B0005219F881400048DD0 /* PokemonSelectionDelegate.swift */; };
+		9F7B0047219F881400048DD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B0006219F881400048DD0 /* AppDelegate.swift */; };
+		9F7B0048219F881400048DD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B0006219F881400048DD0 /* AppDelegate.swift */; };
+		9F7B004B219F889D00048DD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7B0049219F889C00048DD0 /* LaunchScreen.storyboard */; };
+		9F7B004C219F889D00048DD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7B0049219F889C00048DD0 /* LaunchScreen.storyboard */; };
+		9F7B004D219F889D00048DD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7B004A219F889D00048DD0 /* Main.storyboard */; };
+		9F7B004E219F889D00048DD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7B004A219F889D00048DD0 /* Main.storyboard */; };
 		9F7BFFCA219F876000048DD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F7BFFC9219F876000048DD0 /* Assets.xcassets */; };
-		9F7BFFCD219F876000048DD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7BFFCB219F876000048DD0 /* LaunchScreen.storyboard */; };
+		9F7BFFDD219F87B700048DD0 /* PTB_Universal_Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7BFFDB219F87B700048DD0 /* PTB_Universal_Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F7B0000219F881400048DD0 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		9F7B0001219F881400048DD0 /* Pokedex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokedex.swift; sourceTree = "<group>"; };
+		9F7B0002219F881400048DD0 /* Support Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Support Functions.swift"; sourceTree = "<group>"; };
+		9F7B0004219F881400048DD0 /* TeamSectionSelectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamSectionSelectionDelegate.swift; sourceTree = "<group>"; };
+		9F7B0005219F881400048DD0 /* PokemonSelectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonSelectionDelegate.swift; sourceTree = "<group>"; };
+		9F7B0006219F881400048DD0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9F7B0049219F889C00048DD0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9F7B004A219F889D00048DD0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9F7BFFBD219F875F00048DD0 /* PTB Universal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PTB Universal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F7BFFC0219F875F00048DD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F7BFFC2219F875F00048DD0 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		9F7BFFC4219F875F00048DD0 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		9F7BFFC7219F875F00048DD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F7BFFC9219F876000048DD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9F7BFFCC219F876000048DD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F7BFFCE219F876000048DD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F7BFFD9219F87B700048DD0 /* PTB_Universal_Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PTB_Universal_Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F7BFFDB219F87B700048DD0 /* PTB_Universal_Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTB_Universal_Framework.h; sourceTree = "<group>"; };
+		9F7BFFDC219F87B700048DD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F7BFFE1219F881300048DD0 /* PTB Universal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PTB Universal-Bridging-Header.h"; sourceTree = "<group>"; };
+		9F7BFFE2219F881300048DD0 /* PokemonPropertyPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonPropertyPickerView.swift; sourceTree = "<group>"; };
+		9F7BFFE4219F881300048DD0 /* SuggestedMonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestedMonTableViewCell.swift; sourceTree = "<group>"; };
+		9F7BFFE5219F881300048DD0 /* TeamWeaknessTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamWeaknessTableViewCell.swift; sourceTree = "<group>"; };
+		9F7BFFE6219F881300048DD0 /* TeamCoverageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCoverageTableViewCell.swift; sourceTree = "<group>"; };
+		9F7BFFE7219F881300048DD0 /* TeamOverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamOverviewTableViewCell.swift; sourceTree = "<group>"; };
+		9F7BFFE8219F881300048DD0 /* PokedexTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexTableViewCell.swift; sourceTree = "<group>"; };
+		9F7BFFE9219F881300048DD0 /* TeamAttributesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamAttributesTableViewCell.swift; sourceTree = "<group>"; };
+		9F7BFFEA219F881300048DD0 /* SavedTeamsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedTeamsTableViewCell.swift; sourceTree = "<group>"; };
+		9F7BFFEB219F881300048DD0 /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
+		9F7BFFED219F881400048DD0 /* SuggestedMonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestedMonDetailViewController.swift; sourceTree = "<group>"; };
+		9F7BFFEE219F881400048DD0 /* PokedexDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexDetailViewController.swift; sourceTree = "<group>"; };
+		9F7BFFEF219F881400048DD0 /* TeamWeaknessTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamWeaknessTableViewController.swift; sourceTree = "<group>"; };
+		9F7BFFF0219F881400048DD0 /* PokedexSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexSearch.swift; sourceTree = "<group>"; };
+		9F7BFFF1219F881400048DD0 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		9F7BFFF2219F881400048DD0 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9F7BFFF3219F881400048DD0 /* TeamDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
+		9F7BFFF4219F881400048DD0 /* TeamTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
+		9F7BFFF5219F881400048DD0 /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		9F7BFFF6219F881400048DD0 /* CalculatorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorTableViewController.swift; sourceTree = "<group>"; };
+		9F7BFFF7219F881400048DD0 /* PokedexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
+		9F7BFFF8219F881400048DD0 /* SavedTeamsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedTeamsTableViewController.swift; sourceTree = "<group>"; };
+		9F7BFFF9219F881400048DD0 /* PokemonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonTableViewController.swift; sourceTree = "<group>"; };
+		9F7BFFFA219F881400048DD0 /* LevelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
+		9F7BFFFB219F881400048DD0 /* LevelViewPokedex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewPokedex.swift; sourceTree = "<group>"; };
+		9F7BFFFC219F881400048DD0 /* PrimaryTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryTabBarViewController.swift; sourceTree = "<group>"; };
+		9F7BFFFE219F881400048DD0 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		9F7BFFFF219F881400048DD0 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,13 +134,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9F7BFFD6219F87B700048DD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F7B0003219F881400048DD0 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				9F7B0004219F881400048DD0 /* TeamSectionSelectionDelegate.swift */,
+				9F7B0005219F881400048DD0 /* PokemonSelectionDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		9F7BFFB4219F875F00048DD0 = {
 			isa = PBXGroup;
 			children = (
 				9F7BFFBF219F875F00048DD0 /* PTB Universal */,
+				9F7BFFDA219F87B700048DD0 /* PTB Universal Framework */,
 				9F7BFFBE219F875F00048DD0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				9F7BFFBD219F875F00048DD0 /* PTB Universal.app */,
+				9F7BFFD9219F87B700048DD0 /* PTB_Universal_Framework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,18 +174,92 @@
 		9F7BFFBF219F875F00048DD0 /* PTB Universal */ = {
 			isa = PBXGroup;
 			children = (
-				9F7BFFC0219F875F00048DD0 /* AppDelegate.swift */,
-				9F7BFFC2219F875F00048DD0 /* FirstViewController.swift */,
-				9F7BFFC4219F875F00048DD0 /* SecondViewController.swift */,
-				9F7BFFC6219F875F00048DD0 /* Main.storyboard */,
+				9F7B0049219F889C00048DD0 /* LaunchScreen.storyboard */,
+				9F7B004A219F889D00048DD0 /* Main.storyboard */,
+				9F7B0006219F881400048DD0 /* AppDelegate.swift */,
+				9F7B0003219F881400048DD0 /* Delegates */,
+				9F7BFFFD219F881400048DD0 /* Global Classes and Methods */,
+				9F7BFFE2219F881300048DD0 /* PokemonPropertyPickerView.swift */,
+				9F7BFFE3219F881300048DD0 /* Table View Cells */,
+				9F7BFFEC219F881400048DD0 /* View Controllers */,
 				9F7BFFC9219F876000048DD0 /* Assets.xcassets */,
-				9F7BFFCB219F876000048DD0 /* LaunchScreen.storyboard */,
 				9F7BFFCE219F876000048DD0 /* Info.plist */,
+				9F7BFFE1219F881300048DD0 /* PTB Universal-Bridging-Header.h */,
 			);
 			path = "PTB Universal";
 			sourceTree = "<group>";
 		};
+		9F7BFFDA219F87B700048DD0 /* PTB Universal Framework */ = {
+			isa = PBXGroup;
+			children = (
+				9F7BFFDB219F87B700048DD0 /* PTB_Universal_Framework.h */,
+				9F7BFFDC219F87B700048DD0 /* Info.plist */,
+			);
+			path = "PTB Universal Framework";
+			sourceTree = "<group>";
+		};
+		9F7BFFE3219F881300048DD0 /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9F7BFFE4219F881300048DD0 /* SuggestedMonTableViewCell.swift */,
+				9F7BFFE5219F881300048DD0 /* TeamWeaknessTableViewCell.swift */,
+				9F7BFFE6219F881300048DD0 /* TeamCoverageTableViewCell.swift */,
+				9F7BFFE7219F881300048DD0 /* TeamOverviewTableViewCell.swift */,
+				9F7BFFE8219F881300048DD0 /* PokedexTableViewCell.swift */,
+				9F7BFFE9219F881300048DD0 /* TeamAttributesTableViewCell.swift */,
+				9F7BFFEA219F881300048DD0 /* SavedTeamsTableViewCell.swift */,
+				9F7BFFEB219F881300048DD0 /* PokemonTableViewCell.swift */,
+			);
+			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		9F7BFFEC219F881400048DD0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F7BFFED219F881400048DD0 /* SuggestedMonDetailViewController.swift */,
+				9F7BFFEE219F881400048DD0 /* PokedexDetailViewController.swift */,
+				9F7BFFEF219F881400048DD0 /* TeamWeaknessTableViewController.swift */,
+				9F7BFFF0219F881400048DD0 /* PokedexSearch.swift */,
+				9F7BFFF1219F881400048DD0 /* FirstViewController.swift */,
+				9F7BFFF2219F881400048DD0 /* DetailViewController.swift */,
+				9F7BFFF3219F881400048DD0 /* TeamDetailViewController.swift */,
+				9F7BFFF4219F881400048DD0 /* TeamTableViewController.swift */,
+				9F7BFFF5219F881400048DD0 /* CalculatorViewController.swift */,
+				9F7BFFF6219F881400048DD0 /* CalculatorTableViewController.swift */,
+				9F7BFFF7219F881400048DD0 /* PokedexViewController.swift */,
+				9F7BFFF8219F881400048DD0 /* SavedTeamsTableViewController.swift */,
+				9F7BFFF9219F881400048DD0 /* PokemonTableViewController.swift */,
+				9F7BFFFA219F881400048DD0 /* LevelView.swift */,
+				9F7BFFFB219F881400048DD0 /* LevelViewPokedex.swift */,
+				9F7BFFFC219F881400048DD0 /* PrimaryTabBarViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9F7BFFFD219F881400048DD0 /* Global Classes and Methods */ = {
+			isa = PBXGroup;
+			children = (
+				9F7BFFFE219F881400048DD0 /* Calculator.swift */,
+				9F7BFFFF219F881400048DD0 /* Team.swift */,
+				9F7B0000219F881400048DD0 /* Pokemon.swift */,
+				9F7B0001219F881400048DD0 /* Pokedex.swift */,
+				9F7B0002219F881400048DD0 /* Support Functions.swift */,
+			);
+			path = "Global Classes and Methods";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9F7BFFD4219F87B700048DD0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F7BFFDD219F87B700048DD0 /* PTB_Universal_Framework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		9F7BFFBC219F875F00048DD0 /* PTB Universal */ = {
@@ -87,6 +279,24 @@
 			productReference = 9F7BFFBD219F875F00048DD0 /* PTB Universal.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9F7BFFD8219F87B700048DD0 /* PTB Universal Framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F7BFFDE219F87B700048DD0 /* Build configuration list for PBXNativeTarget "PTB Universal Framework" */;
+			buildPhases = (
+				9F7BFFD4219F87B700048DD0 /* Headers */,
+				9F7BFFD5219F87B700048DD0 /* Sources */,
+				9F7BFFD6219F87B700048DD0 /* Frameworks */,
+				9F7BFFD7219F87B700048DD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PTB Universal Framework";
+			productName = "PTB Universal Framework";
+			productReference = 9F7BFFD9219F87B700048DD0 /* PTB_Universal_Framework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,11 +309,16 @@
 				TargetAttributes = {
 					9F7BFFBC219F875F00048DD0 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					9F7BFFD8219F87B700048DD0 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
 			buildConfigurationList = 9F7BFFB8219F875F00048DD0 /* Build configuration list for PBXProject "PTB Universal" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -116,6 +331,7 @@
 			projectRoot = "";
 			targets = (
 				9F7BFFBC219F875F00048DD0 /* PTB Universal */,
+				9F7BFFD8219F87B700048DD0 /* PTB Universal Framework */,
 			);
 		};
 /* End PBXProject section */
@@ -125,9 +341,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F7BFFCD219F876000048DD0 /* LaunchScreen.storyboard in Resources */,
+				9F7B004D219F889D00048DD0 /* Main.storyboard in Resources */,
 				9F7BFFCA219F876000048DD0 /* Assets.xcassets in Resources */,
-				9F7BFFC8219F875F00048DD0 /* Main.storyboard in Resources */,
+				9F7B004B219F889D00048DD0 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F7BFFD7219F87B700048DD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F7B004C219F889D00048DD0 /* LaunchScreen.storyboard in Resources */,
+				9F7B004E219F889D00048DD0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,32 +363,83 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F7BFFC5219F875F00048DD0 /* SecondViewController.swift in Sources */,
-				9F7BFFC1219F875F00048DD0 /* AppDelegate.swift in Sources */,
-				9F7BFFC3219F875F00048DD0 /* FirstViewController.swift in Sources */,
+				9F7B0047219F881400048DD0 /* AppDelegate.swift in Sources */,
+				9F7B0041219F881400048DD0 /* Support Functions.swift in Sources */,
+				9F7B0017219F881400048DD0 /* PokemonTableViewCell.swift in Sources */,
+				9F7B0015219F881400048DD0 /* SavedTeamsTableViewCell.swift in Sources */,
+				9F7B0025219F881400048DD0 /* TeamDetailViewController.swift in Sources */,
+				9F7B0033219F881400048DD0 /* LevelView.swift in Sources */,
+				9F7B0019219F881400048DD0 /* SuggestedMonDetailViewController.swift in Sources */,
+				9F7B0039219F881400048DD0 /* Calculator.swift in Sources */,
+				9F7B002F219F881400048DD0 /* SavedTeamsTableViewController.swift in Sources */,
+				9F7B0037219F881400048DD0 /* PrimaryTabBarViewController.swift in Sources */,
+				9F7B0013219F881400048DD0 /* TeamAttributesTableViewCell.swift in Sources */,
+				9F7B0011219F881400048DD0 /* PokedexTableViewCell.swift in Sources */,
+				9F7B000D219F881400048DD0 /* TeamCoverageTableViewCell.swift in Sources */,
+				9F7B0009219F881400048DD0 /* SuggestedMonTableViewCell.swift in Sources */,
+				9F7B000F219F881400048DD0 /* TeamOverviewTableViewCell.swift in Sources */,
+				9F7B000B219F881400048DD0 /* TeamWeaknessTableViewCell.swift in Sources */,
+				9F7B0035219F881400048DD0 /* LevelViewPokedex.swift in Sources */,
+				9F7B002B219F881400048DD0 /* CalculatorTableViewController.swift in Sources */,
+				9F7B003F219F881400048DD0 /* Pokedex.swift in Sources */,
+				9F7B0031219F881400048DD0 /* PokemonTableViewController.swift in Sources */,
+				9F7B0045219F881400048DD0 /* PokemonSelectionDelegate.swift in Sources */,
+				9F7B0007219F881400048DD0 /* PokemonPropertyPickerView.swift in Sources */,
+				9F7B003B219F881400048DD0 /* Team.swift in Sources */,
+				9F7B001B219F881400048DD0 /* PokedexDetailViewController.swift in Sources */,
+				9F7B001D219F881400048DD0 /* TeamWeaknessTableViewController.swift in Sources */,
+				9F7B003D219F881400048DD0 /* Pokemon.swift in Sources */,
+				9F7B0027219F881400048DD0 /* TeamTableViewController.swift in Sources */,
+				9F7B0043219F881400048DD0 /* TeamSectionSelectionDelegate.swift in Sources */,
+				9F7B0023219F881400048DD0 /* DetailViewController.swift in Sources */,
+				9F7B001F219F881400048DD0 /* PokedexSearch.swift in Sources */,
+				9F7B002D219F881400048DD0 /* PokedexViewController.swift in Sources */,
+				9F7B0029219F881400048DD0 /* CalculatorViewController.swift in Sources */,
+				9F7B0021219F881400048DD0 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F7BFFD5219F87B700048DD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F7B0048219F881400048DD0 /* AppDelegate.swift in Sources */,
+				9F7B0042219F881400048DD0 /* Support Functions.swift in Sources */,
+				9F7B0018219F881400048DD0 /* PokemonTableViewCell.swift in Sources */,
+				9F7B0016219F881400048DD0 /* SavedTeamsTableViewCell.swift in Sources */,
+				9F7B0026219F881400048DD0 /* TeamDetailViewController.swift in Sources */,
+				9F7B0034219F881400048DD0 /* LevelView.swift in Sources */,
+				9F7B001A219F881400048DD0 /* SuggestedMonDetailViewController.swift in Sources */,
+				9F7B003A219F881400048DD0 /* Calculator.swift in Sources */,
+				9F7B0030219F881400048DD0 /* SavedTeamsTableViewController.swift in Sources */,
+				9F7B0038219F881400048DD0 /* PrimaryTabBarViewController.swift in Sources */,
+				9F7B0014219F881400048DD0 /* TeamAttributesTableViewCell.swift in Sources */,
+				9F7B0012219F881400048DD0 /* PokedexTableViewCell.swift in Sources */,
+				9F7B000E219F881400048DD0 /* TeamCoverageTableViewCell.swift in Sources */,
+				9F7B000A219F881400048DD0 /* SuggestedMonTableViewCell.swift in Sources */,
+				9F7B0010219F881400048DD0 /* TeamOverviewTableViewCell.swift in Sources */,
+				9F7B000C219F881400048DD0 /* TeamWeaknessTableViewCell.swift in Sources */,
+				9F7B0036219F881400048DD0 /* LevelViewPokedex.swift in Sources */,
+				9F7B002C219F881400048DD0 /* CalculatorTableViewController.swift in Sources */,
+				9F7B0040219F881400048DD0 /* Pokedex.swift in Sources */,
+				9F7B0032219F881400048DD0 /* PokemonTableViewController.swift in Sources */,
+				9F7B0046219F881400048DD0 /* PokemonSelectionDelegate.swift in Sources */,
+				9F7B0008219F881400048DD0 /* PokemonPropertyPickerView.swift in Sources */,
+				9F7B003C219F881400048DD0 /* Team.swift in Sources */,
+				9F7B001C219F881400048DD0 /* PokedexDetailViewController.swift in Sources */,
+				9F7B001E219F881400048DD0 /* TeamWeaknessTableViewController.swift in Sources */,
+				9F7B003E219F881400048DD0 /* Pokemon.swift in Sources */,
+				9F7B0028219F881400048DD0 /* TeamTableViewController.swift in Sources */,
+				9F7B0044219F881400048DD0 /* TeamSectionSelectionDelegate.swift in Sources */,
+				9F7B0024219F881400048DD0 /* DetailViewController.swift in Sources */,
+				9F7B0020219F881400048DD0 /* PokedexSearch.swift in Sources */,
+				9F7B002E219F881400048DD0 /* PokedexViewController.swift in Sources */,
+				9F7B002A219F881400048DD0 /* CalculatorViewController.swift in Sources */,
+				9F7B0022219F881400048DD0 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		9F7BFFC6219F875F00048DD0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9F7BFFC7219F875F00048DD0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9F7BFFCB219F876000048DD0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9F7BFFCC219F876000048DD0 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9F7BFFCF219F876000048DD0 /* Debug */ = {
@@ -286,6 +562,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F54NBB76Q7;
 				INFOPLIST_FILE = "PTB Universal/Info.plist";
@@ -295,6 +572,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Lygre.PTB-Universal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PTB Universal/PTB Universal-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,6 +583,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F54NBB76Q7;
 				INFOPLIST_FILE = "PTB Universal/Info.plist";
@@ -313,8 +593,68 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Lygre.PTB-Universal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PTB Universal/PTB Universal-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9F7BFFDF219F87B700048DD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = F54NBB76Q7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "PTB Universal Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Lygre.PTB-Universal-Framework";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9F7BFFE0219F87B700048DD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = F54NBB76Q7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "PTB Universal Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Lygre.PTB-Universal-Framework";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -335,6 +675,15 @@
 			buildConfigurations = (
 				9F7BFFD2219F876000048DD0 /* Debug */,
 				9F7BFFD3219F876000048DD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F7BFFDE219F87B700048DD0 /* Build configuration list for PBXNativeTarget "PTB Universal Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F7BFFDF219F87B700048DD0 /* Debug */,
+				9F7BFFE0219F87B700048DD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
